@@ -142,8 +142,7 @@
         <div class="footer-social">
           <a href="https://www.facebook.com/sstpsr" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="https://www.youtube.com/@sstpsr" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/922227320016" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
 
