@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us - SST Public School Rashidabad</title>
   <meta name="description" content="Get in touch with SST Public School Rashidabad. Find our contact details, address, and send us a message." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -151,7 +152,7 @@
             <div class="contact-info-text">
               <h4>Address</h4>
               <span>SST Public School Rashidabad</span>
-              <span>Rashidabad, Pakistan</span>
+              <span>District Tando Allahyar, Sindh, Pakistan</span>
             </div>
           </div>
 
@@ -159,7 +160,7 @@
             <div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div>
             <div class="contact-info-text">
               <h4>WhatsApp</h4>
-              <a href="https://wa.me/920222732001">Chat with us on WhatsApp</a>
+              <a href="https://wa.me/922227320016" target="_blank" rel="noopener">Chat on WhatsApp</a>
             </div>
           </div>
         </div>
@@ -181,7 +182,13 @@
         <h3 style="color:var(--primary);margin-bottom:8px;">Send Us a Message</h3>
         <p style="margin-bottom:28px;font-size:0.875rem;">Fill out the form and we'll get back to you within 24 hours.</p>
 
-        <form id="contact-form" novalidate>
+        <!-- Formspree Contact Form -->
+        <!-- SETUP: Go to formspree.io, create account, click + New Form, copy the form ID and replace 'YOUR_FORM_ID' below -->
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <!-- Hidden fields for Formspree -->
+          <input type="hidden" name="_subject" value="New Inquiry from SST PSR Website" />
+          <input type="text" name="_gotcha" style="display:none" />
+
           <div class="form-row">
             <div class="form-group">
               <label for="cf-name">Full Name *</label>
@@ -202,11 +209,11 @@
               <label for="cf-subject">Subject *</label>
               <select id="cf-subject" name="subject" required>
                 <option value="">Select a subject</option>
-                <option value="admission">Admission Inquiry</option>
-                <option value="academics">Academic Query</option>
-                <option value="fees">Fee Structure</option>
-                <option value="facilities">Facilities</option>
-                <option value="general">General Inquiry</option>
+                <option value="Admission Inquiry">Admission Inquiry</option>
+                <option value="Academic Query">Academic Query</option>
+                <option value="Fee Structure">Fee Structure</option>
+                <option value="Facilities">Facilities</option>
+                <option value="General Inquiry">General Inquiry</option>
               </select>
             </div>
           </div>
@@ -217,7 +224,7 @@
           </div>
 
           <button type="submit" class="form-submit" id="contact-submit-btn">
-            <i class="fas fa-paper-plane"></i> Send Message
+            <i class="fas fa-paper-plane"></i> <span id="btn-text">Send Message</span>
           </button>
         </form>
 
@@ -231,14 +238,16 @@
     <!-- Map Placeholder -->
     <div class="map-section reveal">
       <h3 style="color:var(--primary);margin-bottom:24px;">Find Us on the Map</h3>
-      <div class="map-wrap">
-        <div style="text-align:center;">
-          <i class="fas fa-map-marked-alt" style="display:block;margin-bottom:16px;"></i>
-          <p style="font-size:1rem;color:rgba(200,169,81,0.7);">Rashidabad, Pakistan</p>
-          <a href="https://maps.google.com/?q=Rashidabad+Pakistan" target="_blank" class="btn btn-primary" style="margin-top:16px;font-size:0.85rem;">
-            <i class="fas fa-external-link-alt"></i> Open in Google Maps
-          </a>
-        </div>
+      <div class="map-wrap" style="height:420px;padding:0;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.0!2d68.715!3d25.455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sRashidabad%2C%20Tando%20Allahyar%2C%20Sindh!5e0!3m2!1sen!2spk!4v1"
+          width="100%" height="100%"
+          style="border:0;display:block;"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="SST Public School Rashidabad Location"
+        ></iframe>
       </div>
     </div>
   </div>
@@ -269,16 +278,32 @@
 </footer>
 <button class="scroll-top" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
 
-<script src="js/main.js"></script>
+<script src="js/navbar.js"></script><script src="js/main.js"></script>
 <script>
+  // Formspree AJAX submission with loading state
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      document.getElementById('form-success').style.display = 'block';
-      contactForm.reset();
+    contactForm.addEventListener('submit', async function(e) {
+      const action = this.getAttribute('action');
+      if (!action || action.includes('YOUR_FORM_ID')) {
+        // Demo mode — not connected to Formspree yet
+        e.preventDefault();
+        const btn = document.getElementById('contact-submit-btn');
+        const btnText = document.getElementById('btn-text');
+        btn.disabled = true;
+        btnText.textContent = 'Sending...';
+        setTimeout(() => {
+          document.getElementById('form-success').style.display = 'block';
+          contactForm.reset();
+          btn.disabled = false;
+          btnText.textContent = 'Send Message';
+          document.getElementById('form-success').scrollIntoView({behavior:'smooth',block:'nearest'});
+        }, 1200);
+      }
+      // If real Formspree ID is set, let the form submit normally
     });
   }
 </script>
 </body>
 </html>
+
