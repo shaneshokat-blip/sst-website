@@ -35,7 +35,7 @@
       </li>
 
       <li class="nav-item" role="none">
-        <a href="#"${isActive('about-us.html')} role="menuitem" aria-haspopup="true">
+        <a href="about-us.html"${isActive('about-us.html')} role="menuitem" aria-haspopup="true">
           ABOUT <i class="fas fa-chevron-down"></i>
         </a>
         <ul class="dropdown" role="menu">
@@ -70,20 +70,20 @@
       </li>
 
       <li class="nav-item" role="none">
-        <a href="#"${isActive('science-labs.html')} role="menuitem" aria-haspopup="true">
+        <a href="science-labs.html"${isActive('science-labs.html')} role="menuitem" aria-haspopup="true">
           FACILITIES <i class="fas fa-chevron-down"></i>
         </a>
         <ul class="dropdown" role="menu">
           <li><a href="science-labs.html" class="dropdown-link"><i class="fas fa-flask"></i> Science Laboratories</a></li>
-          <li><a href="ai-lab.html" class="dropdown-link"><i class="fas fa-robot"></i> AI / IT Laboratories</a></li>
+          <li><a href="it-lab.html" class="dropdown-link"><i class="fas fa-robot"></i> AI / IT Laboratories</a></li>
           <li><a href="language-lab.html" class="dropdown-link"><i class="fas fa-language"></i> Language Laboratory</a></li>
-          <li><a href="it-lab.html" class="dropdown-link"><i class="fas fa-home"></i> Boarding Houses</a></li>
+          <li><a href="boarding-houses.html" class="dropdown-link"><i class="fas fa-home"></i> Boarding Houses</a></li>
           <li><a href="library.html" class="dropdown-link"><i class="fas fa-book-reader"></i> Library &amp; Documentation</a></li>
         </ul>
       </li>
 
       <li class="nav-item" role="none">
-        <a href="#"${isActive('co-curricular.html')} role="menuitem" aria-haspopup="true">
+        <a href="co-curricular.html"${isActive('co-curricular.html')} role="menuitem" aria-haspopup="true">
           CAMPUS LIFE <i class="fas fa-chevron-down"></i>
         </a>
         <ul class="dropdown" role="menu">
@@ -96,7 +96,7 @@
       </li>
 
       <li class="nav-item" role="none">
-        <a href="#"${isActive('news.html')} role="menuitem" aria-haspopup="true">
+        <a href="news.html"${isActive('news.html')} role="menuitem" aria-haspopup="true">
           NEWS <i class="fas fa-chevron-down"></i>
         </a>
         <ul class="dropdown" role="menu">
@@ -134,7 +134,7 @@
         <div class="tagline">Rashidabad &middot; Sargodhian Spirit Trust</div>
         <p>Committed to educating young people to become responsible citizens and leaders of Pakistan and the world. <strong>Excel to Lead.</strong></p>
         <div class="footer-contact-info">
-          <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><a href="tel:0222-7320016">0222-732001 (6 lines)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><a href="tel:0222732001">0222-732001-6</a></div>
           <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@sstpsr.edu.pk">info@sstpsr.edu.pk</a></div>
           <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>District Tando Allahyar, Sindh, Pakistan</span></div>
           <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Mon&ndash;Sat: 08:00 &ndash; 16:00</span></div>
