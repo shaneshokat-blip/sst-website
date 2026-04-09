@@ -1,203 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fee Structure - SST Public School Rashidabad</title>
-  <meta name="description" content="View the complete fee structure for SST Public School Rashidabad for all classes and programs." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/animations.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Fee Structure 2026-27 - SST Public School Rashidabad</title>
+  <meta name="description" content="Official fee structure for SST Public School Rashidabad session 2026-27. Transparent pricing for IGCSE/SSC and HSSC programs."/>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
   <style>
-    .fee-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 48px; }
-    .fee-card {
-      background: var(--white); border-radius: var(--radius-lg); overflow: hidden;
-      box-shadow: var(--shadow-md); border: 1px solid var(--light-gray); transition: all var(--transition);
-      display: flex; flex-direction: column;
-    }
-    .fee-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
-    .fee-card.featured { border: 2px solid var(--accent); position: relative; }
-    .fee-card.featured::before { content: 'Most Popular'; position: absolute; top: 16px; right: 16px; background: var(--accent); color: var(--primary); font-size: 0.72rem; font-weight: 700; padding: 4px 12px; border-radius: var(--radius-full); text-transform: uppercase; letter-spacing: 0.5px; }
-    .fee-card-header { background: linear-gradient(135deg, var(--primary), var(--primary-light)); padding: 32px 28px; text-align: center; color: var(--white); }
-    .fee-card-header .class-label { font-size: 0.78rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(200,169,81,0.8); margin-bottom: 8px; }
-    .fee-card-header h3 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--white); margin-bottom: 12px; }
-    .fee-card-header .fee-amount { font-size: 2.4rem; font-weight: 900; color: var(--accent); line-height: 1; }
-    .fee-card-header .fee-period { font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-top: 4px; }
-    .fee-card-body { padding: 28px; flex: 1; }
-    .fee-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--light-gray); font-size: 0.875rem; }
-    .fee-row:last-child { border-bottom: none; }
-    .fee-row .label { color: var(--text-muted); }
-    .fee-row .amount { color: var(--primary); font-weight: 600; }
-    .fee-card-footer { padding: 20px 28px; border-top: 1px solid var(--light-gray); }
-    .fee-card-footer .btn { width: 100%; justify-content: center; }
-
-    .scholarships-section { margin-top: 80px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: var(--radius-lg); padding: 56px; }
-    .scholarships-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
-    .scholarship-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-md); padding: 28px 24px; text-align: center; transition: all var(--transition); }
-    .scholarship-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-4px); }
-    .scholarship-percentage { font-family: var(--font-serif); font-size: 2.5rem; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 8px; }
-    .scholarship-card h4 { color: var(--white); font-size: 0.95rem; margin-bottom: 8px; }
-    .scholarship-card p { color: rgba(255,255,255,0.65); font-size: 0.83rem; }
-
-    .fee-note { background: rgba(200,169,81,0.08); border: 1px solid rgba(200,169,81,0.25); border-radius: var(--radius-md); padding: 20px 24px; margin-top: 32px; }
-    .fee-note p { font-size: 0.875rem; color: var(--dark-gray); }
-    .fee-note i { color: var(--accent); margin-right: 6px; }
-
-    @media(max-width:900px){ .fee-cards { grid-template-columns: 1fr 1fr; } .scholarships-grid { grid-template-columns: 1fr; } }
-    @media(max-width:600px){ .fee-cards { grid-template-columns: 1fr; } .scholarships-section { padding: 32px 20px; } }
+    .fee-table-wrap { background:var(--white); border-radius:var(--radius-lg); box-shadow:var(--shadow-md); overflow:hidden; margin-top:40px; }
+    .fee-table-title { background:linear-gradient(135deg,var(--primary),var(--primary-light)); padding:20px 28px; display:flex; align-items:center; gap:12px; }
+    .fee-table-title h3 { color:var(--white); font-size:1rem; margin:0; }
+    .fee-table-title .badge { background:var(--accent); color:var(--primary); font-size:0.7rem; font-weight:800; padding:4px 12px; border-radius:var(--radius-full); text-transform:uppercase; }
+    table { width:100%; border-collapse:collapse; }
+    thead th { background:rgba(10,22,40,0.04); padding:12px 20px; text-align:left; font-size:0.8rem; font-weight:700; color:var(--primary); text-transform:uppercase; letter-spacing:0.5px; border-bottom:2px solid var(--light-gray); }
+    thead th:not(:first-child) { text-align:right; }
+    tbody td { padding:14px 20px; font-size:0.875rem; border-bottom:1px solid var(--light-gray); color:var(--dark-gray); }
+    tbody td:not(:first-child) { text-align:right; font-weight:600; color:var(--primary); }
+    tbody tr:last-child td { border-bottom:none; }
+    tbody tr:hover { background:rgba(10,22,40,0.02); }
+    .total-row { background:rgba(200,169,81,0.08) !important; }
+    .total-row td { font-weight:700 !important; color:var(--primary) !important; border-top:2px solid var(--accent) !important; }
+    .total-row td:first-child { color:var(--primary) !important; }
+    .due-badge { background:rgba(200,169,81,0.15); color:var(--accent-dark); font-size:0.68rem; font-weight:700; padding:2px 8px; border-radius:var(--radius-full); margin-left:6px; }
+    .one-time-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:40px; }
+    .one-time-card { background:var(--white); border-radius:var(--radius-lg); padding:24px; box-shadow:var(--shadow-sm); border:1px solid var(--light-gray); }
+    .one-time-card h4 { color:var(--primary); margin-bottom:14px; font-size:0.95rem; padding-bottom:10px; border-bottom:2px solid var(--accent); }
+    .one-time-row { display:flex; justify-content:space-between; padding:8px 0; font-size:0.875rem; border-bottom:1px solid var(--light-gray); }
+    .one-time-row:last-child { border-bottom:none; font-weight:700; color:var(--primary); }
+    .one-time-row .label { color:var(--text-muted); }
+    .one-time-row .amount { font-weight:600; color:var(--primary); }
+    .alert-box { background:rgba(200,169,81,0.08); border:1px solid rgba(200,169,81,0.3); border-radius:var(--radius-md); padding:18px 22px; margin-top:32px; }
+    .alert-box p { font-size:0.875rem; margin-bottom:6px; }
+    .alert-box p:last-child { margin-bottom:0; }
+    .scholarships-section { margin-top:80px; background:linear-gradient(135deg,var(--primary),var(--primary-light)); border-radius:var(--radius-lg); padding:56px; }
+    .scholarships-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:32px; }
+    .scholarship-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius-md); padding:28px 24px; text-align:center; transition:all var(--transition); }
+    .scholarship-card:hover { background:rgba(255,255,255,0.1); transform:translateY(-4px); }
+    .scholarship-percentage { font-family:var(--font-serif); font-size:2.5rem; font-weight:700; color:var(--accent); line-height:1; margin-bottom:8px; }
+    .scholarship-card h4 { color:var(--white); font-size:0.95rem; margin-bottom:8px; }
+    .scholarship-card p { color:rgba(255,255,255,0.65); font-size:0.83rem; }
+    @media(max-width:769px){ table { display:block; overflow-x:auto; } .one-time-grid { grid-template-columns:1fr; } .scholarships-grid { grid-template-columns:1fr; } .scholarships-section { padding:32px 20px; } }
   </style>
 </head>
 <body>
+<div class="top-bar"><div class="container"><div class="top-bar-left"><a href="tel:0222-732001-6"><i class="fas fa-phone-alt"></i> 0222-732001-6</a><a href="mailto:info@sstpsr.edu.pk"><i class="fas fa-envelope"></i> info@sstpsr.edu.pk</a></div><div class="top-bar-right"><span>Mon - Sat: 08:00 - 16:00</span></div></div></div>
 
-<!-- Top Bar -->
-<div class="top-bar">
-  <div class="container">
-    <div class="top-bar-left">
-      <a href="tel:0222-732001-6"><i class="fas fa-phone-alt"></i> 0222-732001-6</a>
-      <a href="mailto:info@sstpsr.edu.pk"><i class="fas fa-envelope"></i> info@sstpsr.edu.pk</a>
-    </div>
-  </div>
-</div>
+<nav class="navbar" id="navbar"><div class="container">
+  <a href="index.html" class="nav-logo"><div class="logo-icon"><span class="logo-icon-text">SST</span></div><div class="logo-text"><div class="name">SST Public School</div><div class="tagline">Rashidabad · Excel to Lead</div></div></a>
+  <ul class="nav-menu" id="nav-menu">
+    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">ABOUT <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="about-us.html" class="dropdown-link"><i class="fas fa-school"></i> About Us</a></li><li><a href="message-from-principal.html" class="dropdown-link"><i class="fas fa-user-tie"></i> Message from Principal</a></li><li><a href="video-gallery.html" class="dropdown-link"><i class="fas fa-video"></i> Video Gallery</a></li></ul></li>
+    <li class="nav-item"><a href="#" class="nav-link">ADMISSION <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="how-to-apply.html" class="dropdown-link"><i class="fas fa-question-circle"></i> How to Apply</a></li><li><a href="https://www.sstpsr.edu.pk/new-form-test-2026/" class="dropdown-link" target="_blank"><i class="fas fa-file-alt"></i> Online Admission Form</a></li><li><a href="fee-structure.html" class="dropdown-link"><i class="fas fa-money-bill-wave"></i> Fee Structure</a></li><li><a href="downloads.html" class="dropdown-link"><i class="fas fa-download"></i> Downloads</a></li></ul></li>
+    <li class="nav-item"><a href="#" class="nav-link">ACADEMICS <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="faculty.html" class="dropdown-link"><i class="fas fa-users"></i> Members of Faculty</a></li><li><a href="position-holders.html" class="dropdown-link"><i class="fas fa-trophy"></i> Position Holders</a></li><li><a href="digital-library.html" class="dropdown-link"><i class="fas fa-book-open"></i> Digital Library</a></li><li><a href="alumni.html" class="dropdown-link"><i class="fas fa-user-graduate"></i> Alumni</a></li></ul></li>
+    <li class="nav-item"><a href="#" class="nav-link">FACILITIES <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="science-labs.html" class="dropdown-link"><i class="fas fa-flask"></i> Science Laboratories</a></li><li><a href="ai-lab.html" class="dropdown-link"><i class="fas fa-robot"></i> AI / IT Laboratories</a></li><li><a href="language-lab.html" class="dropdown-link"><i class="fas fa-language"></i> Language Laboratory</a></li><li><a href="library.html" class="dropdown-link"><i class="fas fa-book-reader"></i> Library</a></li><li><a href="it-lab.html" class="dropdown-link"><i class="fas fa-home"></i> Boarding Houses</a></li></ul></li>
+    <li class="nav-item"><a href="#" class="nav-link">CAMPUS LIFE <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="hobbies-club.html" class="dropdown-link"><i class="fas fa-star"></i> Hobbies Club</a></li><li><a href="field-trips.html" class="dropdown-link"><i class="fas fa-map-signs"></i> Field Trips</a></li><li><a href="co-curricular.html" class="dropdown-link"><i class="fas fa-running"></i> Co-Curricular Activities</a></li><li><a href="gallery.html" class="dropdown-link"><i class="fas fa-images"></i> Gallery</a></li></ul></li>
+    <li class="nav-item"><a href="news.html" class="nav-link">NEWS</a></li>
+    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+  </ul>
+  <div class="nav-cta"><a href="#" class="btn-login">Login</a><a href="how-to-apply.html" class="btn-admit">Admissions 2026</a></div>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</div></nav>
 
-<!-- Navbar -->
-<nav class="navbar" id="navbar">
-  <div class="container">
-    <a href="index.html" class="nav-logo">
-      <div class="logo-icon"><span class="logo-icon-text">SST</span></div>
-      <div class="logo-text">
-        <div class="name">SST Public School</div>
-        <div class="tagline">Rashidabad · 19+ Years of Excellence</div>
-      </div>
-    </a>
-    <ul class="nav-menu" id="nav-menu">
-      <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
-      <li class="nav-item">
-        <a href="#" class="nav-link">ABOUT <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown">
-          <li><a href="about-us.html" class="dropdown-link"><i class="fas fa-school"></i> About Us</a></li>
-          <li><a href="message-from-principal.html" class="dropdown-link"><i class="fas fa-user-tie"></i> Message from Principal</a></li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link">ADMISSION <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown">
-          <li><a href="how-to-apply.html" class="dropdown-link"><i class="fas fa-question-circle"></i> How to Apply</a></li>
-          <li><a href="fee-structure.html" class="dropdown-link"><i class="fas fa-money-bill-wave"></i> Fee Structure</a></li>
-        </ul>
-      </li>
-      <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
-    </ul>
-    <div class="nav-cta">
-      <a href="#" class="btn-login">Login</a>
-      <a href="how-to-apply.html" class="btn-admit">Admissions 2026</a>
-    </div>
-    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-  </div>
-</nav>
-
-<!-- Page Hero -->
 <section class="page-hero">
   <div class="container">
-    <div class="section-badge" style="background:rgba(200,169,81,0.15);color:#e4c97a;border-color:rgba(200,169,81,0.3);">Transparent Pricing</div>
+    <div class="section-badge" style="background:rgba(200,169,81,0.15);color:#e4c97a;border-color:rgba(200,169,81,0.3);">Session 2026-27</div>
     <h1>Fee Structure</h1>
-    <p>Clear and transparent fee information for all classes at SST Public School Rashidabad.</p>
-    <div class="breadcrumbs">
-      <a href="index.html">Home</a>
-      <i class="fas fa-chevron-right"></i>
-      <span>Fee Structure</span>
-    </div>
+    <p>Transparent and complete fee information for SST Public School Rashidabad — Session 2026-27.</p>
+    <div class="breadcrumbs"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><a href="how-to-apply.html">Admission</a><i class="fas fa-chevron-right"></i><span>Fee Structure</span></div>
   </div>
 </section>
 
-<!-- Fee Structure Content -->
 <section class="section" style="background:var(--off-white);">
   <div class="container">
 
-    <!-- Fee Cards -->
     <div class="text-center reveal">
-      <div class="section-badge">Annual Fees 2025-26</div>
-      <h2 class="section-title">Our <span>Fee Structure</span></h2>
+      <div class="section-badge">Table A — Annual Fee</div>
+      <h2 class="section-title">Annual Fee <span>Schedule 2026-27</span></h2>
       <div class="gold-divider centered"></div>
-      <p class="section-subtitle">
-        SST Public School provides quality education at affordable rates. Scholarship packages are available for deserving students.
-      </p>
+      <p class="section-subtitle">Fees are charged in two terms per year. The amounts below are the official figures for Session 2026-27.</p>
     </div>
 
-    <div class="fee-cards">
-
-      <!-- Class 7 -->
-      <div class="fee-card reveal">
-        <div class="fee-card-header">
-          <div class="class-label">Foundation Year</div>
-          <h3>Class 7th</h3>
-          <div class="fee-amount">Rs. 72,000</div>
-          <div class="fee-period">Per Year (Boarding)</div>
-        </div>
-        <div class="fee-card-body">
-          <div class="fee-row"><span class="label">Admission Fee (one-time)</span><span class="amount">Rs. 10,000</span></div>
-          <div class="fee-row"><span class="label">Tuition Fee (monthly)</span><span class="amount">Rs. 4,000</span></div>
-          <div class="fee-row"><span class="label">Boarding & Lodging</span><span class="amount">Rs. 2,000</span></div>
-          <div class="fee-row"><span class="label">Exam Fee (annual)</span><span class="amount">Rs. 5,000</span></div>
-          <div class="fee-row"><span class="label">Books & Stationery</span><span class="amount">Rs. 8,000</span></div>
-        </div>
-        <div class="fee-card-footer">
-          <a href="how-to-apply.html" class="btn btn-dark" style="width:100%;justify-content:center;">
-            <i class="fas fa-graduation-cap"></i> Apply Now
-          </a>
-        </div>
+    <!-- Table A: Annual Fee -->
+    <div class="fee-table-wrap reveal">
+      <div class="fee-table-title">
+        <i class="fas fa-table" style="color:var(--accent);"></i>
+        <h3>Table A — Term-wise Annual Fee</h3>
+        <span class="badge">Official 2026-27</span>
       </div>
-
-      <!-- Class 8 (Featured) -->
-      <div class="fee-card featured reveal reveal-delay-1">
-        <div class="fee-card-header">
-          <div class="class-label">Foundation Year</div>
-          <h3>Class 8th</h3>
-          <div class="fee-amount">Rs. 84,000</div>
-          <div class="fee-period">Per Year (Boarding)</div>
-        </div>
-        <div class="fee-card-body">
-          <div class="fee-row"><span class="label">Admission Fee (one-time)</span><span class="amount">Rs. 12,000</span></div>
-          <div class="fee-row"><span class="label">Tuition Fee (monthly)</span><span class="amount">Rs. 5,000</span></div>
-          <div class="fee-row"><span class="label">Boarding & Lodging</span><span class="amount">Rs. 2,000</span></div>
-          <div class="fee-row"><span class="label">Exam Fee (annual)</span><span class="amount">Rs. 6,000</span></div>
-          <div class="fee-row"><span class="label">Books & Stationery</span><span class="amount">Rs. 8,000</span></div>
-        </div>
-        <div class="fee-card-footer">
-          <a href="how-to-apply.html" class="btn btn-primary" style="width:100%;justify-content:center;">
-            <i class="fas fa-graduation-cap"></i> Apply Now
-          </a>
-        </div>
-      </div>
-
-      <!-- O-Level / Pre-Camb -->
-      <div class="fee-card reveal reveal-delay-2">
-        <div class="fee-card-header">
-          <div class="class-label">Pre-Cambridge</div>
-          <h3>O-Level Prep</h3>
-          <div class="fee-amount">Rs. 120,000</div>
-          <div class="fee-period">Per Year (Boarding)</div>
-        </div>
-        <div class="fee-card-body">
-          <div class="fee-row"><span class="label">Admission Fee (one-time)</span><span class="amount">Rs. 15,000</span></div>
-          <div class="fee-row"><span class="label">Tuition Fee (monthly)</span><span class="amount">Rs. 7,500</span></div>
-          <div class="fee-row"><span class="label">Boarding & Lodging</span><span class="amount">Rs. 2,500</span></div>
-          <div class="fee-row"><span class="label">Cambridge Exam Fee</span><span class="amount">Variable</span></div>
-          <div class="fee-row"><span class="label">Books & Materials</span><span class="amount">Rs. 12,000</span></div>
-        </div>
-        <div class="fee-card-footer">
-          <a href="how-to-apply.html" class="btn btn-dark" style="width:100%;justify-content:center;">
-            <i class="fas fa-graduation-cap"></i> Apply Now
-          </a>
-        </div>
-      </div>
-
+      <table>
+        <thead>
+          <tr>
+            <th>Term / Period</th>
+            <th>IGCSE / SSC <small style="font-weight:400;opacity:0.7;">(O-Level)</small></th>
+            <th>HSSC <small style="font-weight:400;opacity:0.7;">(A-Level / Higher)</small></th>
+            <th>Due Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1st Term</strong><br><small style="color:var(--mid-gray);">July — December</small></td>
+            <td>Rs. 238,000</td>
+            <td>Rs. 247,000</td>
+            <td><span class="due-badge">June 10</span></td>
+          </tr>
+          <tr>
+            <td><strong>2nd Term</strong><br><small style="color:var(--mid-gray);">January — June</small></td>
+            <td>Rs. 257,000</td>
+            <td>Rs. 266,750</td>
+            <td><span class="due-badge">Dec 10</span></td>
+          </tr>
+          <tr class="total-row">
+            <td><strong>Total Annual Fee</strong></td>
+            <td><strong>Rs. 495,000</strong></td>
+            <td><strong>Rs. 513,750</strong></td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <!-- Fee Note -->
-    <div class="fee-note reveal">
-      <p><i class="fas fa-info-circle"></i> <strong>Note:</strong> The above fees are indicative and subject to revision. Please contact the school office for the most up-to-date fee information. Additional charges may apply for laboratory, sports, and extracurricular activities.</p>
+    <!-- Table B: One-time Charges -->
+    <div style="margin-top:48px;">
+      <div class="text-center reveal">
+        <div class="section-badge">Table B — One-Time Charges</div>
+        <h2 class="section-title">One-Time <span>Admission Charges</span></h2>
+        <div class="gold-divider centered"></div>
+        <p class="section-subtitle">These charges are payable once at the time of admission. Security Deposit is fully refundable.</p>
+      </div>
+      <div class="one-time-grid reveal">
+        <div class="one-time-card">
+          <h4><i class="fas fa-file-invoice-dollar" style="color:var(--accent);margin-right:8px;"></i>Admission Charges Breakdown</h4>
+          <div class="one-time-row"><span class="label">Registration Fee</span><span class="amount">Rs. 2,500</span></div>
+          <div class="one-time-row"><span class="label">Admission Fee</span><span class="amount">Rs. 60,000</span></div>
+          <div class="one-time-row"><span class="label">Development Fund</span><span class="amount">Rs. 50,000</span></div>
+          <div class="one-time-row"><span class="label">Security Deposit <small style="color:var(--accent-dark);">(Refundable)</small></span><span class="amount">Rs. 35,000</span></div>
+          <div class="one-time-row"><span class="label"><strong>Total One-Time</strong></span><span class="amount"><strong>Rs. 147,500</strong></span></div>
+        </div>
+        <div class="one-time-card">
+          <h4><i class="fas fa-exclamation-triangle" style="color:var(--accent);margin-right:8px;"></i>Fines &amp; Additional Charges</h4>
+          <div class="one-time-row"><span class="label">Late Payment Fine</span><span class="amount">Rs. 100 / day</span></div>
+          <div class="one-time-row"><span class="label">Re-Admission Fee</span><span class="amount">Rs. 60,000</span></div>
+          <div class="one-time-row"><span class="label">Security Deposit (Refundable)</span><span class="amount">Fully refunded on leaving</span></div>
+          <div class="one-time-row"><span class="label">Cambridge Exam Fees</span><span class="amount">As per CAIE rates</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Important Notes -->
+    <div class="alert-box reveal">
+      <p><i class="fas fa-info-circle" style="color:var(--accent);margin-right:6px;"></i><strong>Important Notes:</strong></p>
+      <p>• Fees must be paid before the due date to avoid late payment fines (Rs. 100 per day).</p>
+      <p>• The Security Deposit of Rs. 35,000 is fully refundable at the time of leaving the school.</p>
+      <p>• Cambridge International Examination (CAIE) fees are charged separately as per official CAIE rates.</p>
+      <p>• Re-admission fee of Rs. 60,000 is applicable if a student leaves and wishes to re-join.</p>
+      <p>• All fees are subject to revision. Contact the school office for confirmation before payment.</p>
     </div>
 
     <!-- Scholarships -->
@@ -206,9 +167,7 @@
         <div class="section-badge" style="background:rgba(200,169,81,0.15);color:#e4c97a;border-color:rgba(200,169,81,0.3);">Financial Aid</div>
         <h2 class="section-title" style="color:var(--white);">Scholarship <span>Programs</span></h2>
         <div class="gold-divider centered"></div>
-        <p class="section-subtitle" style="color:rgba(255,255,255,0.7);margin:0 auto;">
-          SST Public School is committed to making quality education accessible. We offer generous scholarships for deserving students.
-        </p>
+        <p style="color:rgba(255,255,255,0.7);max-width:600px;margin:0 auto;">SST Public School Rashidabad is committed to making quality education accessible to deserving students regardless of financial background.</p>
       </div>
       <div class="scholarships-grid">
         <div class="scholarship-card">
@@ -231,72 +190,25 @@
 
     <!-- Payment Methods -->
     <div style="margin-top:56px;" class="reveal">
-      <div class="text-center">
-        <div class="section-badge">Convenient Payments</div>
-        <h2 class="section-title">Payment <span>Methods</span></h2>
-        <div class="gold-divider centered"></div>
-      </div>
+      <div class="text-center"><div class="section-badge">Easy Payments</div><h2 class="section-title">Payment <span>Methods</span></h2><div class="gold-divider centered"></div></div>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:36px;">
-        <div class="dept-card" style="padding:24px;text-align:center;">
-          <div class="dept-icon dept-it" style="margin:0 auto 12px;"><i class="fas fa-university"></i></div>
-          <h4 style="font-size:0.9rem;">Bank Transfer</h4>
-          <p style="font-size:0.8rem;">Direct deposit to school's bank account</p>
-        </div>
-        <div class="dept-card" style="padding:24px;text-align:center;">
-          <div class="dept-icon dept-science" style="margin:0 auto 12px;"><i class="fas fa-mobile-alt"></i></div>
-          <h4 style="font-size:0.9rem;">EasyPaisa / JazzCash</h4>
-          <p style="font-size:0.8rem;">Mobile wallet payments accepted</p>
-        </div>
-        <div class="dept-card" style="padding:24px;text-align:center;">
-          <div class="dept-icon dept-english" style="margin:0 auto 12px;"><i class="fas fa-money-bill-wave"></i></div>
-          <h4 style="font-size:0.9rem;">Cash Payment</h4>
-          <p style="font-size:0.8rem;">At the school accounts office</p>
-        </div>
-        <div class="dept-card" style="padding:24px;text-align:center;">
-          <div class="dept-icon dept-commerce" style="margin:0 auto 12px;"><i class="fas fa-credit-card"></i></div>
-          <h4 style="font-size:0.9rem;">Bank Challan</h4>
-          <p style="font-size:0.8rem;">Collect challan from school office</p>
-        </div>
+        <div class="dept-card" style="padding:24px;text-align:center;"><div class="dept-icon dept-it" style="margin:0 auto 12px;"><i class="fas fa-university"></i></div><h4 style="font-size:0.9rem;">Bank Transfer</h4><p style="font-size:0.8rem;">Direct deposit to school's bank account</p></div>
+        <div class="dept-card" style="padding:24px;text-align:center;"><div class="dept-icon dept-science" style="margin:0 auto 12px;"><i class="fas fa-mobile-alt"></i></div><h4 style="font-size:0.9rem;">EasyPaisa / JazzCash</h4><p style="font-size:0.8rem;">Mobile wallet payments accepted</p></div>
+        <div class="dept-card" style="padding:24px;text-align:center;"><div class="dept-icon dept-english" style="margin:0 auto 12px;"><i class="fas fa-money-bill-wave"></i></div><h4 style="font-size:0.9rem;">Cash Payment</h4><p style="font-size:0.8rem;">At the school accounts office</p></div>
+        <div class="dept-card" style="padding:24px;text-align:center;"><div class="dept-icon dept-commerce" style="margin:0 auto 12px;"><i class="fas fa-file-invoice"></i></div><h4 style="font-size:0.9rem;">Bank Challan</h4><p style="font-size:0.8rem;">Collect challan from school office</p></div>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- CTA -->
-<section class="admission-cta">
-  <div class="container">
-    <div class="reveal">
-      <h3>Ready to Invest in Your Child's Future?</h3>
-      <h2>Apply for Admission<br/>Today!</h2>
-      <a href="how-to-apply.html" class="btn"><i class="fas fa-rocket"></i> APPLY NOW!</a>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <h3>SST Public School</h3>
-        <div class="tagline">Rashidabad · Sargodhian Spirit Trust</div>
-        <p>Inspiring futures through holistic education for over 19 years.</p>
-        <div class="footer-contact-info">
-          <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><a href="tel:0222-732001-6">0222-732001-6</a></div>
-          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@sstpsr.edu.pk">info@sstpsr.edu.pk</a></div>
-        </div>
-      </div>
-      <div class="footer-col"><h4>Quick Links</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="index.html">Home</a><a href="about-us.html">About Us</a><a href="contact.html">Contact</a></div></div>
-      <div class="footer-col"><h4>Admission</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="how-to-apply.html">How to Apply</a><a href="fee-structure.html">Fee Structure</a></div></div>
-      <div class="footer-col"><h4>Newsletter</h4><div class="footer-divider-gold"></div><form class="newsletter-form" novalidate><p>Get the latest news</p><div class="newsletter-input-wrap"><input type="email" placeholder="Your email" required /><button type="submit"><i class="fas fa-paper-plane"></i></button></div></form></div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2025 SST Public School Rashidabad. All rights reserved.</span>
-      <span>Developed by: <a href="#">Asif Khan</a></span>
-    </div>
-  </div>
-</footer>
+<section class="admission-cta"><div class="container"><div class="reveal"><h3>Invest in Your Child's Future</h3><h2>Apply for Admission 2026-27!</h2><a href="how-to-apply.html" class="btn"><i class="fas fa-rocket"></i> APPLY NOW!</a></div></div></section>
+<footer class="footer"><div class="container"><div class="footer-grid">
+  <div class="footer-brand"><h3>SST Public School</h3><div class="tagline">Rashidabad · Sargodhian Spirit Trust</div><p>Inspiring futures through holistic education. District Tando Allahyar, Sindh, Pakistan.</p><div class="footer-contact-info"><div class="footer-contact-item"><i class="fas fa-phone-alt"></i><a href="tel:0222-732001-6">0222-732001 (6 lines)</a></div><div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@sstpsr.edu.pk">info@sstpsr.edu.pk</a></div><div class="footer-contact-item"><i class="fas fa-clock"></i><span>Mon-Sat: 08:00 - 16:00</span></div></div></div>
+  <div class="footer-col"><h4>Admission</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="how-to-apply.html">How to Apply</a><a href="fee-structure.html">Fee Structure</a><a href="downloads.html">Downloads</a></div></div>
+  <div class="footer-col"><h4>Quick Links</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="news.html">News</a><a href="events.html">Events</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></div></div>
+  <div class="footer-col"><h4>Newsletter</h4><div class="footer-divider-gold"></div><form class="newsletter-form" novalidate><p>Get the latest SSTPSR news</p><div class="newsletter-input-wrap"><input type="email" placeholder="Your email" required/><button type="submit"><i class="fas fa-paper-plane"></i></button></div></form></div>
+</div><div class="footer-bottom"><span>&copy; 2025 SST Public School Rashidabad. All rights reserved.</span><span>Developed by: <a href="#">Asif Khan</a></span></div></div></footer>
 <button class="scroll-top" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
 <script src="js/main.js"></script>
 </body>

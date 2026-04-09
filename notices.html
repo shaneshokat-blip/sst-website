@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Notices & Circulars - SST Public School Rashidabad</title>
+  <meta name="description" content="Latest notices, circulars and announcements from SST Public School Rashidabad."/>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <style>
+    .notice-list { display:flex; flex-direction:column; gap:16px; margin-top:40px; }
+    .notice-item { background:var(--white); border-radius:var(--radius-lg); padding:24px 28px; box-shadow:var(--shadow-sm); border:1px solid var(--light-gray); display:flex; align-items:flex-start; gap:20px; transition:all var(--transition); }
+    .notice-item:hover { transform:translateX(6px); box-shadow:var(--shadow-md); border-left:4px solid var(--accent); }
+    .notice-date-box { background:linear-gradient(135deg,var(--primary),var(--primary-light)); border-radius:var(--radius-md); padding:14px 16px; text-align:center; flex-shrink:0; min-width:64px; }
+    .notice-date-box .day { font-family:var(--font-serif); font-size:1.8rem; font-weight:700; color:var(--accent); line-height:1; }
+    .notice-date-box .month { font-size:0.68rem; color:rgba(255,255,255,0.7); text-transform:uppercase; letter-spacing:1px; margin-top:3px; }
+    .notice-content { flex:1; }
+    .notice-type-badge { font-size:0.7rem; font-weight:700; padding:3px 10px; border-radius:var(--radius-full); text-transform:uppercase; letter-spacing:0.5px; display:inline-block; margin-bottom:8px; }
+    .badge-notice { background:rgba(239,68,68,0.1); color:#dc2626; }
+    .badge-circular { background:rgba(59,130,246,0.1); color:#2563eb; }
+    .badge-result { background:rgba(16,185,129,0.1); color:#059669; }
+    .badge-event { background:rgba(200,169,81,0.15); color:var(--accent-dark); }
+    .notice-content h4 { color:var(--primary); font-size:0.97rem; margin-bottom:6px; }
+    .notice-content p { font-size:0.85rem; }
+    .notice-actions { display:flex; align-items:center; gap:8px; margin-top:10px; }
+    .notice-download { font-size:0.78rem; font-weight:700; color:var(--accent-dark); border:1.5px solid var(--accent); padding:5px 12px; border-radius:var(--radius-full); transition:all var(--transition); display:flex; align-items:center; gap:5px; }
+    .notice-download:hover { background:var(--accent); color:var(--primary); }
+    .filter-bar { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:8px; }
+    .filter-btn { padding:8px 20px; border-radius:var(--radius-full); font-size:0.82rem; font-weight:600; cursor:pointer; transition:all var(--transition); border:2px solid var(--light-gray); background:var(--white); color:var(--dark-gray); }
+    .filter-btn.active, .filter-btn:hover { background:var(--accent); border-color:var(--accent); color:var(--primary); }
+  </style>
+</head>
+<body>
+<div class="top-bar"><div class="container"><div class="top-bar-left"><a href="tel:0222-732001-6"><i class="fas fa-phone-alt"></i> 0222-732001-6</a><a href="mailto:info@sstpsr.edu.pk"><i class="fas fa-envelope"></i> info@sstpsr.edu.pk</a></div><div class="top-bar-right"><span>Mon - Sat: 08:00 - 16:00</span></div></div></div>
+<nav class="navbar" id="navbar"><div class="container">
+  <a href="index.html" class="nav-logo"><div class="logo-icon"><span class="logo-icon-text">SST</span></div><div class="logo-text"><div class="name">SST Public School</div><div class="tagline">Rashidabad · Excel to Lead</div></div></a>
+  <ul class="nav-menu" id="nav-menu">
+    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">ABOUT <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="about-us.html" class="dropdown-link"><i class="fas fa-school"></i> About Us</a></li><li><a href="message-from-principal.html" class="dropdown-link"><i class="fas fa-user-tie"></i> Message from Principal</a></li><li><a href="video-gallery.html" class="dropdown-link"><i class="fas fa-video"></i> Video Gallery</a></li></ul></li>
+    <li class="nav-item"><a href="#" class="nav-link">ADMISSION <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="how-to-apply.html" class="dropdown-link"><i class="fas fa-question-circle"></i> How to Apply</a></li><li><a href="fee-structure.html" class="dropdown-link"><i class="fas fa-money-bill-wave"></i> Fee Structure</a></li><li><a href="downloads.html" class="dropdown-link"><i class="fas fa-download"></i> Downloads</a></li></ul></li>
+    <li class="nav-item"><a href="news.html" class="nav-link">NEWS</a></li>
+    <li class="nav-item"><a href="notices.html" class="nav-link" style="color:var(--accent);">NOTICES</a></li>
+    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+  </ul>
+  <div class="nav-cta"><a href="#" class="btn-login">Login</a><a href="how-to-apply.html" class="btn-admit">Admissions 2026</a></div>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</div></nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="section-badge" style="background:rgba(200,169,81,0.15);color:#e4c97a;border-color:rgba(200,169,81,0.3);">Official Communications</div>
+    <h1>Notices &amp; Circulars</h1>
+    <p>Official announcements, circulars, results and important notifications from SST Public School Rashidabad.</p>
+    <div class="breadcrumbs"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Notices</span></div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="filter-bar reveal">
+      <button class="filter-btn active">All</button>
+      <button class="filter-btn">Results</button>
+      <button class="filter-btn">Circulars</button>
+      <button class="filter-btn">Events</button>
+      <button class="filter-btn">Admission</button>
+    </div>
+    <div class="notice-list">
+      <div class="notice-item reveal">
+        <div class="notice-date-box"><div class="day">2026</div><div class="month">Latest</div></div>
+        <div class="notice-content">
+          <span class="notice-type-badge badge-result">Result</span>
+          <h4>Admission Test Result 2026-27 — Foundation &amp; Pre-Cambridge Year</h4>
+          <p>The result of the Admission Test for Foundation Year and Pre-Cambridge Year 2026-27 has been announced. Successful candidates are listed below. Kindly report to the school office with required documents within the stipulated time.</p>
+          <div class="notice-actions"><a href="downloads.html" class="notice-download"><i class="fas fa-download"></i> View Result List</a></div>
+        </div>
+      </div>
+      <div class="notice-item reveal">
+        <div class="notice-date-box"><div class="day">Jan</div><div class="month">2026</div></div>
+        <div class="notice-content">
+          <span class="notice-type-badge badge-circular">Circular</span>
+          <h4>Fee Payment — 2nd Term 2025-26 (Due: December 10, 2025)</h4>
+          <p>This is to remind all parents that the 2nd Term fee for Session 2025-26 was due on December 10, 2025. Late payment fine of Rs. 100 per day applies. Kindly clear dues at the earliest.</p>
+          <div class="notice-actions"><a href="fee-structure.html" class="notice-download"><i class="fas fa-info-circle"></i> Fee Details</a></div>
+        </div>
+      </div>
+      <div class="notice-item reveal">
+        <div class="notice-date-box"><div class="day">Aug</div><div class="month">2025</div></div>
+        <div class="notice-content">
+          <span class="notice-type-badge badge-event">Event</span>
+          <h4>78th Pakistan Independence Day Celebration — August 14, 2025</h4>
+          <p>SST Public School Rashidabad proudly hosted a grand celebration of Pakistan's 78th Independence Day together with Rashidabad Community School, IDA RIUE, and Deaf Reach School.</p>
+        </div>
+      </div>
+      <div class="notice-item reveal">
+        <div class="notice-date-box"><div class="day">2025</div><div class="month">Sports</div></div>
+        <div class="notice-content">
+          <span class="notice-type-badge badge-result">Achievement</span>
+          <h4>SSTians Excel at Inter-Board Sports Gala 2024</h4>
+          <p>SST Public School students displayed outstanding performance at the Inter-Board Sports Gala 2024, winning multiple positions and bringing laurels to the institution.</p>
+        </div>
+      </div>
+      <div class="notice-item reveal">
+        <div class="notice-date-box"><div class="day">2025</div><div class="month">MUN</div></div>
+        <div class="notice-content">
+          <span class="notice-type-badge badge-event">Event</span>
+          <h4>Inter-House Yarians MUN Contest — Sachal House Claims 1st Position</h4>
+          <p>The Inter-House Yarians Model United Nations (MUN) Contest was held successfully at SST. Sachal House claimed the 1st position with unmatched eloquence and diplomatic acumen.</p>
+        </div>
+      </div>
+      <div class="notice-item reveal">
+        <div class="notice-date-box"><div class="day">Vol.1</div><div class="month">Issue 1</div></div>
+        <div class="notice-content">
+          <span class="notice-type-badge badge-circular">Newsletter</span>
+          <h4>SST Newsletter — Volume 01, Issue 01 Published</h4>
+          <p>The first ever SST Public School Rashidabad Newsletter has been published. It covers highlights of academic achievements, events, campus life, and student accomplishments.</p>
+          <div class="notice-actions"><a href="downloads.html" class="notice-download"><i class="fas fa-download"></i> Download Newsletter</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="admission-cta"><div class="container"><div class="reveal"><h3>Stay Informed</h3><h2>Apply for Admission 2026-27!</h2><a href="how-to-apply.html" class="btn"><i class="fas fa-rocket"></i> APPLY NOW!</a></div></div></section>
+<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><h3>SST Public School</h3><div class="tagline">Rashidabad · Sargodhian Spirit Trust</div><p>District Tando Allahyar, Sindh, Pakistan. Inspiring futures through holistic education.</p><div class="footer-contact-info"><div class="footer-contact-item"><i class="fas fa-phone-alt"></i><a href="tel:0222-732001-6">0222-732001 (6 lines)</a></div><div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@sstpsr.edu.pk">info@sstpsr.edu.pk</a></div></div></div><div class="footer-col"><h4>Quick Links</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="news.html">News</a><a href="notices.html">Notices</a><a href="events.html">Events</a><a href="gallery.html">Gallery</a></div></div><div class="footer-col"><h4>Admission</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="how-to-apply.html">How to Apply</a><a href="fee-structure.html">Fee Structure</a></div></div><div class="footer-col"><h4>Newsletter</h4><div class="footer-divider-gold"></div><form class="newsletter-form" novalidate><p>Get the latest news</p><div class="newsletter-input-wrap"><input type="email" placeholder="Your email" required/><button type="submit"><i class="fas fa-paper-plane"></i></button></div></form></div></div><div class="footer-bottom"><span>&copy; 2025 SST Public School Rashidabad. All rights reserved.</span><span>Developed by: <a href="#">Asif Khan</a></span></div></div></footer>
+<button class="scroll-top" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
+<script src="js/main.js"></script>
+</body>
+</html>
