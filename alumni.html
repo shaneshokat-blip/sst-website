@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Alumni - SST Public School Rashidabad</title>
+  <meta name="description" content="Meet the proud alumni of SST Public School Rashidabad — our graduates making a difference around the world."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <style>
+    .alumni-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:48px; }
+    .alumni-card { background:var(--white); border-radius:var(--radius-lg); padding:32px 28px; box-shadow:var(--shadow-sm); border:1px solid var(--light-gray); transition:all var(--transition); position:relative; }
+    .alumni-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); border-color:transparent; }
+    .alumni-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--accent),var(--accent-light)); border-radius:var(--radius-lg) var(--radius-lg) 0 0; transform:scaleX(0); transform-origin:left; transition:transform var(--transition); }
+    .alumni-card:hover::before { transform:scaleX(1); }
+    .alumni-avatar { width:80px; height:80px; border-radius:50%; background:linear-gradient(135deg,var(--primary),var(--primary-light)); display:flex; align-items:center; justify-content:center; font-size:2rem; color:rgba(200,169,81,0.5); margin-bottom:16px; border:3px solid var(--light-gray); }
+    .alumni-card h4 { color:var(--primary); margin-bottom:4px; }
+    .alumni-card .batch { color:var(--accent); font-size:0.78rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:8px; }
+    .alumni-card .profession { color:var(--dark-gray); font-size:0.875rem; margin-bottom:12px; display:flex; align-items:center; gap:6px; }
+    .alumni-card .profession i { color:var(--accent); }
+    .alumni-card p { font-size:0.83rem; line-height:1.7; color:var(--text-muted); }
+    .alumni-quote { font-style:italic; border-left:3px solid var(--accent); padding-left:12px; margin-top:12px; }
+    .stats-alumni { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; margin:48px 0; }
+    .stat-alumni-card { background:linear-gradient(135deg,var(--primary),var(--primary-light)); border-radius:var(--radius-lg); padding:28px 20px; text-align:center; }
+    .stat-alumni-num { font-family:var(--font-serif); font-size:2.5rem; font-weight:700; color:var(--accent); }
+    .stat-alumni-label { color:rgba(255,255,255,0.7); font-size:0.82rem; margin-top:4px; }
+    @media(max-width:900px){ .alumni-grid { grid-template-columns:1fr 1fr; } .stats-alumni { grid-template-columns:1fr 1fr; } }
+    @media(max-width:580px){ .alumni-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<div class="top-bar"><div class="container"><div class="top-bar-left"><a href="tel:0222-732001-6"><i class="fas fa-phone-alt"></i> 0222-732001-6</a><a href="mailto:info@sstpsr.edu.pk"><i class="fas fa-envelope"></i> info@sstpsr.edu.pk</a></div></div></div>
+<nav class="navbar" id="navbar"><div class="container">
+  <a href="index.html" class="nav-logo"><div class="logo-icon"><span class="logo-icon-text">SST</span></div><div class="logo-text"><div class="name">SST Public School</div><div class="tagline">Rashidabad · 19+ Years of Excellence</div></div></a>
+  <ul class="nav-menu" id="nav-menu">
+    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">ACADEMICS <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="faculty.html" class="dropdown-link"><i class="fas fa-users"></i> Members of Faculty</a></li><li><a href="position-holders.html" class="dropdown-link"><i class="fas fa-trophy"></i> Position Holders</a></li><li><a href="alumni.html" class="dropdown-link"><i class="fas fa-user-graduate"></i> Alumni</a></li></ul></li>
+    <li class="nav-item"><a href="news.html" class="nav-link">NEWS</a></li>
+    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+  </ul>
+  <div class="nav-cta"><a href="#" class="btn-login">Login</a><a href="how-to-apply.html" class="btn-admit">Admissions 2026</a></div>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</div></nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="section-badge" style="background:rgba(200,169,81,0.15);color:#e4c97a;border-color:rgba(200,169,81,0.3);">Our Graduates</div>
+    <h1>SST Alumni</h1>
+    <p>Proud Yarians making their mark across Pakistan and the world — our greatest achievement.</p>
+    <div class="breadcrumbs"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Alumni</span></div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <!-- Stats -->
+    <div class="stats-alumni">
+      <div class="stat-alumni-card reveal"><div class="stat-alumni-num" data-counter="1200" data-suffix="+">0+</div><div class="stat-alumni-label">Total Graduates</div></div>
+      <div class="stat-alumni-card reveal reveal-delay-1"><div class="stat-alumni-num" data-counter="15" data-suffix="+">0+</div><div class="stat-alumni-label">Countries Represented</div></div>
+      <div class="stat-alumni-card reveal reveal-delay-2"><div class="stat-alumni-num" data-counter="95" data-suffix="%">0%</div><div class="stat-alumni-label">University Placement</div></div>
+      <div class="stat-alumni-card reveal reveal-delay-3"><div class="stat-alumni-num" data-counter="50" data-suffix="+">0+</div><div class="stat-alumni-label">Cambridge Position Holders</div></div>
+    </div>
+
+    <div class="text-center reveal">
+      <div class="section-badge">Class of Excellence</div>
+      <h2 class="section-title">Distinguished <span>Yarians</span></h2>
+      <div class="gold-divider centered"></div>
+      <p class="section-subtitle">Our alumni carry the SST spirit wherever they go — in medicine, engineering, law, research, and public service.</p>
+    </div>
+
+    <div class="alumni-grid">
+      <div class="alumni-card reveal"><div class="alumni-avatar"><i class="fas fa-user-graduate"></i></div><h4>Ahmed Bilal</h4><div class="batch">Batch 2018</div><div class="profession"><i class="fas fa-stethoscope"></i> Medical Doctor — KEMU Lahore</div><div class="alumni-quote">"SST taught me discipline, resilience, and the hunger to excel — values that define my medical career."</div></div>
+      <div class="alumni-card reveal reveal-delay-1"><div class="alumni-avatar"><i class="fas fa-user-graduate"></i></div><h4>Sara Noor</h4><div class="batch">Batch 2019</div><div class="profession"><i class="fas fa-laptop-code"></i> Software Engineer — Tech Company, Karachi</div><div class="alumni-quote">"The IT education and AI lab gave me the foundation to excel in the technology sector."</div></div>
+      <div class="alumni-card reveal reveal-delay-2"><div class="alumni-avatar"><i class="fas fa-user-graduate"></i></div><h4>Muhammad Hamza</h4><div class="batch">Batch 2017</div><div class="profession"><i class="fas fa-gavel"></i> Lawyer — High Court, Lahore</div><div class="alumni-quote">"Debates and MUN at SST built my argument skills that I use in the courtroom every day."</div></div>
+      <div class="alumni-card reveal"><div class="alumni-avatar"><i class="fas fa-user-graduate"></i></div><h4>Fatima Malik</h4><div class="batch">Batch 2020</div><div class="profession"><i class="fas fa-flask"></i> Research Scientist — NUST</div><div class="alumni-quote">"The science labs at SST sparked my love for research. NUST was the natural next step."</div></div>
+      <div class="alumni-card reveal reveal-delay-1"><div class="alumni-avatar"><i class="fas fa-user-graduate"></i></div><h4>Usman Tariq</h4><div class="batch">Batch 2016</div><div class="profession"><i class="fas fa-chart-bar"></i> Chartered Accountant — Big 4 Firm</div><div class="alumni-quote">"Commerce department at SST gave me the business acumen to succeed at international level."</div></div>
+      <div class="alumni-card reveal reveal-delay-2"><div class="alumni-avatar"><i class="fas fa-user-graduate"></i></div><h4>Zara Hussain</h4><div class="batch">Batch 2021</div><div class="profession"><i class="fas fa-university"></i> Cambridge Graduate — UK</div><div class="alumni-quote">"SST's Cambridge preparation turned my international education dreams into reality."</div></div>
+    </div>
+
+    <!-- Connect CTA -->
+    <div style="margin-top:64px;text-align:center;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:var(--radius-lg);padding:56px;position:relative;overflow:hidden;" class="reveal">
+      <div style="position:relative;z-index:2;">
+        <div class="section-badge" style="background:rgba(200,169,81,0.15);color:#e4c97a;border-color:rgba(200,169,81,0.3);">Stay Connected</div>
+        <h2 class="section-title" style="color:var(--white);">Are You an <span>SST Alumni?</span></h2>
+        <div class="gold-divider centered"></div>
+        <p style="color:rgba(255,255,255,0.7);max-width:480px;margin:0 auto 28px;">Join our alumni network, share your achievements, and stay connected with your Yarian family.</p>
+        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-user-plus"></i> Register as Alumni</a>
+          <a href="contact.html" class="btn btn-outline"><i class="fas fa-envelope"></i> Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="admission-cta"><div class="container"><div class="reveal"><h3>Write Your Own Success Story</h3><h2>Apply for Admission 2026!</h2><a href="how-to-apply.html" class="btn"><i class="fas fa-rocket"></i> APPLY NOW!</a></div></div></section>
+<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><h3>SST Public School</h3><div class="tagline">Rashidabad · Sargodhian Spirit Trust</div><p>Inspiring futures through holistic education for over 19 years.</p><div class="footer-contact-info"><div class="footer-contact-item"><i class="fas fa-phone-alt"></i><a href="tel:0222-732001-6">0222-732001-6</a></div></div></div><div class="footer-col"><h4>Quick Links</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="index.html">Home</a><a href="alumni.html">Alumni</a><a href="contact.html">Contact</a></div></div><div class="footer-col"><h4>Academics</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="faculty.html">Faculty</a><a href="position-holders.html">Position Holders</a></div></div><div class="footer-col"><h4>Newsletter</h4><div class="footer-divider-gold"></div><form class="newsletter-form" novalidate><p>Get the latest news</p><div class="newsletter-input-wrap"><input type="email" placeholder="Your email" required/><button type="submit"><i class="fas fa-paper-plane"></i></button></div></form></div></div><div class="footer-bottom"><span>&copy; 2025 SST Public School Rashidabad. All rights reserved.</span><span>Developed by: <a href="#">Asif Khan</a></span></div></div></footer>
+<button class="scroll-top" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
+<script src="js/main.js"></script>
+</body>
+</html>

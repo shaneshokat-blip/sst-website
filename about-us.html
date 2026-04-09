@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - SST Public School Rashidabad</title>
+  <meta name="description" content="Learn about SST Public School Rashidabad — our history, mission, vision and values. 19+ years of academic excellence in Pakistan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <style>
+    .about-content-section { background: var(--white); }
+    .vision-mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 48px; }
+    .vm-card {
+      background: var(--off-white);
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+      border-left: 4px solid var(--accent);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition);
+    }
+    .vm-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .vm-icon { font-size: 2.5rem; color: var(--accent); margin-bottom: 16px; }
+    .vm-card h3 { color: var(--primary); margin-bottom: 12px; }
+    .history-timeline { position: relative; padding-left: 32px; margin-top: 48px; }
+    .history-timeline::before {
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+      width: 2px; background: linear-gradient(to bottom, var(--accent), var(--primary-light));
+    }
+    .timeline-item { position: relative; margin-bottom: 36px; padding-left: 24px; }
+    .timeline-item::before {
+      content: ''; position: absolute; left: -8px; top: 6px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--accent); border: 2px solid var(--white);
+      box-shadow: 0 0 0 3px rgba(200,169,81,0.2);
+    }
+    .timeline-year { font-size: 0.78rem; font-weight: 700; color: var(--accent); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+    .timeline-item h4 { color: var(--primary); margin-bottom: 6px; }
+    .timeline-item p { font-size: 0.9rem; }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .value-card {
+      background: var(--white); border-radius: var(--radius-lg); padding: 32px 24px;
+      text-align: center; box-shadow: var(--shadow-sm); border: 1px solid var(--light-gray);
+      transition: all var(--transition);
+    }
+    .value-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .value-icon { width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--primary-light)); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 1.5rem; color: var(--accent); }
+    .value-card h4 { color: var(--primary); margin-bottom: 8px; }
+    @media(max-width:768px){ .vision-mission-grid, .values-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <a href="tel:0222-732001-6"><i class="fas fa-phone-alt"></i> 0222-732001-6</a>
+      <a href="mailto:info@sstpsr.edu.pk"><i class="fas fa-envelope"></i> info@sstpsr.edu.pk</a>
+    </div>
+    <div class="top-bar-right">
+      <span>Follow Us:</span>
+      <div class="top-bar-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon"><span class="logo-icon-text">SST</span></div>
+      <div class="logo-text">
+        <div class="name">SST Public School</div>
+        <div class="tagline">Rashidabad · 19+ Years of Excellence</div>
+      </div>
+    </a>
+    <ul class="nav-menu" id="nav-menu">
+      <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">ABOUT <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown">
+          <li><a href="about-us.html" class="dropdown-link"><i class="fas fa-school"></i> About Us</a></li>
+          <li><a href="message-from-principal.html" class="dropdown-link"><i class="fas fa-user-tie"></i> Message from Principal</a></li>
+          <li><a href="#" class="dropdown-link"><i class="fas fa-video"></i> Video Gallery</a></li>
+          <li><a href="#" class="dropdown-link"><i class="fas fa-chalkboard-teacher"></i> Become an Instructor</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">ADMISSION <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown">
+          <li><a href="how-to-apply.html" class="dropdown-link"><i class="fas fa-question-circle"></i> How to Apply</a></li>
+          <li><a href="fee-structure.html" class="dropdown-link"><i class="fas fa-money-bill-wave"></i> Fee Structure</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#" class="btn-login">Login</a>
+      <a href="how-to-apply.html" class="btn-admit">Admissions 2026</a>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <div class="section-badge" style="background:rgba(200,169,81,0.15);color:#e4c97a;border-color:rgba(200,169,81,0.3);">Our Story</div>
+    <h1>About SST Public School Rashidabad</h1>
+    <p>Learn about our 19+ year journey of shaping future leaders in Pakistan.</p>
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>About Us</span>
+    </div>
+  </div>
+</section>
+
+<!-- About Content -->
+<section class="section about-content-section">
+  <div class="container">
+
+    <div class="about-grid" style="margin-bottom:80px;">
+      <div class="reveal">
+        <div style="background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:20px;height:400px;display:flex;align-items:center;justify-content:center;font-size:6rem;color:rgba(200,169,81,0.4);">
+          <i class="fas fa-school"></i>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="section-badge">Who We Are</div>
+        <h2 class="section-title">A Dream Realized for <span>Pakistan's Future</span></h2>
+        <div class="gold-divider"></div>
+        <p>
+          Rashidabad is the realization of the dream of two welfare organizations in Pakistan,
+          though radically different from each other but working hand in hand for one common goal:
+          <strong>prosperity of the 'have-nots' of the country.</strong>
+        </p>
+        <p style="margin-top:14px;">
+          SST Public School Rashidabad (Sargodhian Spirit Trust) was established with the noble mission
+          of providing world-class education to deserving students from all backgrounds. Over 19+ years,
+          we have become one of Pakistan's most respected residential schools.
+        </p>
+        <p style="margin-top:14px;">
+          Our residential campus provides a nurturing environment that fosters academic excellence,
+          character development, and leadership skills — preparing students to become responsible
+          citizens of Pakistan and contributors to the global community.
+        </p>
+      </div>
+    </div>
+
+    <!-- Vision & Mission -->
+    <div class="text-center reveal">
+      <div class="section-badge">Our Foundation</div>
+      <h2 class="section-title">Vision &amp; <span>Mission</span></h2>
+      <div class="gold-divider centered"></div>
+    </div>
+
+    <div class="vision-mission-grid">
+      <div class="vm-card reveal">
+        <div class="vm-icon"><i class="fas fa-eye"></i></div>
+        <h3>Our Vision</h3>
+        <p>
+          To be a leading center of academic excellence in Pakistan, producing graduates who are
+          intellectually capable, morally upright, spiritually grounded, and equipped to serve
+          their nation and humanity.
+        </p>
+      </div>
+      <div class="vm-card reveal reveal-delay-2">
+        <div class="vm-icon"><i class="fas fa-bullseye"></i></div>
+        <h3>Our Mission</h3>
+        <p>
+          To provide quality education in a disciplined, inclusive environment that nurtures
+          critical thinking, creativity, and character — enabling students to excel academically
+          and contribute meaningfully to society.
+        </p>
+      </div>
+    </div>
+
+    <!-- Core Values -->
+    <div class="text-center reveal" style="margin-top:80px;">
+      <div class="section-badge">What We Stand For</div>
+      <h2 class="section-title">Our Core <span>Values</span></h2>
+      <div class="gold-divider centered"></div>
+    </div>
+
+    <div class="values-grid">
+      <div class="value-card reveal"><div class="value-icon"><i class="fas fa-star"></i></div><h4>Excellence</h4><p>We pursue the highest standards in everything we do — academic, moral, and personal.</p></div>
+      <div class="value-card reveal reveal-delay-1"><div class="value-icon"><i class="fas fa-heart"></i></div><h4>Integrity</h4><p>Honesty, transparency, and ethical conduct guide every action within our community.</p></div>
+      <div class="value-card reveal reveal-delay-2"><div class="value-icon"><i class="fas fa-users"></i></div><h4>Inclusivity</h4><p>We welcome students from all backgrounds and believe every child deserves quality education.</p></div>
+      <div class="value-card reveal"><div class="value-icon"><i class="fas fa-seedling"></i></div><h4>Growth</h4><p>We believe in continuous improvement — for students, teachers, and the institution itself.</p></div>
+      <div class="value-card reveal reveal-delay-1"><div class="value-icon"><i class="fas fa-flag"></i></div><h4>Patriotism</h4><p>We foster a deep love for Pakistan and a commitment to national responsibility and service.</p></div>
+      <div class="value-card reveal reveal-delay-2"><div class="value-icon"><i class="fas fa-handshake"></i></div><h4>Community</h4><p>We build strong partnerships between students, teachers, parents, and society at large.</p></div>
+    </div>
+
+    <!-- History Timeline -->
+    <div style="margin-top:80px;">
+      <div class="text-center reveal">
+        <div class="section-badge">Our Journey</div>
+        <h2 class="section-title">A Legacy of <span>19+ Years</span></h2>
+        <div class="gold-divider centered"></div>
+      </div>
+      <div class="history-timeline" style="max-width:680px;margin:0 auto;">
+        <div class="timeline-item reveal"><div class="timeline-year">2004 – Founding</div><h4>School Established</h4><p>SST Public School Rashidabad was founded by Sargodhian Spirit Trust to provide quality education to underprivileged students.</p></div>
+        <div class="timeline-item reveal"><div class="timeline-year">2008</div><h4>Academic Excellence</h4><p>First batch of students achieved outstanding Cambridge results, putting SST on the map of Pakistan's top schools.</p></div>
+        <div class="timeline-item reveal"><div class="timeline-year">2014</div><h4>Infrastructure Expansion</h4><p>New Science Laboratories, Library & Documentation Centre, and modern hostels were added to the campus.</p></div>
+        <div class="timeline-item reveal"><div class="timeline-year">2019</div><h4>Digital Transformation</h4><p>Introduction of the Learning Management System (LMS) and digitally-equipped classrooms for 21st century learning.</p></div>
+        <div class="timeline-item reveal"><div class="timeline-year">2023</div><h4>AI Lab Launch</h4><p>Launch of the AI-integrated Learning Lab — one of the first in Pakistani schools — empowering students with future-ready skills.</p></div>
+        <div class="timeline-item reveal"><div class="timeline-year">2025+</div><h4>Continued Excellence</h4><p>Continuing to grow, innovate, and inspire with record admissions and outstanding academic results.</p></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Admission CTA -->
+<section class="admission-cta">
+  <div class="container">
+    <div class="reveal">
+      <h3>Join Our Community</h3>
+      <h2>Ready to Be Part of<br/>SST Family?</h2>
+      <a href="how-to-apply.html" class="btn"><i class="fas fa-rocket"></i> APPLY NOW!</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>SST Public School</h3>
+        <div class="tagline">Rashidabad · Sargodhian Spirit Trust</div>
+        <p>Inspiring futures through holistic education for over 19 years.</p>
+        <div class="footer-contact-info">
+          <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><a href="tel:0222-732001-6">0222-732001-6</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@sstpsr.edu.pk">info@sstpsr.edu.pk</a></div>
+        </div>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4><div class="footer-divider-gold"></div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about-us.html">About Us</a>
+          <a href="message-from-principal.html">Principal's Message</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Admission</h4><div class="footer-divider-gold"></div>
+        <div class="footer-links">
+          <a href="how-to-apply.html">How to Apply</a>
+          <a href="fee-structure.html">Fee Structure</a>
+          <a href="#">Download Prospectus</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4><div class="footer-divider-gold"></div>
+        <form class="newsletter-form" novalidate>
+          <p>Get the latest SSTPSR news</p>
+          <div class="newsletter-input-wrap">
+            <input type="email" placeholder="Your email" required />
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 SST Public School Rashidabad. All rights reserved.</span>
+      <span>Developed by: <a href="#">Asif Khan</a></span>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Field Trips - SST Public School Rashidabad</title>
+  <meta name="description" content="Educational field trips and visits at SST Public School Rashidabad — learning beyond the classroom walls."/>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <style>
+    .trips-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:48px; }
+    .trip-card { background:var(--white); border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-sm); border:1px solid var(--light-gray); transition:all var(--transition); }
+    .trip-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); }
+    .trip-img { height:160px; background:linear-gradient(135deg,var(--primary),var(--primary-light)); display:flex; align-items:center; justify-content:center; font-size:4rem; color:rgba(200,169,81,0.5); position:relative; }
+    .trip-badge { position:absolute; top:12px; right:12px; background:var(--accent); color:var(--primary); font-size:0.7rem; font-weight:700; padding:4px 10px; border-radius:var(--radius-full); }
+    .trip-body { padding:20px; }
+    .trip-body h4 { color:var(--primary); margin-bottom:8px; }
+    .trip-body p { font-size:0.875rem; margin-bottom:12px; }
+    .trip-meta { display:flex; gap:12px; flex-wrap:wrap; }
+    .trip-meta span { font-size:0.75rem; color:var(--mid-gray); display:flex; align-items:center; gap:4px; }
+    .trip-meta i { color:var(--accent); }
+    .trip-objectives { background:linear-gradient(135deg,var(--primary),var(--primary-light)); border-radius:var(--radius-lg); padding:48px; margin-top:64px; }
+    .objectives-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:32px; }
+    .objective-item { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius-md); padding:24px; text-align:center; }
+    .objective-item i { font-size:2rem; color:var(--accent); display:block; margin-bottom:12px; }
+    .objective-item h4 { color:var(--white); margin-bottom:6px; font-size:0.95rem; }
+    .objective-item p { color:rgba(255,255,255,0.65); font-size:0.82rem; }
+    @media(max-width:900px){ .trips-grid,.objectives-grid { grid-template-columns:1fr 1fr; } }
+    @media(max-width:580px){ .trips-grid,.objectives-grid { grid-template-columns:1fr; } .trip-objectives { padding:28px 20px; } }
+  </style>
+</head>
+<body>
+<div class="top-bar"><div class="container"><div class="top-bar-left"><a href="tel:0222-732001-6"><i class="fas fa-phone-alt"></i> 0222-732001-6</a><a href="mailto:info@sstpsr.edu.pk"><i class="fas fa-envelope"></i> info@sstpsr.edu.pk</a></div></div></div>
+<nav class="navbar" id="navbar"><div class="container">
+  <a href="index.html" class="nav-logo"><div class="logo-icon"><span class="logo-icon-text">SST</span></div><div class="logo-text"><div class="name">SST Public School</div><div class="tagline">Rashidabad · 19+ Years of Excellence</div></div></a>
+  <ul class="nav-menu" id="nav-menu">
+    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">ABOUT <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="about-us.html" class="dropdown-link"><i class="fas fa-school"></i> About Us</a></li><li><a href="message-from-principal.html" class="dropdown-link"><i class="fas fa-user-tie"></i> Principal's Message</a></li><li><a href="video-gallery.html" class="dropdown-link"><i class="fas fa-video"></i> Video Gallery</a></li></ul></li>
+    <li class="nav-item"><a href="#" class="nav-link">ADMISSION <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="how-to-apply.html" class="dropdown-link"><i class="fas fa-question-circle"></i> How to Apply</a></li><li><a href="fee-structure.html" class="dropdown-link"><i class="fas fa-money-bill-wave"></i> Fee Structure</a></li><li><a href="downloads.html" class="dropdown-link"><i class="fas fa-download"></i> Downloads</a></li></ul></li>
+    <li class="nav-item"><a href="#" class="nav-link">ACADEMICS <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="faculty.html" class="dropdown-link"><i class="fas fa-users"></i> Faculty</a></li><li><a href="position-holders.html" class="dropdown-link"><i class="fas fa-trophy"></i> Position Holders</a></li><li><a href="digital-library.html" class="dropdown-link"><i class="fas fa-book-open"></i> Digital Library</a></li><li><a href="alumni.html" class="dropdown-link"><i class="fas fa-user-graduate"></i> Alumni</a></li></ul></li>
+    <li class="nav-item"><a href="#" class="nav-link">FACILITIES <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="science-labs.html" class="dropdown-link"><i class="fas fa-flask"></i> Science Labs</a></li><li><a href="ai-lab.html" class="dropdown-link"><i class="fas fa-robot"></i> AI Lab</a></li><li><a href="language-lab.html" class="dropdown-link"><i class="fas fa-language"></i> Language Lab</a></li><li><a href="it-lab.html" class="dropdown-link"><i class="fas fa-desktop"></i> IT Department</a></li><li><a href="library.html" class="dropdown-link"><i class="fas fa-book-reader"></i> Library</a></li></ul></li>
+    <li class="nav-item"><a href="#" class="nav-link">CAMPUS LIFE <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="hobbies-club.html" class="dropdown-link"><i class="fas fa-star"></i> Hobbies Club</a></li><li><a href="field-trips.html" class="dropdown-link"><i class="fas fa-map-signs"></i> Field Trips</a></li><li><a href="co-curricular.html" class="dropdown-link"><i class="fas fa-running"></i> Co-Curricular</a></li><li><a href="gallery.html" class="dropdown-link"><i class="fas fa-images"></i> Gallery</a></li></ul></li>
+    <li class="nav-item"><a href="news.html" class="nav-link">NEWS</a></li>
+    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+  </ul>
+  <div class="nav-cta"><a href="#" class="btn-login">Login</a><a href="how-to-apply.html" class="btn-admit">Admissions 2026</a></div>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</div></nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="section-badge" style="background:rgba(200,169,81,0.15);color:#e4c97a;border-color:rgba(200,169,81,0.3);">Learning Beyond Walls</div>
+    <h1>Field Trips &amp; Educational Visits</h1>
+    <p>Real-world learning experiences that bring academic concepts to life outside the classroom.</p>
+    <div class="breadcrumbs"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Campus Life</span><i class="fas fa-chevron-right"></i><span>Field Trips</span></div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-badge">Annual Visits</div>
+      <h2 class="section-title">Educational <span>Field Trips</span></h2>
+      <div class="gold-divider centered"></div>
+      <p class="section-subtitle">SST organises annual field trips to industrial, historical, scientific, and cultural destinations — turning every trip into a meaningful learning journey.</p>
+    </div>
+
+    <div class="trips-grid">
+      <div class="trip-card reveal">
+        <div class="trip-img"><i class="fas fa-industry"></i><span class="trip-badge">Annual</span></div>
+        <div class="trip-body"><h4>Industrial Visits — Karachi</h4><p>Students visit major industrial plants, factories and corporate headquarters in Karachi to understand manufacturing and business operations.</p><div class="trip-meta"><span><i class="fas fa-map-marker-alt"></i> Karachi</span><span><i class="fas fa-users"></i> O-Level Students</span></div></div>
+      </div>
+      <div class="trip-card reveal reveal-delay-1">
+        <div class="trip-img"><i class="fas fa-landmark"></i><span class="trip-badge">Annual</span></div>
+        <div class="trip-body"><h4>Historical Sites — Mohenjo-daro</h4><p>A visit to one of the oldest civilisations in the world — Mohenjo-daro — connecting history lessons to real archaeological wonders.</p><div class="trip-meta"><span><i class="fas fa-map-marker-alt"></i> Larkana, Sindh</span><span><i class="fas fa-book"></i> History/Humanities</span></div></div>
+      </div>
+      <div class="trip-card reveal reveal-delay-2">
+        <div class="trip-img"><i class="fas fa-university"></i><span class="trip-badge">Career</span></div>
+        <div class="trip-body"><h4>University Campus Visits</h4><p>Guided visits to NUST, IBA, AKU, and other top universities — inspiring students to aim high for their future education.</p><div class="trip-meta"><span><i class="fas fa-map-marker-alt"></i> Multiple Cities</span><span><i class="fas fa-graduation-cap"></i> Senior Students</span></div></div>
+      </div>
+      <div class="trip-card reveal">
+        <div class="trip-img"><i class="fas fa-globe-asia"></i><span class="trip-badge">Science</span></div>
+        <div class="trip-body"><h4>SUPARCO &amp; Science Centres</h4><p>Visits to Pakistan's space research centre SUPARCO and science museums, igniting interest in research and technology.</p><div class="trip-meta"><span><i class="fas fa-map-marker-alt"></i> Karachi / Islamabad</span><span><i class="fas fa-atom"></i> Science Students</span></div></div>
+      </div>
+      <div class="trip-card reveal reveal-delay-1">
+        <div class="trip-img"><i class="fas fa-tree"></i><span class="trip-badge">Nature</span></div>
+        <div class="trip-body"><h4>Nature &amp; Eco Trips</h4><p>Visits to forests, wildlife reserves, and nature parks — promoting environmental awareness and ecology education.</p><div class="trip-meta"><span><i class="fas fa-map-marker-alt"></i> Sindh &amp; Punjab</span><span><i class="fas fa-leaf"></i> All Students</span></div></div>
+      </div>
+      <div class="trip-card reveal reveal-delay-2">
+        <div class="trip-img"><i class="fas fa-gavel"></i><span class="trip-badge">Civics</span></div>
+        <div class="trip-body"><h4>High Court &amp; Parliament</h4><p>Civic education visits to courts and legislative buildings — giving students a firsthand understanding of Pakistan's justice and governance system.</p><div class="trip-meta"><span><i class="fas fa-map-marker-alt"></i> Islamabad / Karachi</span><span><i class="fas fa-balance-scale"></i> Senior Students</span></div></div>
+      </div>
+    </div>
+
+    <!-- Trip Objectives -->
+    <div class="trip-objectives reveal">
+      <div class="text-center">
+        <div class="section-badge" style="background:rgba(200,169,81,0.15);color:#e4c97a;border-color:rgba(200,169,81,0.3);">Learning Goals</div>
+        <h2 class="section-title" style="color:var(--white);">Why <span>Field Trips Matter</span></h2>
+        <div class="gold-divider centered"></div>
+      </div>
+      <div class="objectives-grid">
+        <div class="objective-item"><i class="fas fa-eye"></i><h4>Real-World Learning</h4><p>Concepts learned in classrooms become tangible and memorable through direct experience.</p></div>
+        <div class="objective-item"><i class="fas fa-lightbulb"></i><h4>Career Inspiration</h4><p>Exposure to industries and universities helps students shape their academic and career goals early.</p></div>
+        <div class="objective-item"><i class="fas fa-flag"></i><h4>National Pride</h4><p>Historical visits build a deeper connection to Pakistan's rich heritage and civilisational legacy.</p></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="admission-cta"><div class="container"><div class="reveal"><h3>Explore and Grow</h3><h2>Apply for Admission 2026!</h2><a href="how-to-apply.html" class="btn"><i class="fas fa-rocket"></i> APPLY NOW!</a></div></div></section>
+<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><h3>SST Public School</h3><div class="tagline">Rashidabad · Sargodhian Spirit Trust</div><p>Inspiring futures through holistic education for over 19 years.</p><div class="footer-contact-info"><div class="footer-contact-item"><i class="fas fa-phone-alt"></i><a href="tel:0222-732001-6">0222-732001-6</a></div></div></div><div class="footer-col"><h4>Campus Life</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="hobbies-club.html">Hobbies Club</a><a href="field-trips.html">Field Trips</a><a href="co-curricular.html">Co-Curricular</a></div></div><div class="footer-col"><h4>Admission</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="how-to-apply.html">How to Apply</a><a href="fee-structure.html">Fee Structure</a></div></div><div class="footer-col"><h4>Newsletter</h4><div class="footer-divider-gold"></div><form class="newsletter-form" novalidate><p>Get the latest news</p><div class="newsletter-input-wrap"><input type="email" placeholder="Your email" required/><button type="submit"><i class="fas fa-paper-plane"></i></button></div></form></div></div><div class="footer-bottom"><span>&copy; 2025 SST Public School Rashidabad. All rights reserved.</span><span>Developed by: <a href="#">Asif Khan</a></span></div></div></footer>
+<button class="scroll-top" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
+<script src="js/main.js"></script>
+</body>
+</html>

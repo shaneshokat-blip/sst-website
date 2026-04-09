@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Hobbies Club - SST Public School Rashidabad</title>
+  <meta name="description" content="SST's Hobbies Club — students explore photography, gardening, coding, reading, arts and much more."/>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <style>
+    .hobbies-masonry { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:48px; }
+    .hobby-card { background:var(--white); border-radius:var(--radius-lg); padding:28px 20px; text-align:center; box-shadow:var(--shadow-sm); border:1px solid var(--light-gray); transition:all var(--transition); cursor:default; position:relative; overflow:hidden; }
+    .hobby-card::after { content:''; position:absolute; inset:0; background:linear-gradient(135deg,var(--primary),var(--primary-light)); opacity:0; transition:opacity var(--transition); border-radius:var(--radius-lg); }
+    .hobby-card:hover { transform:translateY(-8px); box-shadow:var(--shadow-lg); }
+    .hobby-card:hover::after { opacity:1; }
+    .hobby-card > * { position:relative; z-index:2; }
+    .hobby-icon { width:64px; height:64px; border-radius:50%; background:linear-gradient(135deg,var(--primary),var(--primary-light)); display:flex; align-items:center; justify-content:center; margin:0 auto 16px; font-size:1.5rem; color:var(--accent); transition:all var(--transition); }
+    .hobby-card:hover .hobby-icon { background:rgba(200,169,81,0.2); }
+    .hobby-card h4 { color:var(--primary); font-size:0.95rem; margin-bottom:6px; transition:color var(--transition); }
+    .hobby-card:hover h4 { color:var(--white); }
+    .hobby-card p { font-size:0.8rem; transition:color var(--transition); }
+    .hobby-card:hover p { color:rgba(255,255,255,0.75); }
+    .club-info { display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-top:64px; align-items:center; }
+    .club-schedule { background:var(--white); border-radius:var(--radius-lg); padding:32px; box-shadow:var(--shadow-md); }
+    .schedule-row { display:flex; justify-content:space-between; align-items:center; padding:12px 0; border-bottom:1px solid var(--light-gray); }
+    .schedule-row:last-child { border-bottom:none; }
+    .schedule-row .day { font-weight:600; color:var(--primary); }
+    .schedule-row .club-name { color:var(--text-muted); font-size:0.875rem; }
+    .schedule-row .time { background:rgba(200,169,81,0.1); color:var(--accent-dark); font-size:0.75rem; font-weight:700; padding:4px 10px; border-radius:var(--radius-full); }
+    @media(max-width:900px){ .hobbies-masonry { grid-template-columns:repeat(3,1fr); } }
+    @media(max-width:580px){ .hobbies-masonry { grid-template-columns:repeat(2,1fr); } .club-info { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<div class="top-bar"><div class="container"><div class="top-bar-left"><a href="tel:0222-732001-6"><i class="fas fa-phone-alt"></i> 0222-732001-6</a><a href="mailto:info@sstpsr.edu.pk"><i class="fas fa-envelope"></i> info@sstpsr.edu.pk</a></div></div></div>
+<nav class="navbar" id="navbar"><div class="container">
+  <a href="index.html" class="nav-logo"><div class="logo-icon"><span class="logo-icon-text">SST</span></div><div class="logo-text"><div class="name">SST Public School</div><div class="tagline">Rashidabad · 19+ Years of Excellence</div></div></a>
+  <ul class="nav-menu" id="nav-menu">
+    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">ABOUT <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="about-us.html" class="dropdown-link"><i class="fas fa-school"></i> About Us</a></li><li><a href="message-from-principal.html" class="dropdown-link"><i class="fas fa-user-tie"></i> Principal's Message</a></li><li><a href="video-gallery.html" class="dropdown-link"><i class="fas fa-video"></i> Video Gallery</a></li></ul></li>
+    <li class="nav-item"><a href="#" class="nav-link">ADMISSION <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="how-to-apply.html" class="dropdown-link"><i class="fas fa-question-circle"></i> How to Apply</a></li><li><a href="fee-structure.html" class="dropdown-link"><i class="fas fa-money-bill-wave"></i> Fee Structure</a></li><li><a href="downloads.html" class="dropdown-link"><i class="fas fa-download"></i> Downloads</a></li></ul></li>
+    <li class="nav-item"><a href="#" class="nav-link">ACADEMICS <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="faculty.html" class="dropdown-link"><i class="fas fa-users"></i> Faculty</a></li><li><a href="position-holders.html" class="dropdown-link"><i class="fas fa-trophy"></i> Position Holders</a></li><li><a href="digital-library.html" class="dropdown-link"><i class="fas fa-book-open"></i> Digital Library</a></li><li><a href="alumni.html" class="dropdown-link"><i class="fas fa-user-graduate"></i> Alumni</a></li></ul></li>
+    <li class="nav-item"><a href="#" class="nav-link">FACILITIES <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="science-labs.html" class="dropdown-link"><i class="fas fa-flask"></i> Science Labs</a></li><li><a href="ai-lab.html" class="dropdown-link"><i class="fas fa-robot"></i> AI Lab</a></li><li><a href="language-lab.html" class="dropdown-link"><i class="fas fa-language"></i> Language Lab</a></li><li><a href="it-lab.html" class="dropdown-link"><i class="fas fa-desktop"></i> IT Department</a></li><li><a href="library.html" class="dropdown-link"><i class="fas fa-book-reader"></i> Library</a></li></ul></li>
+    <li class="nav-item"><a href="#" class="nav-link">CAMPUS LIFE <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="hobbies-club.html" class="dropdown-link"><i class="fas fa-star"></i> Hobbies Club</a></li><li><a href="field-trips.html" class="dropdown-link"><i class="fas fa-map-signs"></i> Field Trips</a></li><li><a href="co-curricular.html" class="dropdown-link"><i class="fas fa-running"></i> Co-Curricular</a></li><li><a href="gallery.html" class="dropdown-link"><i class="fas fa-images"></i> Gallery</a></li></ul></li>
+    <li class="nav-item"><a href="news.html" class="nav-link">NEWS</a></li>
+    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+  </ul>
+  <div class="nav-cta"><a href="#" class="btn-login">Login</a><a href="how-to-apply.html" class="btn-admit">Admissions 2026</a></div>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</div></nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="section-badge" style="background:rgba(200,169,81,0.15);color:#e4c97a;border-color:rgba(200,169,81,0.3);">Passion &amp; Interest</div>
+    <h1>Hobbies Club</h1>
+    <p>Every student has a unique talent. At SST, we nurture it through structured hobby programs.</p>
+    <div class="breadcrumbs"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Campus Life</span><i class="fas fa-chevron-right"></i><span>Hobbies Club</span></div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-badge">12 Active Clubs</div>
+      <h2 class="section-title">Find Your <span>Passion</span></h2>
+      <div class="gold-divider centered"></div>
+      <p class="section-subtitle">Students join hobby clubs based on their interests. Each club meets weekly with a dedicated teacher-mentor to guide growth.</p>
+    </div>
+
+    <div class="hobbies-masonry">
+      <div class="hobby-card reveal"><div class="hobby-icon"><i class="fas fa-camera"></i></div><h4>Photography</h4><p>Capture moments, learn composition and storytelling through the lens.</p></div>
+      <div class="hobby-card reveal reveal-delay-1"><div class="hobby-icon"><i class="fas fa-seedling"></i></div><h4>Gardening</h4><p>Grow vegetables and flowers in our school garden — learn sustainability.</p></div>
+      <div class="hobby-card reveal reveal-delay-2"><div class="hobby-icon"><i class="fas fa-code"></i></div><h4>Coding Club</h4><p>Build websites, apps, and games. Explore the world of programming.</p></div>
+      <div class="hobby-card reveal reveal-delay-3"><div class="hobby-icon"><i class="fas fa-book-open"></i></div><h4>Reading Circle</h4><p>Weekly book discussions, literature reviews, and creative writing.</p></div>
+      <div class="hobby-card reveal"><div class="hobby-icon"><i class="fas fa-palette"></i></div><h4>Painting &amp; Art</h4><p>Express creativity through colours, canvases and mixed media art.</p></div>
+      <div class="hobby-card reveal reveal-delay-1"><div class="hobby-icon"><i class="fas fa-chess"></i></div><h4>Chess Club</h4><p>Strategic thinking and problem-solving through the royal game of chess.</p></div>
+      <div class="hobby-card reveal reveal-delay-2"><div class="hobby-icon"><i class="fas fa-rocket"></i></div><h4>Astronomy</h4><p>Stargazing sessions, telescope practice and exploration of space science.</p></div>
+      <div class="hobby-card reveal reveal-delay-3"><div class="hobby-icon"><i class="fas fa-pen-nib"></i></div><h4>Creative Writing</h4><p>Urdu/English poetry, short stories, essays and literary expression.</p></div>
+      <div class="hobby-card reveal"><div class="hobby-icon"><i class="fas fa-first-aid"></i></div><h4>First Aid &amp; Health</h4><p>Basic first aid, CPR training, and health awareness workshops.</p></div>
+      <div class="hobby-card reveal reveal-delay-1"><div class="hobby-icon"><i class="fas fa-film"></i></div><h4>Film &amp; Media</h4><p>Script writing, video editing, and student documentary projects.</p></div>
+      <div class="hobby-card reveal reveal-delay-2"><div class="hobby-icon"><i class="fas fa-robot"></i></div><h4>Robotics</h4><p>Build and program robots — hands-on engineering and AI exploration.</p></div>
+      <div class="hobby-card reveal reveal-delay-3"><div class="hobby-icon"><i class="fas fa-globe"></i></div><h4>Environmental Club</h4><p>Tree plantation drives, recycling campaigns, and eco-awareness projects.</p></div>
+    </div>
+
+    <!-- Schedule + Join Info -->
+    <div class="club-info" style="margin-top:72px;">
+      <div class="reveal">
+        <div class="section-badge">Weekly Schedule</div>
+        <h2 class="section-title">Club <span>Timings</span></h2>
+        <div class="gold-divider"></div>
+        <div class="club-schedule">
+          <div class="schedule-row"><span class="day">Saturday</span><span class="club-name">Photography &amp; Film Club</span><span class="time">2:00 PM</span></div>
+          <div class="schedule-row"><span class="day">Saturday</span><span class="club-name">Coding &amp; Robotics Club</span><span class="time">3:00 PM</span></div>
+          <div class="schedule-row"><span class="day">Sunday</span><span class="club-name">Reading Circle &amp; Writing</span><span class="time">10:00 AM</span></div>
+          <div class="schedule-row"><span class="day">Sunday</span><span class="club-name">Chess &amp; Board Games</span><span class="time">11:00 AM</span></div>
+          <div class="schedule-row"><span class="day">Sunday</span><span class="club-name">Art &amp; Painting Studio</span><span class="time">2:00 PM</span></div>
+          <div class="schedule-row"><span class="day">Monday</span><span class="club-name">Gardening &amp; Eco Club</span><span class="time">4:30 PM</span></div>
+          <div class="schedule-row"><span class="day">Thursday</span><span class="club-name">Astronomy &amp; Science Club</span><span class="time">After Maghrib</span></div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="section-badge">How to Join</div>
+        <h2 class="section-title">Join a <span>Club</span></h2>
+        <div class="gold-divider"></div>
+        <p style="margin-bottom:16px;">All SST students are encouraged to join at least one hobby club. Joining is simple:</p>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;align-items:center;gap:12px;"><div style="width:36px;height:36px;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;flex-shrink:0;">1</div><p style="font-size:0.875rem;">Speak to your class teacher or house master</p></div>
+          <div style="display:flex;align-items:center;gap:12px;"><div style="width:36px;height:36px;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;flex-shrink:0;">2</div><p style="font-size:0.875rem;">Fill the Club Registration Form (available in office)</p></div>
+          <div style="display:flex;align-items:center;gap:12px;"><div style="width:36px;height:36px;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;flex-shrink:0;">3</div><p style="font-size:0.875rem;">Attend the first session and meet your club mentor</p></div>
+          <div style="display:flex;align-items:center;gap:12px;"><div style="width:36px;height:36px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:var(--primary);font-weight:700;flex-shrink:0;"><i class="fas fa-check"></i></div><p style="font-size:0.875rem;"><strong>You're in!</strong> Attend regularly and grow your passion.</p></div>
+        </div>
+        <a href="contact.html" class="btn btn-primary" style="margin-top:24px;display:inline-flex;"><i class="fas fa-envelope"></i> Inquire About Clubs</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="admission-cta"><div class="container"><div class="reveal"><h3>Discover Your Passion</h3><h2>Apply for Admission 2026!</h2><a href="how-to-apply.html" class="btn"><i class="fas fa-rocket"></i> APPLY NOW!</a></div></div></section>
+<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><h3>SST Public School</h3><div class="tagline">Rashidabad · Sargodhian Spirit Trust</div><p>Inspiring futures through holistic education for over 19 years.</p><div class="footer-contact-info"><div class="footer-contact-item"><i class="fas fa-phone-alt"></i><a href="tel:0222-732001-6">0222-732001-6</a></div></div></div><div class="footer-col"><h4>Campus Life</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="hobbies-club.html">Hobbies Club</a><a href="field-trips.html">Field Trips</a><a href="co-curricular.html">Co-Curricular</a></div></div><div class="footer-col"><h4>Admission</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="how-to-apply.html">How to Apply</a><a href="fee-structure.html">Fee Structure</a></div></div><div class="footer-col"><h4>Newsletter</h4><div class="footer-divider-gold"></div><form class="newsletter-form" novalidate><p>Get the latest news</p><div class="newsletter-input-wrap"><input type="email" placeholder="Your email" required/><button type="submit"><i class="fas fa-paper-plane"></i></button></div></form></div></div><div class="footer-bottom"><span>&copy; 2025 SST Public School Rashidabad. All rights reserved.</span><span>Developed by: <a href="#">Asif Khan</a></span></div></div></footer>
+<button class="scroll-top" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Video Gallery - SST Public School Rashidabad</title>
+  <meta name="description" content="Watch videos about SST Public School Rashidabad — events, achievements, campus life and more."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <style>
+    .video-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:40px; }
+    .video-card { background:var(--white); border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-sm); border:1px solid var(--light-gray); transition:all var(--transition); }
+    .video-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); }
+    .video-thumbnail { aspect-ratio:16/9; background:linear-gradient(135deg,var(--primary),var(--primary-light)); display:flex; align-items:center; justify-content:center; position:relative; cursor:pointer; }
+    .video-play-btn { width:64px; height:64px; border-radius:50%; background:rgba(200,169,81,0.9); display:flex; align-items:center; justify-content:center; font-size:1.4rem; color:var(--primary); transition:all var(--transition); }
+    .video-thumbnail:hover .video-play-btn { transform:scale(1.1); background:var(--accent); }
+    .video-thumb-icon { position:absolute; opacity:0.15; font-size:5rem; color:var(--white); }
+    .video-card-body { padding:20px; }
+    .video-card-body h4 { color:var(--primary); font-size:0.95rem; margin-bottom:6px; }
+    .video-card-body .vid-meta { display:flex; align-items:center; gap:12px; font-size:0.78rem; color:var(--mid-gray); }
+    .video-card-body .vid-cat { display:inline-block; background:rgba(200,169,81,0.1); color:var(--accent-dark); font-size:0.7rem; font-weight:700; padding:3px 10px; border-radius:var(--radius-full); text-transform:uppercase; }
+    @media(max-width:900px){ .video-grid { grid-template-columns:1fr 1fr; } }
+    @media(max-width:580px){ .video-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<div class="top-bar"><div class="container"><div class="top-bar-left"><a href="tel:0222-732001-6"><i class="fas fa-phone-alt"></i> 0222-732001-6</a></div></div></div>
+<nav class="navbar" id="navbar"><div class="container">
+  <a href="index.html" class="nav-logo"><div class="logo-icon"><span class="logo-icon-text">SST</span></div><div class="logo-text"><div class="name">SST Public School</div><div class="tagline">Rashidabad · 19+ Years of Excellence</div></div></a>
+  <ul class="nav-menu" id="nav-menu">
+    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">ABOUT <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="about-us.html" class="dropdown-link"><i class="fas fa-school"></i> About Us</a></li><li><a href="message-from-principal.html" class="dropdown-link"><i class="fas fa-user-tie"></i> Message from Principal</a></li><li><a href="video-gallery.html" class="dropdown-link"><i class="fas fa-video"></i> Video Gallery</a></li></ul></li>
+    <li class="nav-item"><a href="gallery.html" class="nav-link">GALLERY</a></li>
+    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+  </ul>
+  <div class="nav-cta"><a href="#" class="btn-login">Login</a><a href="how-to-apply.html" class="btn-admit">Admissions 2026</a></div>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</div></nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="section-badge" style="background:rgba(200,169,81,0.15);color:#e4c97a;border-color:rgba(200,169,81,0.3);">Media Centre</div>
+    <h1>Video Gallery</h1>
+    <p>Watch our videos showcasing campus life, events, achievements and more.</p>
+    <div class="breadcrumbs"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Video Gallery</span></div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <!-- Featured Video -->
+    <div style="margin-bottom:56px;" class="reveal">
+      <div class="section-badge">Featured</div>
+      <h2 class="section-title">SST Public School <span>Official Video</span></h2>
+      <div class="gold-divider"></div>
+      <div style="position:relative;padding-bottom:56.25%;height:0;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);margin-top:28px;">
+        <iframe src="https://www.youtube.com/embed/your-video-id?rel=0&modestbranding=1" title="SST Public School Rashidabad" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+      </div>
+    </div>
+
+    <!-- Grid Videos -->
+    <div class="text-center reveal"><h2 class="section-title">More <span>Videos</span></h2><div class="gold-divider centered"></div></div>
+    <div class="video-grid">
+      <div class="video-card reveal">
+        <div class="video-thumbnail"><i class="fas fa-flag video-thumb-icon"></i><div class="video-play-btn"><i class="fas fa-play"></i></div></div>
+        <div class="video-card-body"><span class="vid-cat">Events</span><h4>78th Pakistan Independence Day Celebration 2025</h4><div class="vid-meta"><span><i class="fas fa-calendar"></i> Aug 14, 2025</span></div></div>
+      </div>
+      <div class="video-card reveal reveal-delay-1">
+        <div class="video-thumbnail"><i class="fas fa-microscope video-thumb-icon"></i><div class="video-play-btn"><i class="fas fa-play"></i></div></div>
+        <div class="video-card-body"><span class="vid-cat">Academics</span><h4>Science Quiz &amp; Debate Competition Highlights</h4><div class="vid-meta"><span><i class="fas fa-calendar"></i> 2025</span></div></div>
+      </div>
+      <div class="video-card reveal reveal-delay-2">
+        <div class="video-thumbnail"><i class="fas fa-globe video-thumb-icon"></i><div class="video-play-btn"><i class="fas fa-play"></i></div></div>
+        <div class="video-card-body"><span class="vid-cat">Events</span><h4>Inter-House Yarians MUN Contest</h4><div class="vid-meta"><span><i class="fas fa-calendar"></i> 2025</span></div></div>
+      </div>
+      <div class="video-card reveal">
+        <div class="video-thumbnail"><i class="fas fa-robot video-thumb-icon"></i><div class="video-play-btn"><i class="fas fa-play"></i></div></div>
+        <div class="video-card-body"><span class="vid-cat">Facilities</span><h4>AI Lab Launch &amp; Demo Day</h4><div class="vid-meta"><span><i class="fas fa-calendar"></i> 2024</span></div></div>
+      </div>
+      <div class="video-card reveal reveal-delay-1">
+        <div class="video-thumbnail"><i class="fas fa-trophy video-thumb-icon"></i><div class="video-play-btn"><i class="fas fa-play"></i></div></div>
+        <div class="video-card-body"><span class="vid-cat">Achievements</span><h4>Annual Prize Distribution Ceremony</h4><div class="vid-meta"><span><i class="fas fa-calendar"></i> 2024</span></div></div>
+      </div>
+      <div class="video-card reveal reveal-delay-2">
+        <div class="video-thumbnail"><i class="fas fa-running video-thumb-icon"></i><div class="video-play-btn"><i class="fas fa-play"></i></div></div>
+        <div class="video-card-body"><span class="vid-cat">Campus Life</span><h4>Annual Sports Day — Highlights</h4><div class="vid-meta"><span><i class="fas fa-calendar"></i> 2024</span></div></div>
+      </div>
+    </div>
+
+    <!-- YouTube Subscribe CTA -->
+    <div style="text-align:center;margin-top:48px;" class="reveal">
+      <p style="margin-bottom:16px;color:var(--text-muted);">Subscribe to our YouTube channel for more videos</p>
+      <a href="https://youtube.com" target="_blank" class="btn" style="background:#ff0000;color:var(--white);border-radius:var(--radius-full);padding:12px 28px;display:inline-flex;align-items:center;gap:10px;font-weight:700;"><i class="fab fa-youtube"></i> Subscribe on YouTube</a>
+    </div>
+  </div>
+</section>
+
+<section class="admission-cta"><div class="container"><div class="reveal"><h3>See It. Feel It. Live It.</h3><h2>Apply for Admission 2026!</h2><a href="how-to-apply.html" class="btn"><i class="fas fa-rocket"></i> APPLY NOW!</a></div></div></section>
+<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><h3>SST Public School</h3><div class="tagline">Rashidabad · Sargodhian Spirit Trust</div><p>Inspiring futures through holistic education for over 19 years.</p><div class="footer-contact-info"><div class="footer-contact-item"><i class="fas fa-phone-alt"></i><a href="tel:0222-732001-6">0222-732001-6</a></div></div></div><div class="footer-col"><h4>Quick Links</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="index.html">Home</a><a href="gallery.html">Gallery</a><a href="video-gallery.html">Videos</a></div></div><div class="footer-col"><h4>Admission</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="how-to-apply.html">How to Apply</a><a href="fee-structure.html">Fee Structure</a></div></div><div class="footer-col"><h4>Newsletter</h4><div class="footer-divider-gold"></div><form class="newsletter-form" novalidate><p>Get the latest news</p><div class="newsletter-input-wrap"><input type="email" placeholder="Your email" required/><button type="submit"><i class="fas fa-paper-plane"></i></button></div></form></div></div><div class="footer-bottom"><span>&copy; 2025 SST Public School Rashidabad. All rights reserved.</span><span>Developed by: <a href="#">Asif Khan</a></span></div></div></footer>
+<button class="scroll-top" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
+<script src="js/main.js"></script>
+</body>
+</html>

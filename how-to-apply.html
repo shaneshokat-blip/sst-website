@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Apply - SST Public School Rashidabad</title>
+  <meta name="description" content="Learn how to apply for admission at SST Public School Rashidabad. Step-by-step guide for Foundation and Pre-Cambridge classes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <style>
+    .steps-grid { counter-reset: step-count; display: flex; flex-direction: column; gap: 28px; margin-top: 48px; }
+    .step-card {
+      counter-increment: step-count;
+      display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: start;
+      background: var(--white); border-radius: var(--radius-lg); padding: 32px 36px;
+      box-shadow: var(--shadow-sm); border: 1px solid var(--light-gray); transition: all var(--transition);
+      position: relative; overflow: hidden;
+    }
+    .step-card::before {
+      content: counter(step-count, decimal-leading-zero);
+      position: absolute; right: 24px; top: 16px;
+      font-size: 4rem; font-weight: 900; color: rgba(200,169,81,0.08);
+      font-family: var(--font-serif); line-height: 1;
+    }
+    .step-card:hover { transform: translateX(8px); box-shadow: var(--shadow-md); border-left: 3px solid var(--accent); }
+    .step-icon {
+      width: 64px; height: 64px; border-radius: var(--radius-md); flex-shrink: 0;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; color: var(--accent); box-shadow: var(--shadow-md);
+    }
+    .step-content h3 { color: var(--primary); margin-bottom: 8px; }
+    .step-content p { font-size: 0.9rem; margin-bottom: 12px; }
+    .step-tag { display: inline-block; background: rgba(200,169,81,0.1); color: var(--accent-dark); padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.5px; }
+
+    .intake-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
+    .intake-card {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: var(--radius-lg); padding: 36px; color: var(--white);
+      position: relative; overflow: hidden; box-shadow: var(--shadow-md);
+      transition: all var(--transition);
+    }
+    .intake-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .intake-card::after { content: ''; position: absolute; right: -40px; top: -40px; width: 180px; height: 180px; border-radius: 50%; background: rgba(200,169,81,0.06); }
+    .intake-card h3 { font-size: 1.4rem; margin-bottom: 12px; color: var(--white); }
+    .intake-card .class-badge { background: var(--accent); color: var(--primary); padding: 4px 14px; border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 700; display: inline-block; margin-bottom: 16px; }
+    .intake-card ul { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+    .intake-card ul li { display: flex; align-items: center; gap: 10px; font-size: 0.875rem; color: rgba(255,255,255,0.85); }
+    .intake-card ul li i { color: var(--accent); flex-shrink: 0; }
+    .intake-card .btn { background: rgba(255,255,255,0.15); color: var(--white); border: 1px solid rgba(255,255,255,0.3); border-radius: var(--radius-full); padding: 10px 20px; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: all var(--transition); }
+    .intake-card .btn:hover { background: var(--accent); border-color: var(--accent); color: var(--primary); }
+
+    .req-list { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+    .req-item { display: flex; align-items: center; gap: 12px; padding: 14px 18px; background: var(--white); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); font-size: 0.875rem; }
+    .req-item i { color: var(--accent); width: 20px; }
+
+    @media(max-width:768px){ .intake-cards, .req-list { grid-template-columns: 1fr; } .step-card { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <a href="tel:0222-732001-6"><i class="fas fa-phone-alt"></i> 0222-732001-6</a>
+      <a href="mailto:info@sstpsr.edu.pk"><i class="fas fa-envelope"></i> info@sstpsr.edu.pk</a>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon"><span class="logo-icon-text">SST</span></div>
+      <div class="logo-text">
+        <div class="name">SST Public School</div>
+        <div class="tagline">Rashidabad · 19+ Years of Excellence</div>
+      </div>
+    </a>
+    <ul class="nav-menu" id="nav-menu">
+      <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">ABOUT <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown">
+          <li><a href="about-us.html" class="dropdown-link"><i class="fas fa-school"></i> About Us</a></li>
+          <li><a href="message-from-principal.html" class="dropdown-link"><i class="fas fa-user-tie"></i> Message from Principal</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">ADMISSION <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown">
+          <li><a href="how-to-apply.html" class="dropdown-link"><i class="fas fa-question-circle"></i> How to Apply</a></li>
+          <li><a href="fee-structure.html" class="dropdown-link"><i class="fas fa-money-bill-wave"></i> Fee Structure</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#" class="btn-login">Login</a>
+      <a href="https://www.sst.edu.pk/new-form-test-2026/" class="btn-admit" target="_blank">Online Form 2026</a>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <div class="section-badge" style="background:rgba(200,169,81,0.15);color:#e4c97a;border-color:rgba(200,169,81,0.3);">Admissions 2026</div>
+    <h1>How to Apply</h1>
+    <p>Your step-by-step guide to joining the SST Public School Rashidabad family.</p>
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>How to Apply</span>
+    </div>
+  </div>
+</section>
+
+<!-- How to Apply Content -->
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+
+    <!-- Admission Intake -->
+    <div class="text-center reveal">
+      <div class="section-badge">Classes Offered</div>
+      <h2 class="section-title">Admission <span>Intake</span></h2>
+      <div class="gold-divider centered"></div>
+      <p class="section-subtitle">We offer admissions to the following classes. Apply early as seats are limited.</p>
+    </div>
+
+    <div class="intake-cards">
+      <div class="intake-card reveal">
+        <div class="class-badge">Foundation Year</div>
+        <h3>Admission to Class 7th</h3>
+        <ul>
+          <li><i class="fas fa-check"></i> Open to students completing Class 6</li>
+          <li><i class="fas fa-check"></i> Entry test required</li>
+          <li><i class="fas fa-check"></i> Merit-based selection</li>
+          <li><i class="fas fa-check"></i> Residential boarding available</li>
+          <li><i class="fas fa-check"></i> Scholarship for deserving students</li>
+        </ul>
+        <a href="https://www.sst.edu.pk/new-form-test-2026/" target="_blank" class="btn"><i class="fas fa-file-alt"></i> Apply Now</a>
+      </div>
+      <div class="intake-card reveal reveal-delay-2">
+        <div class="class-badge">Foundation Year</div>
+        <h3>Admission to Class 8th</h3>
+        <ul>
+          <li><i class="fas fa-check"></i> Open to students completing Class 7</li>
+          <li><i class="fas fa-check"></i> Entry test required</li>
+          <li><i class="fas fa-check"></i> Merit-based selection</li>
+          <li><i class="fas fa-check"></i> Residential boarding available</li>
+          <li><i class="fas fa-check"></i> Scholarship for deserving students</li>
+        </ul>
+        <a href="https://www.sst.edu.pk/new-form-test-2026/" target="_blank" class="btn"><i class="fas fa-file-alt"></i> Apply Now</a>
+      </div>
+    </div>
+
+    <!-- Step-by-Step Guide -->
+    <div style="margin-top:80px;">
+      <div class="text-center reveal">
+        <div class="section-badge">Application Process</div>
+        <h2 class="section-title">Step-by-Step <span>Guide</span></h2>
+        <div class="gold-divider centered"></div>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card reveal">
+          <div class="step-icon"><i class="fas fa-info-circle"></i></div>
+          <div class="step-content">
+            <h3>Check Eligibility</h3>
+            <p>Ensure your child meets the age and academic requirements for the class they are applying to. Review our eligibility criteria carefully before proceeding.</p>
+            <span class="step-tag">First Step</span>
+          </div>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-icon"><i class="fas fa-file-download"></i></div>
+          <div class="step-content">
+            <h3>Download/Collect Application Form</h3>
+            <p>Download the admission form from our website or collect it from the school office during working hours (8 AM – 4 PM, Mon–Sat).</p>
+            <span class="step-tag">Second Step</span>
+          </div>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-icon"><i class="fas fa-file-alt"></i></div>
+          <div class="step-content">
+            <h3>Fill the Application Form</h3>
+            <p>Complete all sections of the application form accurately. Attach required documents including academic records, photographs, and B-Form copy.</p>
+            <span class="step-tag">Third Step</span>
+          </div>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-icon"><i class="fas fa-paper-plane"></i></div>
+          <div class="step-content">
+            <h3>Submit the Application</h3>
+            <p>Submit your completed application form along with all required documents to the admission office. Online submissions are also accepted via our official website.</p>
+            <span class="step-tag">Fourth Step</span>
+          </div>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-icon"><i class="fas fa-pen"></i></div>
+          <div class="step-content">
+            <h3>Appear in Entry Test</h3>
+            <p>All candidates must appear in the written entry test. Test dates will be communicated after form submission. Prepare using our Foundation Year and Pre-Camb Sample Papers.</p>
+            <span class="step-tag">Fifth Step</span>
+          </div>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+          <div class="step-content">
+            <h3>Result & Enrollment</h3>
+            <p>Successful candidates will be notified via SMS/email. Upon selection, complete the enrollment process and submit the required fee within the stipulated time.</p>
+            <span class="step-tag">Final Step</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Requirements -->
+    <div style="margin-top:80px;">
+      <div class="text-center reveal">
+        <div class="section-badge">Documents Required</div>
+        <h2 class="section-title">Required <span>Documents</span></h2>
+        <div class="gold-divider centered"></div>
+      </div>
+      <div class="req-list">
+        <div class="req-item reveal"><i class="fas fa-id-card"></i> Child's B-Form (NADRA)</div>
+        <div class="req-item reveal"><i class="fas fa-file-alt"></i> Previous Academic Reports / Marksheets</div>
+        <div class="req-item reveal"><i class="fas fa-camera"></i> Passport-size Photographs (4)</div>
+        <div class="req-item reveal"><i class="fas fa-user"></i> Parent/Guardian CNIC copies</div>
+        <div class="req-item reveal"><i class="fas fa-file-signature"></i> Completed Application Form</div>
+        <div class="req-item reveal"><i class="fas fa-file-invoice-dollar"></i> Application Processing Fee (receipt)</div>
+      </div>
+    </div>
+
+    <!-- Download Buttons -->
+    <div style="margin-top:56px;text-align:center;" class="reveal">
+      <h3 style="color:var(--primary);margin-bottom:24px;">Quick Downloads</h3>
+      <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:16px;">
+        <a href="https://sstpsr.edu.pk/admission-form-2026/" target="_blank" class="btn btn-primary"><i class="fas fa-download"></i> Download Admission Form 2026</a>
+        <a href="https://sstpsr.edu.pk/download-prospectus/" target="_blank" class="btn btn-dark"><i class="fas fa-book"></i> Download Prospectus</a>
+        <a href="https://sstpsr.edu.pk/foundation-sample-papers/" target="_blank" class="btn btn-dark"><i class="fas fa-file-pdf"></i> Sample Papers</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="admission-cta">
+  <div class="container">
+    <div class="reveal">
+      <h3>Ready to Begin?</h3>
+      <h2>Apply Online for<br/>Admission 2026!</h2>
+      <a href="https://www.sst.edu.pk/new-form-test-2026/" target="_blank" class="btn"><i class="fas fa-rocket"></i> APPLY ONLINE NOW!</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>SST Public School</h3>
+        <div class="tagline">Rashidabad · Sargodhian Spirit Trust</div>
+        <p>Inspiring futures through holistic education for over 19 years.</p>
+        <div class="footer-contact-info">
+          <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><a href="tel:0222-732001-6">0222-732001-6</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@sstpsr.edu.pk">info@sstpsr.edu.pk</a></div>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="index.html">Home</a><a href="about-us.html">About Us</a><a href="contact.html">Contact</a></div></div>
+      <div class="footer-col"><h4>Admission</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="how-to-apply.html">How to Apply</a><a href="fee-structure.html">Fee Structure</a></div></div>
+      <div class="footer-col"><h4>Newsletter</h4><div class="footer-divider-gold"></div><form class="newsletter-form" novalidate><p>Get the latest news</p><div class="newsletter-input-wrap"><input type="email" placeholder="Your email" required /><button type="submit"><i class="fas fa-paper-plane"></i></button></div></form></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 SST Public School Rashidabad. All rights reserved.</span>
+      <span>Developed by: <a href="#">Asif Khan</a></span>
+    </div>
+  </div>
+</footer>
+<button class="scroll-top" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
+<script src="js/main.js"></script>
+</body>
+</html>

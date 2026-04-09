@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Photo Gallery - SST Public School Rashidabad</title>
+  <meta name="description" content="Explore the photo gallery of SST Public School Rashidabad — campus life, events, achievements and more."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <style>
+    .lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.92); z-index:9999; align-items:center; justify-content:center; }
+    .lightbox.open { display:flex; }
+    .lightbox-content { background:var(--primary); border-radius:var(--radius-lg); padding:20px; max-width:800px; width:90%; text-align:center; position:relative; }
+    .lightbox-img-placeholder { width:100%; aspect-ratio:16/9; background:linear-gradient(135deg,var(--primary-light),var(--primary-mid)); border-radius:var(--radius-md); display:flex;align-items:center;justify-content:center;font-size:5rem;color:rgba(200,169,81,0.4); }
+    .lightbox-title { color:var(--white); margin-top:16px; font-size:1rem; }
+    .lightbox-close { position:absolute; top:12px; right:16px; color:var(--white); font-size:1.5rem; cursor:pointer; opacity:0.7; transition:opacity var(--transition); }
+    .lightbox-close:hover { opacity:1; }
+    .gallery-section-title { display:flex; align-items:center; gap:14px; margin:48px 0 20px; padding-bottom:12px; border-bottom:2px solid var(--light-gray); }
+    .gallery-section-title h3 { color:var(--primary); font-size:1.2rem; }
+  </style>
+</head>
+<body>
+<!-- Top Bar -->
+<div class="top-bar"><div class="container"><div class="top-bar-left"><a href="tel:0222-732001-6"><i class="fas fa-phone-alt"></i> 0222-732001-6</a><a href="mailto:info@sstpsr.edu.pk"><i class="fas fa-envelope"></i> info@sstpsr.edu.pk</a></div></div></div>
+<!-- Navbar -->
+<nav class="navbar" id="navbar"><div class="container">
+  <a href="index.html" class="nav-logo"><div class="logo-icon"><span class="logo-icon-text">SST</span></div><div class="logo-text"><div class="name">SST Public School</div><div class="tagline">Rashidabad · 19+ Years of Excellence</div></div></a>
+  <ul class="nav-menu" id="nav-menu">
+    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">CAMPUS LIFE <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="hobbies-club.html" class="dropdown-link"><i class="fas fa-star"></i> Hobbies Club</a></li><li><a href="field-trips.html" class="dropdown-link"><i class="fas fa-map-signs"></i> Field Trips</a></li><li><a href="co-curricular.html" class="dropdown-link"><i class="fas fa-running"></i> Co-Curricular</a></li><li><a href="gallery.html" class="dropdown-link"><i class="fas fa-images"></i> Gallery</a></li></ul></li>
+    <li class="nav-item"><a href="news.html" class="nav-link">NEWS</a></li>
+    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+  </ul>
+  <div class="nav-cta"><a href="#" class="btn-login">Login</a><a href="how-to-apply.html" class="btn-admit">Admissions 2026</a></div>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</div></nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <div class="section-badge" style="background:rgba(200,169,81,0.15);color:#e4c97a;border-color:rgba(200,169,81,0.3);">Visual Journey</div>
+    <h1>Photo Gallery</h1>
+    <p>A glimpse into the vibrant life at SST Public School Rashidabad campus.</p>
+    <div class="breadcrumbs"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Gallery</span></div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:32px;">
+      <div class="gallery-filter">
+        <button class="gallery-filter-btn active" onclick="filterGallery(this,'all')">All Photos</button>
+        <button class="gallery-filter-btn" onclick="filterGallery(this,'campus')">Campus</button>
+        <button class="gallery-filter-btn" onclick="filterGallery(this,'events')">Events</button>
+        <button class="gallery-filter-btn" onclick="filterGallery(this,'labs')">Labs</button>
+        <button class="gallery-filter-btn" onclick="filterGallery(this,'sports')">Sports</button>
+        <button class="gallery-filter-btn" onclick="filterGallery(this,'academics')">Academics</button>
+      </div>
+    </div>
+
+    <!-- Campus -->
+    <div class="gallery-section-title reveal"><div class="dept-icon dept-science" style="flex-shrink:0;width:40px;height:40px;"><i class="fas fa-building"></i></div><h3>Campus Life</h3></div>
+    <div class="gallery-grid" id="gallery-grid">
+      <div class="gallery-item reveal" data-cat="campus" onclick="openLightbox('School Main Building')"><div class="gallery-item-bg" style="background:linear-gradient(135deg,#0a1628,#1e3a5f);"><i class="fas fa-school"></i></div><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+      <div class="gallery-item reveal reveal-delay-1" data-cat="campus" onclick="openLightbox('Hostel Block')"><div class="gallery-item-bg" style="background:linear-gradient(135deg,#163054,#0f2340);"><i class="fas fa-home"></i></div><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+      <div class="gallery-item reveal reveal-delay-2" data-cat="campus" onclick="openLightbox('Campus Grounds')"><div class="gallery-item-bg" style="background:linear-gradient(135deg,#0f2340,#1e3a5f);"><i class="fas fa-tree"></i></div><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+      <div class="gallery-item reveal reveal-delay-3" data-cat="campus" onclick="openLightbox('Dining Hall')"><div class="gallery-item-bg" style="background:linear-gradient(135deg,#1e3a5f,#163054);"><i class="fas fa-utensils"></i></div><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+
+      <!-- Events -->
+      <div class="gallery-item reveal" data-cat="events" onclick="openLightbox('Independence Day Celebration')"><div class="gallery-item-bg" style="background:linear-gradient(135deg,#0a2040,#1e3a5f);"><i class="fas fa-flag"></i></div><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+      <div class="gallery-item reveal reveal-delay-1" data-cat="events" onclick="openLightbox('MUN Contest')"><div class="gallery-item-bg" style="background:linear-gradient(135deg,#163054,#0a1628);"><i class="fas fa-globe"></i></div><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+      <div class="gallery-item reveal reveal-delay-2" data-cat="events" onclick="openLightbox('Award Ceremony')"><div class="gallery-item-bg" style="background:linear-gradient(135deg,#0f2340,#163054);"><i class="fas fa-award"></i></div><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+      <div class="gallery-item reveal reveal-delay-3" data-cat="events" onclick="openLightbox('Sports Day')"><div class="gallery-item-bg" style="background:linear-gradient(135deg,#1e3a5f,#0a2040);"><i class="fas fa-trophy"></i></div><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+
+      <!-- Labs -->
+      <div class="gallery-item reveal" data-cat="labs" onclick="openLightbox('Science Laboratory')"><div class="gallery-item-bg" style="background:linear-gradient(135deg,#0a1628,#0f2340);"><i class="fas fa-flask"></i></div><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+      <div class="gallery-item reveal reveal-delay-1" data-cat="labs" onclick="openLightbox('AI Learning Lab')"><div class="gallery-item-bg" style="background:linear-gradient(135deg,#163054,#1e3a5f);"><i class="fas fa-robot"></i></div><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+      <div class="gallery-item reveal reveal-delay-2" data-cat="labs" onclick="openLightbox('Computer/IT Lab')"><div class="gallery-item-bg" style="background:linear-gradient(135deg,#0f2340,#0a1628);"><i class="fas fa-desktop"></i></div><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+      <div class="gallery-item reveal reveal-delay-3" data-cat="labs" onclick="openLightbox('Language Lab')"><div class="gallery-item-bg" style="background:linear-gradient(135deg,#1e3a5f,#163054);"><i class="fas fa-language"></i></div><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+
+      <!-- Sports -->
+      <div class="gallery-item reveal" data-cat="sports" onclick="openLightbox('Cricket Match')"><div class="gallery-item-bg" style="background:linear-gradient(135deg,#0a2040,#163054);"><i class="fas fa-baseball-ball"></i></div><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+      <div class="gallery-item reveal reveal-delay-1" data-cat="sports" onclick="openLightbox('Football Ground')"><div class="gallery-item-bg" style="background:linear-gradient(135deg,#0f2340,#0a2040);"><i class="fas fa-futbol"></i></div><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+      <div class="gallery-item reveal reveal-delay-2" data-cat="sports" onclick="openLightbox('Athletics Track')"><div class="gallery-item-bg" style="background:linear-gradient(135deg,#163054,#0f2340);"><i class="fas fa-running"></i></div><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+      <div class="gallery-item reveal reveal-delay-3" data-cat="sports" onclick="openLightbox('Swimming Pool')"><div class="gallery-item-bg" style="background:linear-gradient(135deg,#0a1628,#163054);"><i class="fas fa-swimming-pool"></i></div><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+
+      <!-- Academics -->
+      <div class="gallery-item reveal" data-cat="academics" onclick="openLightbox('Classroom Session')"><div class="gallery-item-bg" style="background:linear-gradient(135deg,#1e3a5f,#0a1628);"><i class="fas fa-chalkboard-teacher"></i></div><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+      <div class="gallery-item reveal reveal-delay-1" data-cat="academics" onclick="openLightbox('Library Reading Room')"><div class="gallery-item-bg" style="background:linear-gradient(135deg,#0a1628,#0f2340);"><i class="fas fa-book-reader"></i></div><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+      <div class="gallery-item reveal reveal-delay-2" data-cat="academics" onclick="openLightbox('Debate Competition')"><div class="gallery-item-bg" style="background:linear-gradient(135deg,#163054,#0a2040);"><i class="fas fa-comments"></i></div><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+      <div class="gallery-item reveal reveal-delay-3" data-cat="academics" onclick="openLightbox('Science Exhibition')"><div class="gallery-item-bg" style="background:linear-gradient(135deg,#0f2340,#1e3a5f);"><i class="fas fa-microscope"></i></div><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+    </div>
+
+    <!-- Video Gallery Link -->
+    <div style="text-align:center;margin-top:48px;" class="reveal">
+      <p style="margin-bottom:16px;color:var(--text-muted);">Looking for videos? Visit our Video Gallery</p>
+      <a href="video-gallery.html" class="btn btn-dark"><i class="fas fa-play-circle"></i> View Video Gallery</a>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-content" onclick="event.stopPropagation()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <div class="lightbox-img-placeholder"><i class="fas fa-image"></i></div>
+    <div class="lightbox-title" id="lightbox-title">Image Title</div>
+  </div>
+</div>
+
+<section class="admission-cta"><div class="container"><div class="reveal"><h3>Experience SST Life</h3><h2>Apply for Admission 2026!</h2><a href="how-to-apply.html" class="btn"><i class="fas fa-rocket"></i> APPLY NOW!</a></div></div></section>
+<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><h3>SST Public School</h3><div class="tagline">Rashidabad · Sargodhian Spirit Trust</div><p>Inspiring futures through holistic education for over 19 years.</p><div class="footer-contact-info"><div class="footer-contact-item"><i class="fas fa-phone-alt"></i><a href="tel:0222-732001-6">0222-732001-6</a></div></div></div><div class="footer-col"><h4>Quick Links</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="index.html">Home</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></div></div><div class="footer-col"><h4>Admission</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="how-to-apply.html">How to Apply</a><a href="fee-structure.html">Fee Structure</a></div></div><div class="footer-col"><h4>Newsletter</h4><div class="footer-divider-gold"></div><form class="newsletter-form" novalidate><p>Get the latest news</p><div class="newsletter-input-wrap"><input type="email" placeholder="Your email" required/><button type="submit"><i class="fas fa-paper-plane"></i></button></div></form></div></div><div class="footer-bottom"><span>&copy; 2025 SST Public School Rashidabad. All rights reserved.</span><span>Developed by: <a href="#">Asif Khan</a></span></div></div></footer>
+<button class="scroll-top" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
+<script src="js/main.js"></script>
+<script>
+function filterGallery(btn, cat) {
+  document.querySelectorAll('.gallery-filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#gallery-grid .gallery-item').forEach(item => {
+    item.style.display = (cat === 'all' || item.dataset.cat === cat) ? 'block' : 'none';
+  });
+}
+function openLightbox(title) {
+  document.getElementById('lightbox-title').textContent = title;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+</body>
+</html>

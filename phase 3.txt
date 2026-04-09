@@ -1,0 +1,309 @@
+# 🎨 SSTPSR Project — Phase 3 (Design System + UI/UX Blueprint)
+
+---
+
+# 🎯 OBJECTIVE
+
+Ek **premium, modern, trust-building design system** create karna jo:
+
+* parents ko impress kare
+* admissions ko boost kare
+* professional boarding school feel de
+* mobile-first ho
+* clean aur structured ho
+
+---
+
+# 🧠 PHASE 3 CORE OUTPUTS
+
+Phase 3 ke end par tumhare paas ye hona chahiye:
+
+* Design system (colors, fonts, spacing)
+* Component library
+* Homepage wireframe (premium)
+* All page templates (UI level)
+* Mobile-first layouts
+* Visual hierarchy
+* CTA strategy
+* UI guidelines for developer
+
+---
+
+# 3.1 DESIGN PHILOSOPHY (VERY IMPORTANT)
+
+Tumhari website ka tone kya hoga?
+
+👉 **Premium + Trust + Discipline + Modern**
+
+### Avoid:
+
+* flashy colors
+* clutter
+* random animations
+* cheap templates
+
+### Target:
+
+* cadet college style
+* military discipline feel
+* structured layout
+* high trust
+
+---
+
+# 3.2 COLOR SYSTEM
+
+Original site ke colors ko base lo, phir polish karo.
+
+## Define:
+
+* Primary color (school identity)
+* Secondary color
+* Accent color (buttons)
+* Neutral colors (background, text)
+
+## Example structure:
+
+* Primary: Deep Blue / Green (authority)
+* Accent: Gold / Orange (CTA)
+* Background: White / light gray
+* Text: dark gray / black
+
+---
+
+# 3.3 TYPOGRAPHY SYSTEM
+
+Define:
+
+* Heading font (strong, bold)
+* Body font (readable)
+* Line spacing
+* Font sizes hierarchy
+
+## Example:
+
+* H1: bold, large (hero)
+* H2: section title
+* H3: subsection
+* Body: clean readable
+
+👉 Consistency bohat important hai
+
+---
+
+# 3.4 SPACING & GRID SYSTEM
+
+Define:
+
+* section spacing
+* container width
+* padding rules
+* mobile margins
+
+👉 Is se design clean aur premium lagta hai
+
+---
+
+# 3.5 COMPONENT SYSTEM (REUSABLE BLOCKS)
+
+Tumhari site components se banegi.
+
+## Must Components:
+
+* Navbar
+* Footer
+* Hero section
+* Section title block
+* Cards (news, faculty, features)
+* CTA blocks
+* Image + text blocks
+* Stats/counters
+* Forms
+* Buttons (primary/secondary)
+
+👉 Har component reusable hona chahiye
+
+---
+
+# 3.6 HOMEPAGE WIREFRAME (MOST IMPORTANT)
+
+## Structure:
+
+1. Hero Section
+
+   * tagline
+   * Apply Now
+   * strong visual
+
+2. Why SSTPSR
+
+   * trust points
+
+3. Admissions CTA
+
+   * clear process
+
+4. Campus Life
+
+   * images
+
+5. Academics / Facilities
+
+6. Achievements / Results
+
+7. News
+
+8. Final CTA
+
+9. Footer
+
+---
+
+# 3.7 PAGE TEMPLATE DESIGN
+
+## T1 — Homepage
+
+Unique premium design
+
+## T2 — Standard Page
+
+About, Principal Message
+
+## T3 — Section Page
+
+Admissions, Academics
+
+## T4 — Facility Page
+
+Labs, Library, IT
+
+## T5 — News Page
+
+## T6 — Downloads Page
+
+## T7 — Contact Page
+
+---
+
+# 3.8 MOBILE-FIRST DESIGN
+
+👉 Most parents mobile use karte hain
+
+Ensure:
+
+* buttons large
+* text readable
+* no clutter
+* fast loading
+* easy navigation
+
+---
+
+# 3.9 CTA STRATEGY (VERY IMPORTANT)
+
+Har page par clear action hona chahiye:
+
+* Apply Now
+* Download Prospectus
+* Contact Admissions
+* WhatsApp
+
+👉 Design ka goal = conversion
+
+---
+
+# 3.10 VISUAL STYLE GUIDELINES
+
+Define:
+
+* border radius
+* shadows
+* card style
+* image style
+* icon style
+
+---
+
+# 3.11 MEDIA DIRECTION
+
+* high quality images
+* clean crops
+* consistent style
+* avoid low-res images
+
+---
+
+# 3.12 DESIGN SYSTEM DOCUMENT
+
+Create file:
+
+```txt
+02-design/design-system.md
+```
+
+Include:
+
+* colors
+* fonts
+* spacing
+* components
+* rules
+
+---
+
+# 3.13 WIREFRAME FILES
+
+Create:
+
+* homepage wireframe
+* inner page wireframes
+
+---
+
+# 3.14 COMPONENT LIBRARY DOC
+
+List:
+
+* all UI components
+* where used
+* variations
+
+---
+
+# 3.15 PHASE 3 SUCCESS CRITERIA
+
+Phase 3 complete tab hoga jab:
+
+✔ homepage fully designed ho
+✔ templates defined ho
+✔ design system documented ho
+✔ mobile layout clear ho
+✔ CTA placement decided ho
+✔ developer ko clear instructions ho
+
+---
+
+# ❌ PHASE 3 MEIN KYA NAHIN KARNA
+
+* coding start mat karo
+* backend mat banao
+* CMS integrate mat karo
+* AI features mat lagao
+
+---
+
+# 🏁 FINAL OUTPUT
+
+Developer ke paas hona chahiye:
+
+👉 “Exact blueprint of how website will look”
+
+---
+
+# 🔥 GOLDEN RULE
+
+“Good structure without good design = boring site
+Good design without structure = useless site
+Phase 3 = dono ko balance karta hai”
+
+---

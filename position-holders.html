@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Position Holders - SST Public School Rashidabad</title>
+  <meta name="description" content="Our pride — Cambridge and Board position holders from SST Public School Rashidabad over the years."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <style>
+    .pos-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; margin-top:40px; }
+    .pos-card { background:var(--white); border-radius:var(--radius-lg); padding:28px 20px; box-shadow:var(--shadow-sm); border:1px solid var(--light-gray); text-align:center; position:relative; overflow:hidden; transition:all var(--transition); }
+    .pos-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); }
+    .pos-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; }
+    .pos-card.gold::before { background:linear-gradient(90deg,#f5c518,#ffed88); }
+    .pos-card.silver::before { background:linear-gradient(90deg,#c0c0c0,#e8e8e8); }
+    .pos-card.bronze::before { background:linear-gradient(90deg,#cd7f32,#e8a838); }
+    .pos-badge { display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:50%; font-size:1.3rem; margin-bottom:14px; }
+    .pos-badge.gold { background:rgba(245,197,24,0.15); color:#d4a017; }
+    .pos-badge.silver { background:rgba(192,192,192,0.15); color:#888; }
+    .pos-badge.bronze { background:rgba(205,127,50,0.15); color:#cd7f32; }
+    .pos-card h4 { color:var(--primary); margin-bottom:4px; }
+    .pos-card .year { font-size:0.72rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--accent); margin-bottom:8px; }
+    .pos-card .subject { font-size:0.8rem; color:var(--mid-gray); }
+    .pos-card .score { font-family:var(--font-serif); font-size:1.8rem; font-weight:700; color:var(--primary); margin:8px 0; }
+    .year-tab { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:36px; }
+    .ytab { padding:8px 18px; border-radius:var(--radius-full); font-size:0.82rem; font-weight:600; border:2px solid var(--light-gray); background:var(--white); color:var(--dark-gray); cursor:pointer; transition:all var(--transition); }
+    .ytab.active, .ytab:hover { background:var(--accent); border-color:var(--accent); color:var(--primary); }
+    @media(max-width:900px){ .pos-grid { grid-template-columns:repeat(3,1fr); } }
+    @media(max-width:600px){ .pos-grid { grid-template-columns:repeat(2,1fr); } }
+  </style>
+</head>
+<body>
+<div class="top-bar"><div class="container"><div class="top-bar-left"><a href="tel:0222-732001-6"><i class="fas fa-phone-alt"></i> 0222-732001-6</a></div></div></div>
+<nav class="navbar" id="navbar"><div class="container">
+  <a href="index.html" class="nav-logo"><div class="logo-icon"><span class="logo-icon-text">SST</span></div><div class="logo-text"><div class="name">SST Public School</div><div class="tagline">Rashidabad · 19+ Years of Excellence</div></div></a>
+  <ul class="nav-menu" id="nav-menu">
+    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">ACADEMICS <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="faculty.html" class="dropdown-link"><i class="fas fa-users"></i> Faculty</a></li><li><a href="position-holders.html" class="dropdown-link"><i class="fas fa-trophy"></i> Position Holders</a></li><li><a href="alumni.html" class="dropdown-link"><i class="fas fa-user-graduate"></i> Alumni</a></li></ul></li>
+    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+  </ul>
+  <div class="nav-cta"><a href="#" class="btn-login">Login</a><a href="how-to-apply.html" class="btn-admit">Admissions 2026</a></div>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</div></nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="section-badge" style="background:rgba(200,169,81,0.15);color:#e4c97a;border-color:rgba(200,169,81,0.3);">Our Pride</div>
+    <h1>Position Holders</h1>
+    <p>Celebrating our highest achievers — Cambridge and Board position holders from SST.</p>
+    <div class="breadcrumbs"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Academics</span><i class="fas fa-chevron-right"></i><span>Position Holders</span></div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <!-- Achievement Banner -->
+    <div style="background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:var(--radius-lg);padding:40px;text-align:center;margin-bottom:64px;" class="reveal">
+      <div class="section-badge" style="background:rgba(200,169,81,0.15);color:#e4c97a;border-color:rgba(200,169,81,0.3);">Track Record</div>
+      <h2 style="color:var(--white);font-size:1.8rem;margin-bottom:12px;">19+ Years of <span style="color:var(--accent);">Outstanding Results</span></h2>
+      <p style="color:rgba(255,255,255,0.7);max-width:560px;margin:0 auto;">SST Public School Rashidabad has consistently produced top performers in Cambridge O-Level and Pakistan Board examinations.</p>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:32px;">
+        <div style="text-align:center;"><div style="font-family:var(--font-serif);font-size:2.2rem;font-weight:700;color:var(--accent);" data-counter="50" data-suffix="+">0+</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.65);">Cambridge Position Holders</div></div>
+        <div style="text-align:center;"><div style="font-family:var(--font-serif);font-size:2.2rem;font-weight:700;color:var(--accent);" data-counter="12" data-suffix=">">0></div><div style="font-size:0.82rem;color:rgba(255,255,255,0.65);">A* Grades Annually</div></div>
+        <div style="text-align:center;"><div style="font-family:var(--font-serif);font-size:2.2rem;font-weight:700;color:var(--accent);" data-counter="95" data-suffix="%">0%</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.65);">Pass Rate</div></div>
+        <div style="text-align:center;"><div style="font-family:var(--font-serif);font-size:2.2rem;font-weight:700;color:var(--accent);" data-counter="19" data-suffix="+">0+</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.65);">Years of Excellence</div></div>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-bottom:20px;">
+      <div class="section-badge">Cambridge O-Level</div>
+      <h2 class="section-title">Position <span>Holders 2025</span></h2>
+      <div class="gold-divider"></div>
+    </div>
+
+    <div class="year-tab reveal">
+      <button class="ytab active">2025</button>
+      <button class="ytab">2024</button>
+      <button class="ytab">2023</button>
+      <button class="ytab">2022</button>
+      <button class="ytab">2021</button>
+    </div>
+
+    <div class="pos-grid">
+      <div class="pos-card gold reveal"><div class="pos-badge gold"><i class="fas fa-medal"></i></div><div class="year">2025 · 1st Position</div><h4>Ali Hassan</h4><div class="score">A*</div><div class="subject">Physics, Mathematics, Chemistry</div></div>
+      <div class="pos-card gold reveal reveal-delay-1"><div class="pos-badge gold"><i class="fas fa-medal"></i></div><div class="year">2025 · 1st Position</div><h4>Fatima Zahra</h4><div class="score">A*</div><div class="subject">Biology, Chemistry, English</div></div>
+      <div class="pos-card silver reveal reveal-delay-2"><div class="pos-badge silver"><i class="fas fa-medal"></i></div><div class="year">2025 · 2nd Position</div><h4>Usman Raza</h4><div class="score">A</div><div class="subject">Physics, Maths, CS</div></div>
+      <div class="pos-card silver reveal reveal-delay-3"><div class="pos-badge silver"><i class="fas fa-medal"></i></div><div class="year">2025 · 2nd Position</div><h4>Sara Iqbal</h4><div class="score">A</div><div class="subject">English, History, Islamiyat</div></div>
+      <div class="pos-card bronze reveal"><div class="pos-badge bronze"><i class="fas fa-medal"></i></div><div class="year">2025 · 3rd Position</div><h4>Ahmed Bilal</h4><div class="score">B+</div><div class="subject">Mathematics, Physics</div></div>
+      <div class="pos-card bronze reveal reveal-delay-1"><div class="pos-badge bronze"><i class="fas fa-medal"></i></div><div class="year">2025 · 3rd Position</div><h4>Amna Tariq</h4><div class="score">B+</div><div class="subject">Biology, Chemistry</div></div>
+      <div class="pos-card reveal reveal-delay-2"><div class="pos-badge gold"><i class="fas fa-star"></i></div><div class="year">2025 · Cambridge World 🌍</div><h4>Muhammad Hamza</h4><div class="score">A*</div><div class="subject">Mathematics — World Rank</div></div>
+      <div class="pos-card reveal reveal-delay-3"><div class="pos-badge gold"><i class="fas fa-star"></i></div><div class="year">2025 · Cambridge World 🌍</div><h4>Zara Noor</h4><div class="score">A*</div><div class="subject">Physics — World Rank</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="admission-cta"><div class="container"><div class="reveal"><h3>Be a Position Holder</h3><h2>Apply for Admission 2026!</h2><a href="how-to-apply.html" class="btn"><i class="fas fa-rocket"></i> APPLY NOW!</a></div></div></section>
+<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><h3>SST Public School</h3><div class="tagline">Rashidabad · Sargodhian Spirit Trust</div><p>Inspiring futures through holistic education for over 19 years.</p><div class="footer-contact-info"><div class="footer-contact-item"><i class="fas fa-phone-alt"></i><a href="tel:0222-732001-6">0222-732001-6</a></div></div></div><div class="footer-col"><h4>Academics</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="faculty.html">Faculty</a><a href="position-holders.html">Position Holders</a><a href="alumni.html">Alumni</a></div></div><div class="footer-col"><h4>Admission</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="how-to-apply.html">How to Apply</a><a href="fee-structure.html">Fee Structure</a></div></div><div class="footer-col"><h4>Newsletter</h4><div class="footer-divider-gold"></div><form class="newsletter-form" novalidate><p>Get the latest news</p><div class="newsletter-input-wrap"><input type="email" placeholder="Your email" required/><button type="submit"><i class="fas fa-paper-plane"></i></button></div></form></div></div><div class="footer-bottom"><span>&copy; 2025 SST Public School Rashidabad. All rights reserved.</span><span>Developed by: <a href="#">Asif Khan</a></span></div></div></footer>
+<button class="scroll-top" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
+<script src="js/main.js"></script>
+</body>
+</html>

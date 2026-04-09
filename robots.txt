@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /assets/documents/
+
+Sitemap: https://sstpsr.edu.pk/sitemap.xml

@@ -1,0 +1,710 @@
+# 🧭 SSTPSR Project — Phase 2 (Structure, Mapping, Content Architecture)
+
+## 🎯 Phase 2 Objective
+
+Phase 2 ka maqsad hai:
+
+**Captured website ko rebuild-ready structure mein convert karna.**
+
+Abhi tak tumhare paas raw data hai:
+
+* pages
+* screenshots
+* images
+* PDFs
+* text
+* menus
+* links
+
+Ab Phase 2 mein tum ye decide karoge:
+
+* kaun sa page new site mein exactly ayega
+* kaun sa page combine hoga
+* kaun sa page template use karega
+* kaun sa content CMS se manage hoga
+* kaun sa content static hoga
+* kaun se assets original parity ke liye preserve honge
+
+---
+
+# 2.1 PHASE 2 CORE OUTPUTS
+
+Phase 2 complete hone par tumhare paas ye deliverables hone chahiye:
+
+1. Final sitemap
+2. Old-to-new page mapping
+3. Content classification system
+4. Template matrix
+5. CMS content model
+6. Navigation model
+7. URL strategy
+8. Asset usage map
+9. Archive/keep/merge decision log
+10. Phase 3 design brief
+
+---
+
+# 2.2 PHASE 2 MAIN THINKING
+
+Ab raw copied website ko directly build nahi karna.
+
+Pehle ye samajhna hai:
+
+* original site mein kaun si cheezein repetitive hain
+* kaun se sections outdated hain
+* kaun se pages same template se ban sakte hain
+* kaun se pages important hain
+* kaun se pages sirf support pages hain
+* kaun si downloads ko dedicated docs center mein rakhna chahiye
+* kaun sa content homepage par highlight hoga
+* kaun si cheez menu mein rehni chahiye ya footer mein shift honi chahiye
+
+---
+
+# 2.3 PHASE 2 FOLDER STRUCTURE
+
+Create:
+
+```txt
+sstpsr-project/
+├── 01-discovery/
+├── 02-architecture/
+│   ├── 01-sitemap/
+│   ├── 02-page-mapping/
+│   ├── 03-content-model/
+│   ├── 04-template-matrix/
+│   ├── 05-navigation/
+│   ├── 06-url-strategy/
+│   ├── 07-cms-model/
+│   ├── 08-asset-usage-map/
+│   ├── 09-archive-log/
+│   └── 10-phase3-design-brief/
+├── 03-development/
+├── 04-assets/
+└── 05-docs/
+```
+
+---
+
+# 2.4 STEP 1 — PAGE CLASSIFICATION
+
+Phase 1 se jo pages mile thay, un sab ko classify karo.
+
+## हर page ko in categories mein daalo:
+
+### A. Core Pages
+
+Ye top-level important pages honge:
+
+* Home
+* About
+* Admissions
+* Academics
+* Campus Life
+* Contact
+* News / Updates
+
+### B. Support Pages
+
+Ye detailed inner pages honge:
+
+* Fee Structure
+* How to Apply
+* Sample Papers
+* Faculty
+* Facilities pages
+* Principal Message
+* Downloads
+* Prospectus
+
+### C. Content Entries
+
+Ye repeatable data hoga:
+
+* News posts
+* Notices
+* Gallery items
+* Announcements
+* Achievements
+
+### D. Utility Pages
+
+* 404
+* Search results
+* Privacy / Terms (future)
+* Login / Portal pages
+
+### E. External/Linked Resources
+
+* Google Forms
+* PDF downloads
+* external LMS
+* external admission links
+
+---
+
+# 2.5 STEP 2 — KEEP / MERGE / ARCHIVE / REBUILD DECISION
+
+Ab har page par decision lo.
+
+Har original page ke samne 1 فیصلہ hona chahiye:
+
+* **KEEP** → same concept ke saath new site mein ayega
+* **MERGE** → kisi aur page ke andar combine hoga
+* **ARCHIVE** → public menu se niklega, but record mein rahega
+* **REBUILD** → new structure/design ke saath re-create hoga
+* **EXTERNAL** → external link hi rahega ya later replace hoga
+
+## Example thinking:
+
+* `Principal Message` → KEEP ya About ke andar MERGE
+* `Download Prospectus` → Downloads center mein MERGE
+* `Fee Structure` → Admissions ke andar KEEP as dedicated section/page
+* `Facilities individual pages` → REBUILD as reusable template pages
+* `Old news posts` → Content Entries mein migrate
+* `Broken/empty page` → ARCHIVE or client approval
+
+---
+
+# 2.6 STEP 3 — FINAL SITEMAP BANANA
+
+Ab new website ka **clean sitemap** banao.
+
+## Recommended Main Navigation
+
+* Home
+* About
+* Admissions
+* Academics
+* Campus Life
+* News & Events
+* Contact
+
+## Recommended Secondary Structure
+
+### About
+
+* Overview
+* Principal’s Message
+* Faculty
+* Alumni
+
+### Admissions
+
+* How to Apply
+* Eligibility / Classes
+* Fee Structure
+* Download Prospectus
+* Sample Papers
+* Online Application
+
+### Academics
+
+* Learning System
+* Digital Library
+* LMS
+* Position Holders
+
+### Campus Life
+
+* Facilities
+* Labs
+* Clubs
+* Trips
+* Activities
+* Gallery / Videos
+
+### News & Events
+
+* Latest News
+* Circulars / Notices
+* Highlights
+
+### Contact
+
+* Contact info
+* Inquiry form
+* Map / address
+
+---
+
+# 2.7 STEP 4 — OLD TO NEW PAGE MAPPING MATRIX
+
+Ye sabse important artifacts mein se ek hai.
+
+Ek sheet banao:
+
+| Original Page | Original URL | New Page | Action | Template | Notes |
+| ------------- | ------------ | -------- | ------ | -------- | ----- |
+
+## Example:
+
+| Message from Principal | /message-from-principal | /about/principals-message | KEEP | Content Page | Same content, better layout |
+| Download Prospectus | /download-prospectus | /admissions/prospectus | MERGE | Downloads Page | Admissions section |
+| Science Laboratories | /science-laboratories | /campus-life/facilities/science-labs | REBUILD | Facility Detail Template | same media if available |
+
+---
+
+# 2.8 STEP 5 — TEMPLATE MATRIX
+
+Ab tum decide karoge website mein kitne real templates lagenge.
+
+Ye bohat important hai kyunke isi se fast development hoga.
+
+## Recommended Template Types
+
+### T1 — Homepage
+
+Unique premium landing page
+
+### T2 — Standard Content Page
+
+About, Principal Message, How to Apply jaisay pages
+
+### T3 — Section Landing Page
+
+Admissions, Academics, Campus Life
+
+### T4 — Facility Detail Page
+
+Labs, library, classrooms, IT, English lab
+
+### T5 — Post / News Detail Page
+
+News and updates
+
+### T6 — Downloads / Resource Page
+
+Forms, prospectus, papers
+
+### T7 — Gallery / Media Page
+
+Photos, videos, drone, later 360
+
+### T8 — Contact / Inquiry Page
+
+Form + info + map
+
+### T9 — Portal/Auth Pages
+
+Login, dashboard, attendance, notices
+
+### T10 — Application Flow Pages
+
+Online admission multi-step flow
+
+## Template Matrix Sheet
+
+| Template ID | Template Name | Used For | Required Components |
+| ----------- | ------------- | -------- | ------------------- |
+
+---
+
+# 2.9 STEP 6 — CONTENT MODEL
+
+Ab raw text ko CMS-ready fields mein todna hai.
+
+## Example for Standard Page
+
+* title
+* slug
+* hero title
+* hero subtitle
+* featured image
+* body content
+* CTA label
+* CTA link
+* SEO title
+* SEO description
+* language variants
+
+## Example for News Post
+
+* title
+* slug
+* publish date
+* category
+* excerpt
+* cover image
+* body
+* attachments
+* author/source
+* SEO fields
+
+## Example for Facility Page
+
+* facility name
+* summary
+* intro image
+* description
+* highlights
+* gallery
+* related links
+
+## Example for Download Item
+
+* title
+* type
+* year
+* category
+* file
+* related page
+* notes
+
+---
+
+# 2.10 STEP 7 — CMS MODEL DEFINE KARNA
+
+Ab decide karo CMS mein kya editable hoga.
+
+## CMS Editable Collections
+
+* pages
+* news posts
+* notices/circulars
+* downloads
+* facilities
+* gallery/media
+* admissions info
+* faculty entries
+* testimonials/alumni (future)
+* SEO settings
+* site settings
+
+## CMS Global Settings
+
+* logo
+* favicon
+* contact info
+* social links
+* footer links
+* homepage highlights
+* CTA settings
+* language settings
+
+## CMS mein kya static rahega?
+
+* deeply custom layouts
+* app shell
+* portal code
+* auth logic
+* reusable design components
+
+---
+
+# 2.11 STEP 8 — NAVIGATION MODEL
+
+Ab navigation ko systematize karo.
+
+## Main Nav
+
+Sirf high-priority menu items
+
+## Secondary Nav
+
+Section ke andar child pages
+
+## Footer Nav
+
+Useful links + downloads + contact + policies
+
+## Quick Actions
+
+* Apply Now
+* Download Prospectus
+* Contact Admissions
+* Parent Portal Login
+
+## Navigation Rules
+
+* max 6–7 top-level items
+* critical CTA visible ho
+* duplicate menu items hatao
+* broken links remove karo
+* external links clearly mark karo
+
+---
+
+# 2.12 STEP 9 — URL STRATEGY
+
+New URLs clean aur future-proof honi chahiye.
+
+## Rules
+
+* lowercase
+* kebab-case
+* short but clear
+* no random dates unless news
+* avoid WordPress-style messy slugs
+
+## Example Structure
+
+* `/about`
+* `/about/principals-message`
+* `/admissions`
+* `/admissions/how-to-apply`
+* `/admissions/fee-structure`
+* `/academics`
+* `/campus-life/facilities/science-labs`
+* `/news`
+* `/news/[slug]`
+* `/downloads`
+* `/contact`
+
+## Redirect Planning
+
+Old URL → new URL mapping list banegi, taake later migration ya SEO safe rahe.
+
+---
+
+# 2.13 STEP 10 — ASSET USAGE MAP
+
+Phase 1 mein assets collect hue thay. Ab unko map karo.
+
+Har asset ke liye decide karo:
+
+* use as-is
+* optimize and reuse
+* crop/reframe
+* replace later
+* archive
+
+## Asset Groups
+
+* brand assets
+* hero assets
+* facility images
+* faculty/team images
+* post thumbnails
+* downloadable docs
+* icon assets
+
+## Required Output
+
+| Asset | Original Source | New Usage | Status | Notes |
+
+---
+
+# 2.14 STEP 11 — CONTENT QUALITY TAGGING
+
+Ab content ko quality ke hisaab se tag karo.
+
+Har page/content ko label do:
+
+* **Use As-Is**
+* **Needs Cleanup**
+* **Needs Rewrite Later**
+* **Needs Better Media**
+* **Needs Client Confirmation**
+* **Archive Candidate**
+
+Ye tumhare redesign aur build dono ko easy karega.
+
+---
+
+# 2.15 STEP 12 — INFORMATION PRIORITY MODEL
+
+Ab decide karo homepage aur sections mein kya upar aayega.
+
+## High Priority Content
+
+* Admissions
+* Why Choose SSTPSR
+* Campus / Facilities highlights
+* Principal/leadership trust
+* Contact
+* News / updates
+* Downloads / prospectus
+
+## Medium Priority
+
+* Faculty
+* Gallery
+* Activities
+* labs details
+
+## Lower Priority / secondary placement
+
+* old posts
+* repeated announcements
+* isolated old documents
+* non-critical historical info
+
+---
+
+# 2.16 STEP 13 — PHASE 3 DESIGN BRIEF TAYAR KARNA
+
+Phase 2 ke end par designer/developer ko ye crystal clear hona chahiye:
+
+* site ka structure kya hai
+* main pages ka order kya hai
+* templates kitne hain
+* brand ka direction kya hai
+* original parity kis had tak preserve karni hai
+* homepage par kya aayega
+* premium look ka target kya hai
+* mobile-first kaise apply hoga
+
+## Phase 3 design brief mein include:
+
+* world-class boarding school feel
+* trust-building homepage
+* original content loss na ho
+* modern but respectful rebrand
+* existing identity preserve with polish
+* parent-first navigation
+* admissions-first CTA hierarchy
+
+---
+
+# 2.17 PHASE 2 MASTER FILES (MANDATORY)
+
+Tumhe minimum ye files banani chahiye:
+
+## A. final-sitemap.md
+
+Final page structure
+
+## B. page-mapping.xlsx / sheet
+
+Old-to-new mapping
+
+## C. template-matrix.md
+
+All page templates and their use cases
+
+## D. cms-content-model.md
+
+Collections and fields
+
+## E. navigation-model.md
+
+Header, footer, quick links
+
+## F. url-strategy.md
+
+Slug rules and redirects
+
+## G. asset-usage-map.xlsx
+
+Image/document usage decisions
+
+## H. content-quality-log.xlsx
+
+Cleanup/rewrite status
+
+## I. phase3-design-brief.md
+
+Next phase handoff doc
+
+---
+
+# 2.18 PHASE 2 EXACT TASK ORDER
+
+## Step 1
+
+Open Phase 1 registers
+
+## Step 2
+
+List all pages in one master page map
+
+## Step 3
+
+Categorize pages
+
+## Step 4
+
+Mark keep/merge/archive/rebuild
+
+## Step 5
+
+Draft clean sitemap
+
+## Step 6
+
+Create template matrix
+
+## Step 7
+
+Define CMS collections and fields
+
+## Step 8
+
+Define navigation
+
+## Step 9
+
+Define URL structure
+
+## Step 10
+
+Map assets to future pages
+
+## Step 11
+
+Tag content quality
+
+## Step 12
+
+Write Phase 3 design brief
+
+## Step 13
+
+Do internal review:
+
+* is anything unmapped?
+* any page without template?
+* any asset without usage?
+* any important download without destination?
+* any core page missing from new sitemap?
+
+---
+
+# 2.19 PHASE 2 SUCCESS CRITERIA
+
+Phase 2 complete tab mana jayega jab:
+
+* har original page ka new destination defined ho
+* new sitemap approved internally ho
+* templates finalized hon
+* CMS model ready ho
+* navigation clear ho
+* asset mapping ho chuki ho
+* content quality tags assigned hon
+* design brief ready ho
+
+Agar inmein se koi cheez missing hai, to Phase 2 incomplete hai.
+
+---
+
+# 2.20 PHASE 2 MEIN KYA NAHIN KARNA
+
+* final UI design start mat karo
+* coding start mat karo
+* content rewrite start mat karo
+* media editing par time waste mat karo
+* portal/AI features par jump mat karo
+
+Phase 2 ka kaam hai:
+**“build ko predictable banana”**
+
+---
+
+# 2.21 PHASE 2 FINAL SUMMARY
+
+## Phase 1 ne diya:
+
+* raw website archive
+
+## Phase 2 dega:
+
+* rebuild ka map
+
+## Phase 3 karega:
+
+* premium design
+
+## Golden Rule
+
+**“Nothing should exist in Phase 1 that has no place, decision, or destination in Phase 2.”**

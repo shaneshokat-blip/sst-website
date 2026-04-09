@@ -1,0 +1,419 @@
+# 🧱 SSTPSR Project — Phase 0 + Phase 1 (Execution Starter Pack)
+
+---
+
+# 🔰 PHASE 0 — PROJECT SETUP (Start BEFORE touching website)
+
+## 🎯 Objective
+
+Developer apna **complete independent environment + workflow system** ready kare.
+
+---
+
+## 0.1 Accounts & Tools Setup
+
+Ensure you have:
+
+* GitHub account
+* Vercel account (preview deployment)
+* Google Drive / Notion (documentation)
+* Code editor (VS Code recommended)
+* Browser tools (Chrome DevTools)
+
+---
+
+## 0.2 Project Folder Initialization
+
+Create root project:
+
+```
+sstpsr-project/
+├── 00-project-setup/
+├── 01-discovery/
+├── 02-design/
+├── 03-development/
+├── 04-assets/
+├── 05-docs/
+```
+
+---
+
+## 0.3 Naming Conventions (IMPORTANT)
+
+Define from day 1:
+
+* page names: `kebab-case`
+* images: `section-name-description.jpg`
+* docs: `type-year-name.pdf`
+* folders: structured (no random dumping)
+
+---
+
+## 0.4 Master Tracking System
+
+Create a central tracking file (Google Sheet or Notion):
+
+### Must Tabs:
+
+* URL Register
+* Content Register
+* Asset Register
+* Gap Log
+* Progress Tracker
+
+---
+
+## 0.5 Define Project Rules
+
+Write these rules in docs:
+
+* Nothing gets deleted without record
+* Every asset must have source
+* Every page must be mapped
+* No redesign before capture
+* No guessing content
+
+---
+
+## 0.6 Git Repository Setup
+
+Initialize:
+
+```
+git init
+git remote add origin <your-repo>
+```
+
+Create branches:
+
+* main
+* dev
+* discovery-phase
+
+---
+
+## 0.7 Preview System Setup
+
+* Connect GitHub → Vercel
+* Test dummy deploy
+* Confirm preview URL working
+
+---
+
+## 0.8 Documentation Setup
+
+Create:
+
+```
+/05-docs/
+├── project-overview.md
+├── rules.md
+├── workflow.md
+```
+
+---
+
+## ✅ PHASE 0 DONE WHEN:
+
+* repo ready
+* folders structured
+* tracking sheets ready
+* preview working
+* rules defined
+
+---
+
+# 🔍 PHASE 1 — FULL WEBSITE CAPTURE (MOST CRITICAL PHASE)
+
+## 🎯 Objective
+
+**Original website ka 100% public digital clone (data level par)**
+
+👉 Design nahi
+👉 Code nahi
+👉 Sirf CAPTURE
+
+---
+
+## 1.1 WEBSITE ENTRY ANALYSIS
+
+Start from homepage:
+
+### Capture:
+
+* header
+* logo
+* menu structure
+* top bar (if any)
+* hero section
+* slider content
+* all visible sections
+* footer
+
+### Output:
+
+* homepage breakdown document
+
+---
+
+## 1.2 FULL URL DISCOVERY
+
+## Step-by-step:
+
+1. Menu links open karo
+2. Har submenu open karo
+3. Internal links click karo
+4. “Read more” links follow karo
+5. News posts open karo
+6. Download buttons follow karo
+
+### Record for each:
+
+* page name
+* URL
+* category
+* source (menu / link / post)
+
+---
+
+## 1.3 URL REGISTER (MANDATORY)
+
+Structure:
+
+| Page | URL | Type | Source | Status |
+| ---- | --- | ---- | ------ | ------ |
+
+Types:
+
+* main page
+* sub page
+* post
+* download
+* external link
+
+---
+
+## 1.4 PAGE CONTENT CAPTURE
+
+For EACH page:
+
+### Extract:
+
+* headings (H1, H2, H3)
+* full text content
+* bullet points
+* CTA text (Apply Now, Download etc)
+* forms (fields)
+* labels
+* captions
+
+Save as:
+
+```
+page-name.md
+```
+
+---
+
+## 1.5 SCREENSHOT ARCHIVE
+
+For EACH page:
+
+Take:
+
+* full desktop screenshot
+* mobile screenshot
+* important sections zoom
+
+Store in:
+
+```
+/01-discovery/screenshots/
+```
+
+---
+
+## 1.6 ASSET EXTRACTION
+
+Download EVERYTHING:
+
+### Categories:
+
+* logo
+* banners
+* hero images
+* section images
+* faculty images
+* thumbnails
+* icons
+* background images
+
+### Save in:
+
+```
+/04-assets/images/
+```
+
+---
+
+## 1.7 DOCUMENT DOWNLOADS
+
+Download ALL files:
+
+* admission forms
+* prospectus
+* sample papers
+* PDFs
+* docs
+
+Save in:
+
+```
+/04-assets/documents/
+```
+
+---
+
+## 1.8 NEWS / POSTS CAPTURE
+
+For EACH post:
+
+Capture:
+
+* title
+* date
+* image
+* full content
+* category
+
+---
+
+## 1.9 FORM ANALYSIS
+
+Find:
+
+* admission form
+* contact form
+* online links
+
+Record:
+
+* fields
+* required fields
+* flow
+
+---
+
+## 1.10 BRAND & STYLE AUDIT
+
+Identify:
+
+* primary color
+* secondary color
+* button color
+* font style (approx)
+* spacing
+* layout pattern
+* card styles
+
+---
+
+## 1.11 NAVIGATION MAPPING
+
+Create:
+
+* menu tree
+* submenu tree
+* footer links
+* repeated links
+
+---
+
+## 1.12 GAP LOG (VERY IMPORTANT)
+
+Record issues:
+
+* broken links
+* missing images
+* empty pages
+* external redirects
+* unclear sections
+
+---
+
+## 1.13 ASSET REGISTER
+
+Track:
+
+| Asset | Source Page | Type | Downloaded | Notes |
+
+---
+
+## 1.14 CONTENT REGISTER
+
+Track:
+
+| Page | Content | CTA | Notes |
+
+---
+
+## 1.15 COMPLETENESS CHECK
+
+Before closing Phase 1, ask:
+
+✔ Kya har menu page capture hua?
+✔ Kya har image download hui?
+✔ Kya har PDF save hua?
+✔ Kya har text copy hua?
+✔ Kya har CTA record hua?
+✔ Kya gaps note hue?
+
+---
+
+## 1.16 FINAL PHASE 1 REPORT
+
+Create file:
+
+```
+phase1-report.md
+```
+
+Include:
+
+* total pages found
+* total assets downloaded
+* total documents saved
+* missing items list
+* readiness for next phase
+
+---
+
+## ❌ PHASE 1 MEIN KYA NAHIN KARNA
+
+* design start mat karo
+* code likhna start mat karo
+* UI improve mat karo
+* content rewrite mat karo
+* AI add mat karo
+
+---
+
+## ✅ PHASE 1 SUCCESS DEFINITION
+
+Phase 1 complete tab hoga jab:
+
+👉 Tumhare paas:
+
+* full website ka content dump ho
+* saari images/assets ho
+* saare pages mapped ho
+* saare downloads saved ho
+* koi visible cheez miss na ho
+
+---
+
+# 🧠 GOLDEN RULE
+
+“Jo website dikhti hai, uska har pixel aur har word record hona chahiye — warna Phase 1 incomplete hai.”
+
+---

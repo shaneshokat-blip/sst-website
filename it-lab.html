@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>IT Department - SST Public School Rashidabad</title>
+  <meta name="description" content="SST's Information Technology department with digitally-equipped classrooms and modern IT labs."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <style>
+    .it-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:36px; }
+    .it-card { background:var(--white); border-radius:var(--radius-lg); padding:28px 24px; box-shadow:var(--shadow-sm); border:1px solid var(--light-gray); text-align:center; transition:all var(--transition); }
+    .it-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); }
+    .it-icon { width:60px; height:60px; border-radius:50%; background:linear-gradient(135deg,var(--primary),var(--primary-light)); display:flex; align-items:center; justify-content:center; margin:0 auto 16px; color:var(--accent); font-size:1.4rem; }
+    .facility-nav { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:40px; }
+    .facility-nav-link { padding:8px 18px; border-radius:var(--radius-full); font-size:0.82rem; font-weight:600; border:2px solid var(--light-gray); background:var(--white); color:var(--dark-gray); transition:all var(--transition); display:flex; align-items:center; gap:6px; }
+    .facility-nav-link:hover, .facility-nav-link.active { background:var(--accent); border-color:var(--accent); color:var(--primary); }
+    @media(max-width:680px){ .it-grid { grid-template-columns:1fr 1fr; } }
+  </style>
+</head>
+<body>
+<div class="top-bar"><div class="container"><div class="top-bar-left"><a href="tel:0222-732001-6"><i class="fas fa-phone-alt"></i> 0222-732001-6</a></div></div></div>
+<nav class="navbar" id="navbar"><div class="container">
+  <a href="index.html" class="nav-logo"><div class="logo-icon"><span class="logo-icon-text">SST</span></div><div class="logo-text"><div class="name">SST Public School</div><div class="tagline">Rashidabad · 19+ Years of Excellence</div></div></a>
+  <ul class="nav-menu" id="nav-menu">
+    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">FACILITIES <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="science-labs.html" class="dropdown-link"><i class="fas fa-flask"></i> Science Labs</a></li><li><a href="ai-lab.html" class="dropdown-link"><i class="fas fa-robot"></i> AI Lab</a></li><li><a href="language-lab.html" class="dropdown-link"><i class="fas fa-language"></i> Language Lab</a></li><li><a href="it-lab.html" class="dropdown-link"><i class="fas fa-desktop"></i> IT Department</a></li><li><a href="library.html" class="dropdown-link"><i class="fas fa-book-reader"></i> Library</a></li></ul></li>
+    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+  </ul>
+  <div class="nav-cta"><a href="#" class="btn-login">Login</a><a href="how-to-apply.html" class="btn-admit">Admissions 2026</a></div>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</div></nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="section-badge" style="background:rgba(200,169,81,0.15);color:#e4c97a;border-color:rgba(200,169,81,0.3);">Digital Learning</div>
+    <h1>Information Technology Department</h1>
+    <p>Digitally equipped classrooms, smart boards, and a full IT lab for 21st century learning.</p>
+    <div class="breadcrumbs"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Facilities</span><i class="fas fa-chevron-right"></i><span>IT Department</span></div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="facility-nav reveal">
+      <a href="science-labs.html" class="facility-nav-link"><i class="fas fa-flask"></i> Science Labs</a>
+      <a href="ai-lab.html" class="facility-nav-link"><i class="fas fa-robot"></i> AI Lab</a>
+      <a href="language-lab.html" class="facility-nav-link"><i class="fas fa-language"></i> Language Lab</a>
+      <a href="it-lab.html" class="facility-nav-link active"><i class="fas fa-desktop"></i> IT Lab</a>
+      <a href="library.html" class="facility-nav-link"><i class="fas fa-book-reader"></i> Library</a>
+    </div>
+    <div class="about-grid" style="margin-bottom:56px;">
+      <div class="reveal" style="background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:var(--radius-lg);min-height:340px;display:flex;align-items:center;justify-content:center;font-size:7rem;color:rgba(200,169,81,0.4);"><i class="fas fa-desktop"></i></div>
+      <div class="reveal reveal-delay-2">
+        <div class="section-badge">Digital First</div>
+        <h2 class="section-title">IT Department &amp; <span>Smart Classrooms</span></h2>
+        <div class="gold-divider"></div>
+        <p>The Information Technology Department at SST Public School Rashidabad is equipped with modern computers, high-speed internet, and smart boards that transform every classroom into an interactive digital environment.</p>
+        <p style="margin-top:12px;">The Learning Management System (LMS) enables teachers to assign tasks, share resources, and conduct assessments digitally — keeping students, teachers and parents connected seamlessly.</p>
+        <p style="margin-top:12px;">Our IT department offers structured courses in Computer Science, Information Technology, and coding — from beginner to advanced levels aligned with Cambridge IGCSE curriculum.</p>
+      </div>
+    </div>
+    <div class="text-center reveal"><h2 class="section-title">IT Department <span>Features</span></h2><div class="gold-divider centered"></div></div>
+    <div class="it-grid">
+      <div class="it-card reveal"><div class="it-icon"><i class="fas fa-tv"></i></div><h4>Smart Classrooms</h4><p>Interactive smart boards and projectors in every classroom for dynamic lessons.</p></div>
+      <div class="it-card reveal reveal-delay-1"><div class="it-icon"><i class="fas fa-wifi"></i></div><h4>High-Speed Internet</h4><p>Campus-wide high-speed internet enabling e-learning and digital research.</p></div>
+      <div class="it-card reveal reveal-delay-2"><div class="it-icon"><i class="fas fa-laptop"></i></div><h4>Computer Lab</h4><p>Modern computer lab with 40+ workstations for IT classes and self-study.</p></div>
+      <div class="it-card reveal"><div class="it-icon"><i class="fas fa-cloud"></i></div><h4>LMS Platform</h4><p>Digital Learning Management System connecting students, teachers and parents.</p></div>
+      <div class="it-card reveal reveal-delay-1"><div class="it-icon"><i class="fas fa-code"></i></div><h4>Coding Classes</h4><p>Structured programming classes from Scratch to Python for all age groups.</p></div>
+      <div class="it-card reveal reveal-delay-2"><div class="it-icon"><i class="fas fa-shield-alt"></i></div><h4>Digital Safety</h4><p>Cybersecurity awareness and responsible internet usage taught to all students.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="admission-cta"><div class="container"><div class="reveal"><h3>Learn in a Digital Era</h3><h2>Apply for Admission 2026!</h2><a href="how-to-apply.html" class="btn"><i class="fas fa-rocket"></i> APPLY NOW!</a></div></div></section>
+<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><h3>SST Public School</h3><div class="tagline">Rashidabad · Sargodhian Spirit Trust</div><p>Inspiring futures through holistic education for over 19 years.</p><div class="footer-contact-info"><div class="footer-contact-item"><i class="fas fa-phone-alt"></i><a href="tel:0222-732001-6">0222-732001-6</a></div></div></div><div class="footer-col"><h4>Facilities</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="science-labs.html">Science Labs</a><a href="ai-lab.html">AI Lab</a><a href="it-lab.html">IT Lab</a></div></div><div class="footer-col"><h4>Admission</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="how-to-apply.html">How to Apply</a><a href="fee-structure.html">Fee Structure</a></div></div><div class="footer-col"><h4>Newsletter</h4><div class="footer-divider-gold"></div><form class="newsletter-form" novalidate><p>Get the latest news</p><div class="newsletter-input-wrap"><input type="email" placeholder="Your email" required/><button type="submit"><i class="fas fa-paper-plane"></i></button></div></form></div></div><div class="footer-bottom"><span>&copy; 2025 SST Public School Rashidabad. All rights reserved.</span><span>Developed by: <a href="#">Asif Khan</a></span></div></div></footer>
+<button class="scroll-top" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
+<script src="js/main.js"></script>
+</body>
+</html>

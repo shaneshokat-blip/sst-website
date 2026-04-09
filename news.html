@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Latest News - SST Public School Rashidabad</title>
+  <meta name="description" content="Stay updated with the latest news, events and announcements from SST Public School Rashidabad."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <style>
+    .news-filters { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:40px; }
+    .filter-btn { padding:8px 20px; border-radius:var(--radius-full); font-size:0.82rem; font-weight:600; cursor:pointer; transition:all var(--transition); border:2px solid var(--light-gray); background:var(--white); color:var(--dark-gray); }
+    .filter-btn.active, .filter-btn:hover { background:var(--accent); border-color:var(--accent); color:var(--primary); }
+    .news-big-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+    .pagination { display:flex; justify-content:center; gap:8px; margin-top:48px; }
+    .page-btn { width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.85rem; font-weight:600; cursor:pointer; border:2px solid var(--light-gray); background:var(--white); color:var(--dark-gray); transition:all var(--transition); }
+    .page-btn.active, .page-btn:hover { background:var(--accent); border-color:var(--accent); color:var(--primary); }
+    @media(max-width:900px){ .news-big-grid { grid-template-columns:1fr 1fr; } }
+    @media(max-width:580px){ .news-big-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<!-- Notice Banner -->
+<div class="notice-banner" id="notice-banner">
+  <div class="container">
+    <div class="ticker-wrap">
+      <i class="fas fa-bullhorn"></i>
+      <span>🎉 Admissions 2026 open! <a href="how-to-apply.html">Apply Now</a> — Foundation & Pre-Cambridge Year</span>
+    </div>
+    <span class="close-notice" onclick="document.getElementById('notice-banner').style.display='none'">&times;</span>
+  </div>
+</div>
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <a href="tel:0222-732001-6"><i class="fas fa-phone-alt"></i> 0222-732001-6</a>
+      <a href="mailto:info@sstpsr.edu.pk"><i class="fas fa-envelope"></i> info@sstpsr.edu.pk</a>
+    </div>
+    <div class="top-bar-right">
+      <span>Follow Us:</span>
+      <div class="top-bar-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon"><span class="logo-icon-text">SST</span></div>
+      <div class="logo-text"><div class="name">SST Public School</div><div class="tagline">Rashidabad · 19+ Years of Excellence</div></div>
+    </a>
+    <ul class="nav-menu" id="nav-menu">
+      <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">ABOUT <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown">
+          <li><a href="about-us.html" class="dropdown-link"><i class="fas fa-school"></i> About Us</a></li>
+          <li><a href="message-from-principal.html" class="dropdown-link"><i class="fas fa-user-tie"></i> Message from Principal</a></li>
+          <li><a href="video-gallery.html" class="dropdown-link"><i class="fas fa-video"></i> Video Gallery</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="#" class="nav-link">ADMISSION <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown">
+          <li><a href="how-to-apply.html" class="dropdown-link"><i class="fas fa-question-circle"></i> How to Apply</a></li>
+          <li><a href="fee-structure.html" class="dropdown-link"><i class="fas fa-money-bill-wave"></i> Fee Structure</a></li>
+          <li><a href="downloads.html" class="dropdown-link"><i class="fas fa-download"></i> Download Prospectus</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="#" class="nav-link">ACADEMICS <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown">
+          <li><a href="faculty.html" class="dropdown-link"><i class="fas fa-users"></i> Members of Faculty</a></li>
+          <li><a href="position-holders.html" class="dropdown-link"><i class="fas fa-trophy"></i> Position Holders</a></li>
+          <li><a href="digital-library.html" class="dropdown-link"><i class="fas fa-book"></i> Digital Library</a></li>
+          <li><a href="downloads.html" class="dropdown-link"><i class="fas fa-download"></i> Downloads</a></li>
+          <li><a href="alumni.html" class="dropdown-link"><i class="fas fa-user-graduate"></i> Alumni</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="#" class="nav-link">FACILITIES <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown">
+          <li><a href="science-labs.html" class="dropdown-link"><i class="fas fa-flask"></i> Science Laboratories</a></li>
+          <li><a href="ai-lab.html" class="dropdown-link"><i class="fas fa-robot"></i> AI Lab</a></li>
+          <li><a href="language-lab.html" class="dropdown-link"><i class="fas fa-language"></i> English Language Lab</a></li>
+          <li><a href="it-lab.html" class="dropdown-link"><i class="fas fa-desktop"></i> IT Department</a></li>
+          <li><a href="library.html" class="dropdown-link"><i class="fas fa-book-reader"></i> Library</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="#" class="nav-link">CAMPUS LIFE <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown">
+          <li><a href="hobbies-club.html" class="dropdown-link"><i class="fas fa-star"></i> Hobbies Club</a></li>
+          <li><a href="field-trips.html" class="dropdown-link"><i class="fas fa-map-signs"></i> Field Trips</a></li>
+          <li><a href="co-curricular.html" class="dropdown-link"><i class="fas fa-running"></i> Co-Curricular</a></li>
+          <li><a href="gallery.html" class="dropdown-link"><i class="fas fa-images"></i> Gallery</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="news.html" class="nav-link">NEWS</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#" class="btn-login">Login</a>
+      <a href="how-to-apply.html" class="btn-admit">Admissions 2026</a>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <div class="section-badge" style="background:rgba(200,169,81,0.15);color:#e4c97a;border-color:rgba(200,169,81,0.3);">Stay Informed</div>
+    <h1>Latest News &amp; Updates</h1>
+    <p>Latest happenings, achievements, and announcements from SST Public School Rashidabad.</p>
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>News</span>
+    </div>
+  </div>
+</section>
+
+<!-- News Content -->
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="news-filters reveal">
+      <button class="filter-btn active" onclick="filterNews(this,'all')">All News</button>
+      <button class="filter-btn" onclick="filterNews(this,'education')">Education</button>
+      <button class="filter-btn" onclick="filterNews(this,'events')">Events</button>
+      <button class="filter-btn" onclick="filterNews(this,'achievements')">Achievements</button>
+      <button class="filter-btn" onclick="filterNews(this,'admissions')">Admissions</button>
+    </div>
+
+    <div class="news-big-grid" id="news-grid">
+
+      <article class="news-card reveal" data-cat="admissions">
+        <div class="news-card-img" style="background:linear-gradient(135deg,#0a1628,#1e3a5f);"><i class="fas fa-graduation-cap" style="font-size:3rem;color:rgba(200,169,81,0.4);"></i></div>
+        <div class="news-card-body">
+          <span class="news-category">Admissions</span>
+          <h4>Successful Candidates for Foundation &amp; Pre-Cambridge 2026 Admission – List 1</h4>
+          <div class="news-date"><i class="fas fa-calendar"></i> 2026</div>
+        </div>
+        <div class="news-footer"><a href="news-detail.html" class="news-read-more">Read More <i class="fas fa-arrow-right"></i></a></div>
+      </article>
+
+      <article class="news-card reveal reveal-delay-1" data-cat="education">
+        <div class="news-card-img" style="background:linear-gradient(135deg,#163054,#0a2040);"><i class="fas fa-microscope" style="font-size:3rem;color:rgba(200,169,81,0.4);"></i></div>
+        <div class="news-card-body">
+          <span class="news-category">Education</span>
+          <h4>A battle of brilliance — Yarians showcased their wit in Debates &amp; Science Quizzes.</h4>
+          <div class="news-date"><i class="fas fa-calendar"></i> 2025</div>
+        </div>
+        <div class="news-footer"><a href="news-detail.html" class="news-read-more">Read More <i class="fas fa-arrow-right"></i></a></div>
+      </article>
+
+      <article class="news-card reveal reveal-delay-2" data-cat="events">
+        <div class="news-card-img" style="background:linear-gradient(135deg,#0f2340,#1e3a5f);"><i class="fas fa-flag" style="font-size:3rem;color:rgba(200,169,81,0.4);"></i></div>
+        <div class="news-card-body">
+          <span class="news-category">Events</span>
+          <h4>SST proudly hosted the 78th Pakistan Independence Day 2025 grand celebration.</h4>
+          <div class="news-date"><i class="fas fa-calendar"></i> August 14, 2025</div>
+        </div>
+        <div class="news-footer"><a href="news-detail.html" class="news-read-more">Read More <i class="fas fa-arrow-right"></i></a></div>
+      </article>
+
+      <article class="news-card reveal" data-cat="education">
+        <div class="news-card-img" style="background:linear-gradient(135deg,#0a1628,#163054);"><i class="fas fa-globe" style="font-size:3rem;color:rgba(200,169,81,0.4);"></i></div>
+        <div class="news-card-body">
+          <span class="news-category">Education</span>
+          <h4>Inter House Yarians MUN Contest — Sachal House claimed 1st Position with eloquence.</h4>
+          <div class="news-date"><i class="fas fa-calendar"></i> 2025</div>
+        </div>
+        <div class="news-footer"><a href="news-detail.html" class="news-read-more">Read More <i class="fas fa-arrow-right"></i></a></div>
+      </article>
+
+      <article class="news-card reveal reveal-delay-1" data-cat="achievements">
+        <div class="news-card-img" style="background:linear-gradient(135deg,#1e3a5f,#0a1628);"><i class="fas fa-award" style="font-size:3rem;color:rgba(200,169,81,0.4);"></i></div>
+        <div class="news-card-body">
+          <span class="news-category">Achievements</span>
+          <h4>International FSP Science Contest — Champions clinched Provincial &amp; National Level Top positions.</h4>
+          <div class="news-date"><i class="fas fa-calendar"></i> 2025</div>
+        </div>
+        <div class="news-footer"><a href="news-detail.html" class="news-read-more">Read More <i class="fas fa-arrow-right"></i></a></div>
+      </article>
+
+      <article class="news-card reveal reveal-delay-2" data-cat="education">
+        <div class="news-card-img" style="background:linear-gradient(135deg,#0a1628,#1e3a5f);"><i class="fas fa-comments" style="font-size:3rem;color:rgba(200,169,81,0.4);"></i></div>
+        <div class="news-card-body">
+          <span class="news-category">Education</span>
+          <h4>Urdu Debate Competition — 23 August 2025. Outstanding oratory skills on display.</h4>
+          <div class="news-date"><i class="fas fa-calendar"></i> August 23, 2025</div>
+        </div>
+        <div class="news-footer"><a href="news-detail.html" class="news-read-more">Read More <i class="fas fa-arrow-right"></i></a></div>
+      </article>
+
+      <article class="news-card reveal" data-cat="events">
+        <div class="news-card-img" style="background:linear-gradient(135deg,#163054,#0f2340);"><i class="fas fa-medal" style="font-size:3rem;color:rgba(200,169,81,0.4);"></i></div>
+        <div class="news-card-body">
+          <span class="news-category">Events</span>
+          <h4>Young Yarians at Mirpur Khas Summer Games — representing SST with pride.</h4>
+          <div class="news-date"><i class="fas fa-calendar"></i> Summer 2025</div>
+        </div>
+        <div class="news-footer"><a href="news-detail.html" class="news-read-more">Read More <i class="fas fa-arrow-right"></i></a></div>
+      </article>
+
+      <article class="news-card reveal reveal-delay-1" data-cat="events">
+        <div class="news-card-img" style="background:linear-gradient(135deg,#0a1628,#163054);"><i class="fas fa-shield-alt" style="font-size:3rem;color:rgba(200,169,81,0.4);"></i></div>
+        <div class="news-card-body">
+          <span class="news-category">Events</span>
+          <h4>Defence Day 6th September — Yarians paid heartfelt tribute to the valiant sons of the soil.</h4>
+          <div class="news-date"><i class="fas fa-calendar"></i> September 6, 2025</div>
+        </div>
+        <div class="news-footer"><a href="news-detail.html" class="news-read-more">Read More <i class="fas fa-arrow-right"></i></a></div>
+      </article>
+
+      <article class="news-card reveal reveal-delay-2" data-cat="education">
+        <div class="news-card-img" style="background:linear-gradient(135deg,#1e3a5f,#163054);"><i class="fas fa-hands-helping" style="font-size:3rem;color:rgba(200,169,81,0.4);"></i></div>
+        <div class="news-card-body">
+          <span class="news-category">Education</span>
+          <h4>Community Service — Yarians give back to society through meaningful outreach programs.</h4>
+          <div class="news-date"><i class="fas fa-calendar"></i> 2025</div>
+        </div>
+        <div class="news-footer"><a href="news-detail.html" class="news-read-more">Read More <i class="fas fa-arrow-right"></i></a></div>
+      </article>
+
+    </div>
+
+    <div class="pagination reveal">
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<section class="admission-cta"><div class="container"><div class="reveal"><h3>Join the SST Family</h3><h2>Apply for Admission 2026!</h2><a href="how-to-apply.html" class="btn"><i class="fas fa-rocket"></i> APPLY NOW!</a></div></div></section>
+
+<footer class="footer"><div class="container">
+  <div class="footer-grid">
+    <div class="footer-brand"><h3>SST Public School</h3><div class="tagline">Rashidabad · Sargodhian Spirit Trust</div><p>Inspiring futures through holistic education for over 19 years.</p><div class="footer-contact-info"><div class="footer-contact-item"><i class="fas fa-phone-alt"></i><a href="tel:0222-732001-6">0222-732001-6</a></div><div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@sstpsr.edu.pk">info@sstpsr.edu.pk</a></div></div><div class="footer-social"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
+    <div class="footer-col"><h4>Quick Links</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="index.html">Home</a><a href="about-us.html">About Us</a><a href="news.html">News</a><a href="contact.html">Contact</a></div></div>
+    <div class="footer-col"><h4>Admission</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="how-to-apply.html">How to Apply</a><a href="fee-structure.html">Fee Structure</a><a href="downloads.html">Downloads</a></div></div>
+    <div class="footer-col"><h4>Newsletter</h4><div class="footer-divider-gold"></div><form class="newsletter-form" novalidate><p>Get the latest SSTPSR news</p><div class="newsletter-input-wrap"><input type="email" placeholder="Your email" required/><button type="submit"><i class="fas fa-paper-plane"></i></button></div></form></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2025 SST Public School Rashidabad. All rights reserved.</span><span>Developed by: <a href="#">Asif Khan</a></span></div>
+</div></footer>
+<button class="scroll-top" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
+<script src="js/main.js"></script>
+<script>
+function filterNews(btn, cat) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#news-grid .news-card').forEach(card => {
+    if (cat === 'all' || card.dataset.cat === cat) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>

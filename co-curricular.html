@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Co-Curricular Activities - SST Public School Rashidabad</title>
+  <meta name="description" content="Explore the rich co-curricular activities at SST Public School Rashidabad — debate, sports, arts, community service and more."/>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <style>
+    .activity-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:40px; }
+    .activity-card { background:var(--white); border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-sm); border:1px solid var(--light-gray); transition:all var(--transition); }
+    .activity-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); }
+    .activity-header { padding:28px; background:linear-gradient(135deg,var(--primary),var(--primary-light)); text-align:center; }
+    .activity-icon { font-size:3rem; color:rgba(200,169,81,0.7); margin-bottom:12px; display:block; }
+    .activity-header h3 { color:var(--white); font-size:1.1rem; }
+    .activity-body { padding:24px; }
+    .activity-body p { font-size:0.875rem; margin-bottom:14px; }
+    .activity-tags { display:flex; flex-wrap:wrap; gap:6px; }
+    .activity-tag { background:rgba(200,169,81,0.1); color:var(--accent-dark); font-size:0.72rem; font-weight:600; padding:4px 10px; border-radius:var(--radius-full); }
+    .benefit-list { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:40px; }
+    .benefit-item { display:flex; align-items:flex-start; gap:12px; padding:16px; background:var(--white); border-radius:var(--radius-md); box-shadow:var(--shadow-sm); }
+    .benefit-item i { color:var(--accent); font-size:1.1rem; flex-shrink:0; margin-top:2px; }
+    .benefit-item p { font-size:0.875rem; }
+    @media(max-width:900px){ .activity-grid { grid-template-columns:1fr 1fr; } }
+    @media(max-width:580px){ .activity-grid { grid-template-columns:1fr; } .benefit-list { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<div class="top-bar"><div class="container"><div class="top-bar-left"><a href="tel:0222-732001-6"><i class="fas fa-phone-alt"></i> 0222-732001-6</a><a href="mailto:info@sstpsr.edu.pk"><i class="fas fa-envelope"></i> info@sstpsr.edu.pk</a></div><div class="top-bar-right"><span>Follow Us:</span><div class="top-bar-social"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div></div></div>
+
+<nav class="navbar" id="navbar"><div class="container">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-icon"><span class="logo-icon-text">SST</span></div>
+    <div class="logo-text"><div class="name">SST Public School</div><div class="tagline">Rashidabad · 19+ Years of Excellence</div></div>
+  </a>
+  <ul class="nav-menu" id="nav-menu">
+    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">ABOUT <i class="fas fa-chevron-down"></i></a>
+      <ul class="dropdown">
+        <li><a href="about-us.html" class="dropdown-link"><i class="fas fa-school"></i> About Us</a></li>
+        <li><a href="message-from-principal.html" class="dropdown-link"><i class="fas fa-user-tie"></i> Principal's Message</a></li>
+        <li><a href="video-gallery.html" class="dropdown-link"><i class="fas fa-video"></i> Video Gallery</a></li>
+      </ul>
+    </li>
+    <li class="nav-item"><a href="#" class="nav-link">ADMISSION <i class="fas fa-chevron-down"></i></a>
+      <ul class="dropdown">
+        <li><a href="how-to-apply.html" class="dropdown-link"><i class="fas fa-question-circle"></i> How to Apply</a></li>
+        <li><a href="fee-structure.html" class="dropdown-link"><i class="fas fa-money-bill-wave"></i> Fee Structure</a></li>
+        <li><a href="downloads.html" class="dropdown-link"><i class="fas fa-download"></i> Downloads</a></li>
+      </ul>
+    </li>
+    <li class="nav-item"><a href="#" class="nav-link">ACADEMICS <i class="fas fa-chevron-down"></i></a>
+      <ul class="dropdown">
+        <li><a href="faculty.html" class="dropdown-link"><i class="fas fa-users"></i> Faculty</a></li>
+        <li><a href="position-holders.html" class="dropdown-link"><i class="fas fa-trophy"></i> Position Holders</a></li>
+        <li><a href="digital-library.html" class="dropdown-link"><i class="fas fa-book-open"></i> Digital Library</a></li>
+        <li><a href="alumni.html" class="dropdown-link"><i class="fas fa-user-graduate"></i> Alumni</a></li>
+      </ul>
+    </li>
+    <li class="nav-item"><a href="#" class="nav-link">FACILITIES <i class="fas fa-chevron-down"></i></a>
+      <ul class="dropdown">
+        <li><a href="science-labs.html" class="dropdown-link"><i class="fas fa-flask"></i> Science Labs</a></li>
+        <li><a href="ai-lab.html" class="dropdown-link"><i class="fas fa-robot"></i> AI Lab</a></li>
+        <li><a href="language-lab.html" class="dropdown-link"><i class="fas fa-language"></i> Language Lab</a></li>
+        <li><a href="it-lab.html" class="dropdown-link"><i class="fas fa-desktop"></i> IT Department</a></li>
+        <li><a href="library.html" class="dropdown-link"><i class="fas fa-book-reader"></i> Library</a></li>
+      </ul>
+    </li>
+    <li class="nav-item"><a href="#" class="nav-link">CAMPUS LIFE <i class="fas fa-chevron-down"></i></a>
+      <ul class="dropdown">
+        <li><a href="hobbies-club.html" class="dropdown-link"><i class="fas fa-star"></i> Hobbies Club</a></li>
+        <li><a href="field-trips.html" class="dropdown-link"><i class="fas fa-map-signs"></i> Field Trips</a></li>
+        <li><a href="co-curricular.html" class="dropdown-link"><i class="fas fa-running"></i> Co-Curricular</a></li>
+        <li><a href="gallery.html" class="dropdown-link"><i class="fas fa-images"></i> Gallery</a></li>
+      </ul>
+    </li>
+    <li class="nav-item"><a href="news.html" class="nav-link">NEWS</a></li>
+    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+  </ul>
+  <div class="nav-cta"><a href="#" class="btn-login">Login</a><a href="how-to-apply.html" class="btn-admit">Admissions 2026</a></div>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</div></nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="section-badge" style="background:rgba(200,169,81,0.15);color:#e4c97a;border-color:rgba(200,169,81,0.3);">Beyond the Classroom</div>
+    <h1>Co-Curricular Activities</h1>
+    <p>Developing well-rounded Yarians through sports, arts, debate, leadership and community service.</p>
+    <div class="breadcrumbs"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Campus Life</span><i class="fas fa-chevron-right"></i><span>Co-Curricular</span></div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-badge">All Activities</div>
+      <h2 class="section-title">Our Co-Curricular <span>Programme</span></h2>
+      <div class="gold-divider centered"></div>
+      <p class="section-subtitle">At SST, education goes beyond textbooks. Our students engage in a wide variety of activities that develop leadership, teamwork, creativity, and civic responsibility.</p>
+    </div>
+
+    <div class="activity-grid">
+      <div class="activity-card reveal">
+        <div class="activity-header"><span class="activity-icon"><i class="fas fa-comments"></i></span><h3>Debate &amp; Public Speaking</h3></div>
+        <div class="activity-body"><p>Students participate in Urdu and English debate competitions, MUN sessions, and oratory events — building confidence and critical thinking.</p><div class="activity-tags"><span class="activity-tag">Urdu Debate</span><span class="activity-tag">English Debate</span><span class="activity-tag">MUN</span></div></div>
+      </div>
+      <div class="activity-card reveal reveal-delay-1">
+        <div class="activity-header"><span class="activity-icon"><i class="fas fa-futbol"></i></span><h3>Sports &amp; Athletics</h3></div>
+        <div class="activity-body"><p>Inter-house sports competitions including cricket, football, volleyball, badminton, table tennis and annual athletics day.</p><div class="activity-tags"><span class="activity-tag">Cricket</span><span class="activity-tag">Football</span><span class="activity-tag">Athletics</span><span class="activity-tag">Badminton</span></div></div>
+      </div>
+      <div class="activity-card reveal reveal-delay-2">
+        <div class="activity-header"><span class="activity-icon"><i class="fas fa-paint-brush"></i></span><h3>Arts &amp; Crafts</h3></div>
+        <div class="activity-body"><p>Creative expression through painting, calligraphy, model-making and art exhibitions. Students develop aesthetic sense and artistic talent.</p><div class="activity-tags"><span class="activity-tag">Painting</span><span class="activity-tag">Calligraphy</span><span class="activity-tag">Model Making</span></div></div>
+      </div>
+      <div class="activity-card reveal">
+        <div class="activity-header"><span class="activity-icon"><i class="fas fa-microscope"></i></span><h3>Science Competitions</h3></div>
+        <div class="activity-body"><p>Participants in national/international science olympiads, FSP contests, and provincial science fairs — consistently winning top positions.</p><div class="activity-tags"><span class="activity-tag">Science Olympiad</span><span class="activity-tag">FSP Contest</span><span class="activity-tag">Quiz Bowl</span></div></div>
+      </div>
+      <div class="activity-card reveal reveal-delay-1">
+        <div class="activity-header"><span class="activity-icon"><i class="fas fa-hands-helping"></i></span><h3>Community Service</h3></div>
+        <div class="activity-body"><p>Students give back through outreach programs, health awareness drives, Ramadan welfare activities, and community engagement.</p><div class="activity-tags"><span class="activity-tag">Welfare Drives</span><span class="activity-tag">Health Camps</span><span class="activity-tag">Outreach</span></div></div>
+      </div>
+      <div class="activity-card reveal reveal-delay-2">
+        <div class="activity-header"><span class="activity-icon"><i class="fas fa-music"></i></span><h3>Nasheeds &amp; Performing Arts</h3></div>
+        <div class="activity-body"><p>National day performances, nasheed competitions, drama and theatrical presentations that develop confidence and stage presence.</p><div class="activity-tags"><span class="activity-tag">Nasheeds</span><span class="activity-tag">Drama</span><span class="activity-tag">Tableaux</span></div></div>
+      </div>
+      <div class="activity-card reveal">
+        <div class="activity-header"><span class="activity-icon"><i class="fas fa-globe"></i></span><h3>Model UN (MUN)</h3></div>
+        <div class="activity-body"><p>SST hosts its own MUN — Yarians MUN Contest — where students represent world nations and debate real global issues diplomatically.</p><div class="activity-tags"><span class="activity-tag">Diplomacy</span><span class="activity-tag">Global Issues</span><span class="activity-tag">Leadership</span></div></div>
+      </div>
+      <div class="activity-card reveal reveal-delay-1">
+        <div class="activity-header"><span class="activity-icon"><i class="fas fa-flag"></i></span><h3>National Day Celebrations</h3></div>
+        <div class="activity-body"><p>Grand celebrations on Independence Day, Defence Day, Iqbal Day, and Pakistan Day with flags, speeches, and patriotic events.</p><div class="activity-tags"><span class="activity-tag">14 August</span><span class="activity-tag">Defence Day</span><span class="activity-tag">Iqbal Day</span></div></div>
+      </div>
+      <div class="activity-card reveal reveal-delay-2">
+        <div class="activity-header"><span class="activity-icon"><i class="fas fa-chalkboard"></i></span><h3>Guest Speaker Sessions</h3></div>
+        <div class="activity-body"><p>Inspirational talks by professionals, alumni, scientists, and leaders — expanding students' horizons and career awareness.</p><div class="activity-tags"><span class="activity-tag">Webinars</span><span class="activity-tag">Alumni Talks</span><span class="activity-tag">Career Guidance</span></div></div>
+      </div>
+    </div>
+
+    <!-- Benefits -->
+    <div style="margin-top:72px;">
+      <div class="text-center reveal">
+        <div class="section-badge">Why It Matters</div>
+        <h2 class="section-title">Benefits of <span>Co-Curricular Activities</span></h2>
+        <div class="gold-divider centered"></div>
+      </div>
+      <div class="benefit-list">
+        <div class="benefit-item reveal"><i class="fas fa-brain"></i><div><strong>Holistic Development</strong><p>Activities complement academics to produce well-rounded, balanced individuals ready for life beyond school.</p></div></div>
+        <div class="benefit-item reveal reveal-delay-1"><i class="fas fa-users"></i><div><strong>Teamwork &amp; Leadership</strong><p>Inter-house competitions and clubs teach students how to lead, collaborate and resolve conflict.</p></div></div>
+        <div class="benefit-item reveal"><i class="fas fa-medal"></i><div><strong>Confidence Building</strong><p>Stage performances, debates and presentations build students' self-confidence and public speaking ability.</p></div></div>
+        <div class="benefit-item reveal reveal-delay-1"><i class="fas fa-heart"></i><div><strong>Social Responsibility</strong><p>Community service programs develop empathy, civic sense and a spirit of giving back to society.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="admission-cta"><div class="container"><div class="reveal"><h3>A Life Beyond Books</h3><h2>Apply for Admission 2026!</h2><a href="how-to-apply.html" class="btn"><i class="fas fa-rocket"></i> APPLY NOW!</a></div></div></section>
+<footer class="footer"><div class="container"><div class="footer-grid">
+  <div class="footer-brand"><h3>SST Public School</h3><div class="tagline">Rashidabad · Sargodhian Spirit Trust</div><p>Inspiring futures through holistic education for over 19 years.</p><div class="footer-contact-info"><div class="footer-contact-item"><i class="fas fa-phone-alt"></i><a href="tel:0222-732001-6">0222-732001-6</a></div><div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@sstpsr.edu.pk">info@sstpsr.edu.pk</a></div></div><div class="footer-social"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
+  <div class="footer-col"><h4>Campus Life</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="hobbies-club.html">Hobbies Club</a><a href="field-trips.html">Field Trips</a><a href="co-curricular.html">Co-Curricular</a><a href="gallery.html">Gallery</a></div></div>
+  <div class="footer-col"><h4>Admission</h4><div class="footer-divider-gold"></div><div class="footer-links"><a href="how-to-apply.html">How to Apply</a><a href="fee-structure.html">Fee Structure</a><a href="downloads.html">Downloads</a></div></div>
+  <div class="footer-col"><h4>Newsletter</h4><div class="footer-divider-gold"></div><form class="newsletter-form" novalidate><p>Get the latest SSTPSR news</p><div class="newsletter-input-wrap"><input type="email" placeholder="Your email" required/><button type="submit"><i class="fas fa-paper-plane"></i></button></div></form></div>
+</div><div class="footer-bottom"><span>&copy; 2025 SST Public School Rashidabad. All rights reserved.</span><span>Developed by: <a href="#">Asif Khan</a></span></div></div></footer>
+<button class="scroll-top" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
+<script src="js/main.js"></script>
+</body>
+</html>

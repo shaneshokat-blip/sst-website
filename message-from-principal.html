@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Message from Principal - SST Public School Rashidabad</title>
+  <meta name="description" content="Read the inspiring message from the Principal of SST Public School Rashidabad." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <style>
+    .message-grid { display: grid; grid-template-columns: 320px 1fr; gap: 64px; align-items: start; }
+    .principal-card {
+      background: var(--white); border-radius: var(--radius-lg); padding: 36px 28px;
+      text-align: center; box-shadow: var(--shadow-md); border: 1px solid var(--light-gray);
+      position: sticky; top: 100px;
+    }
+    .principal-avatar {
+      width: 160px; height: 160px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border: 4px solid var(--accent); margin: 0 auto 20px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 4rem; color: rgba(200,169,81,0.6);
+    }
+    .principal-card h3 { color: var(--primary); font-size: 1.3rem; margin-bottom: 6px; }
+    .principal-card .role { color: var(--accent); font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+    .principal-card .divider { width: 40px; height: 2px; background: var(--accent); margin: 16px auto; }
+    .principal-card p { font-size: 0.875rem; line-height: 1.7; }
+    .message-body { background: var(--white); }
+    .message-body .para { font-size: 1rem; line-height: 1.9; color: var(--text-muted); margin-bottom: 20px; }
+    .message-body .para:first-of-type::first-letter { font-family: var(--font-serif); font-size: 3.5rem; font-weight: 700; color: var(--accent); float: left; line-height: 1; margin: 4px 12px 0 0; }
+    .signature { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--light-gray); }
+    .signature .name { font-family: var(--font-serif); font-size: 1.5rem; color: var(--primary); }
+    .signature .role { color: var(--mid-gray); font-size: 0.875rem; }
+    .values-strip { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 36px; }
+    .value-pill { display: flex; align-items: center; gap: 8px; background: rgba(200,169,81,0.08); border: 1px solid rgba(200,169,81,0.2); color: var(--accent-dark); padding: 8px 16px; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 500; }
+    @media(max-width:900px){ .message-grid { grid-template-columns: 1fr; } .principal-card { position: static; } }
+  </style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <a href="tel:0222-732001-6"><i class="fas fa-phone-alt"></i> 0222-732001-6</a>
+      <a href="mailto:info@sstpsr.edu.pk"><i class="fas fa-envelope"></i> info@sstpsr.edu.pk</a>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon"><span class="logo-icon-text">SST</span></div>
+      <div class="logo-text">
+        <div class="name">SST Public School</div>
+        <div class="tagline">Rashidabad · 19+ Years of Excellence</div>
+      </div>
+    </a>
+    <ul class="nav-menu" id="nav-menu">
+      <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">ABOUT <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown">
+          <li><a href="about-us.html" class="dropdown-link"><i class="fas fa-school"></i> About Us</a></li>
+          <li><a href="message-from-principal.html" class="dropdown-link"><i class="fas fa-user-tie"></i> Message from Principal</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#" class="btn-login">Login</a>
+      <a href="how-to-apply.html" class="btn-admit">Admissions 2026</a>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <div class="section-badge" style="background:rgba(200,169,81,0.15);color:#e4c97a;border-color:rgba(200,169,81,0.3);">Leadership</div>
+    <h1>Message from the Principal</h1>
+    <p>Words of wisdom and guidance from the leadership of SST Public School Rashidabad.</p>
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a>
+      <i class="fas fa-chevron-right"></i>
+      <a href="about-us.html">About</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>Message from Principal</span>
+    </div>
+  </div>
+</section>
+
+<!-- Message Content -->
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="message-grid">
+
+      <!-- Principal Card (Sidebar) -->
+      <div class="principal-card reveal">
+        <div class="principal-avatar"><i class="fas fa-user-tie"></i></div>
+        <h3>The Principal</h3>
+        <div class="role">SST Public School Rashidabad</div>
+        <div class="divider"></div>
+        <p>Leading SST Public School Rashidabad with dedication, vision, and an unwavering commitment to academic excellence and character development.</p>
+        <div class="gold-divider centered" style="margin-top:20px;"></div>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:16px;text-align:left;">
+          <div style="display:flex;align-items:center;gap:8px;font-size:0.83rem;color:var(--text-muted);">
+            <i class="fas fa-envelope" style="color:var(--accent);"></i>
+            <a href="mailto:info@sstpsr.edu.pk" style="color:var(--text-muted);">info@sstpsr.edu.pk</a>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:0.83rem;color:var(--text-muted);">
+            <i class="fas fa-phone-alt" style="color:var(--accent);"></i>
+            0222-732001-6
+          </div>
+        </div>
+      </div>
+
+      <!-- Message Body -->
+      <div class="message-body reveal reveal-delay-2">
+        <div class="section-badge">Principal's Corner</div>
+        <h2 class="section-title">A Message of <span>Pride &amp; Commitment</span></h2>
+        <div class="gold-divider"></div>
+
+        <p class="para">
+          Dear students, parents, guardians, and esteemed members of the SST community. It is with immense pride
+          and honor that I take on the role of Principal at SST Public School, Rashidabad. As we embark on this
+          exciting journey together, I remain deeply committed to upholding the values that define our institution
+          — academic excellence, character development, and a strong sense of national responsibility.
+        </p>
+
+        <p class="para">
+          SST Public School Rashidabad stands as a beacon of hope and opportunity for deserving young minds across
+          Pakistan. Our mission is not just to impart knowledge but to shape individuals who are confident, compassionate,
+          and capable of contributing meaningfully to society and our beloved nation.
+        </p>
+
+        <p class="para">
+          Education at SST goes beyond the classroom. We believe in nurturing the whole person — intellectually,
+          morally, physically, and spiritually. Our dedicated faculty, state-of-the-art facilities, and holistic
+          curriculum are all designed with one goal in mind: to prepare our students for the challenges and
+          opportunities of the 21st century.
+        </p>
+
+        <p class="para">
+          I encourage every student to embrace every learning opportunity with enthusiasm and dedication. Push your
+          boundaries, engage with your peers, and never shy away from asking questions. Remember that every great
+          leader once sat in a classroom, just like you — filled with curiosity and the potential to change the world.
+        </p>
+
+        <p class="para">
+          To our parents and guardians, your partnership is invaluable. Together, we can create an environment where
+          our children flourish. I invite you to be active participants in your child's educational journey and to
+          reach out whenever you have concerns or ideas.
+        </p>
+
+        <p class="para">
+          I am honored to lead this remarkable institution and look forward to continuing the tradition of excellence
+          that SST Public School Rashidabad has built over 19+ years. Let us work together to make this year truly
+          extraordinary for every Yarian.
+        </p>
+
+        <div class="values-strip">
+          <div class="value-pill"><i class="fas fa-star"></i> Academic Excellence</div>
+          <div class="value-pill"><i class="fas fa-shield-alt"></i> Character Development</div>
+          <div class="value-pill"><i class="fas fa-flag"></i> National Responsibility</div>
+          <div class="value-pill"><i class="fas fa-lightbulb"></i> Innovation</div>
+        </div>
+
+        <div class="signature">
+          <div class="name">The Principal</div>
+          <div class="role">SST Public School Rashidabad</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="admission-cta">
+  <div class="container">
+    <div class="reveal">
+      <h3>Join the SST Family</h3>
+      <h2>Applications Open for<br/>2026 Admissions</h2>
+      <a href="how-to-apply.html" class="btn"><i class="fas fa-rocket"></i> APPLY NOW!</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>SST Public School</h3>
+        <div class="tagline">Rashidabad · Sargodhian Spirit Trust</div>
+        <p>Inspiring futures through holistic education for over 19 years.</p>
+        <div class="footer-contact-info">
+          <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><a href="tel:0222-732001-6">0222-732001-6</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@sstpsr.edu.pk">info@sstpsr.edu.pk</a></div>
+        </div>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4><div class="footer-divider-gold"></div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about-us.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Admission</h4><div class="footer-divider-gold"></div>
+        <div class="footer-links">
+          <a href="how-to-apply.html">How to Apply</a>
+          <a href="fee-structure.html">Fee Structure</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4><div class="footer-divider-gold"></div>
+        <form class="newsletter-form" novalidate>
+          <p>Get the latest SSTPSR news</p>
+          <div class="newsletter-input-wrap">
+            <input type="email" placeholder="Your email" required />
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 SST Public School Rashidabad. All rights reserved.</span>
+      <span>Developed by: <a href="#">Asif Khan</a></span>
+    </div>
+  </div>
+</footer>
+<button class="scroll-top" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
+<script src="js/main.js"></script>
+</body>
+</html>
