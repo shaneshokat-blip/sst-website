@@ -176,7 +176,7 @@
       <div class="footer-col">
         <h4>Newsletter</h4>
         <div class="footer-divider-gold"></div>
-        <form class="newsletter-form" id="newsletter-form-footer" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST" novalidate>
+        <form class="newsletter-form" id="newsletter-form-footer" action="https://formspree.io/f/mdapvgyy" method="POST" novalidate>
           <p>Get the latest SSTPSR news and announcements</p>
           <div class="newsletter-input-wrap">
             <input type="email" name="email" placeholder="Your email address" aria-label="Email for newsletter" required />
