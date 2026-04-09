@@ -18,8 +18,12 @@
 <nav class="navbar" id="navbar" role="navigation" aria-label="Main Navigation">
   <div class="container">
     <a href="index.html" class="nav-logo" aria-label="SST Public School Rashidabad Home">
-      <div class="logo-icon"><span class="logo-icon-text">SST</span></div>
-      <div class="logo-text">
+      <img src="https://sstpsr.edu.pk/wp-content/uploads/2021/05/logo.png"
+           alt="SST Public School Rashidabad Logo"
+           class="logo-img"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+           style="height:54px;width:auto;object-fit:contain;" />
+      <div class="logo-text" style="display:none;">
         <div class="name">SST Public School</div>
         <div class="tagline">Rashidabad &middot; Excel to Lead</div>
       </div>
